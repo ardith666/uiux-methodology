@@ -62,10 +62,12 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 
 ### Phase 1: Ask
 
+- **Read `knowledge/README.md` first** — entry point, tau state + metodologi aktif
+- **If `knowledge/` doesn't exist, create it with templates** (`knowledge-README.md`, `KNOWLEDGE.md`, `DESIGN.md`)
+- **Check for `knowledge/DESIGN.md`** — design system context
 - Understand project context, constraints, existing design system
-- **Check for DESIGN.md in project root** — if exists, load as brand context
 - Anti-slop gate: "Does this project have a design system? What's the accent token? Any serif fonts?"
-- Load brand context if available (brand-guidelines.md, DESIGN.md, or brand-context.md)
+- Load brand context if available
 - Extract: product type, target audience, style keywords, stack
 
 ### Phase 2: Spec
@@ -84,7 +86,8 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 - Choose ONE bold visual move (the 20% distinctive)
 - Plan token architecture (3-layer)
 - Plan brand voice + microcopy
-- **Generate or update DESIGN.md using templates/DESIGN.md** — one file that any AI agent can read
+- **Generate `knowledge/DESIGN.md` using templates/knowledge-DESIGN.md** — fill with project-specific values
+- **Generate or update `knowledge/README.md` using templates/knowledge-README.md** — entry point for other agents
 - Anti-slop gate: "What makes this NOT look like AI generated?"
 - Break into tasks with dependencies
 
@@ -108,18 +111,32 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 
 - Final anti-slop audit
 - Check 80/20 balance
-- Verify brand consistency
+- **Verify brand consistency against `knowledge/DESIGN.md`**
 - Self-critique checklist (from dev-methodology)
 
 ### Phase 7: Knowledge
 
 - Log design decisions to `knowledge/KNOWLEDGE.md` (same pattern as dev-methodology)
 - Save anti-slop patterns that worked
-- Update `DESIGN.md` in project root with final design system specs
+- **Update `knowledge/DESIGN.md`** with final design system specs
+- **Update `knowledge/README.md`** jika ada perubahan metodologi
 - Update brand guidelines if needed
-- Both `knowledge/KNOWLEDGE.md` + `DESIGN.md` live in project root
-  - `DESIGN.md` = "what" — design system spec readable by any AI agent (Google Stitch standard)
-  - `knowledge/KNOWLEDGE.md` = "why" — decisions, rationale, context (dev-methodology standard)
+
+### Knowledge Folder Structure
+
+```
+project-root/
+├── knowledge/
+│   ├── README.md        ← Entry point. Agent WAJIB baca ini dulu
+│   ├── KNOWLEDGE.md     ← Context, decisions, progress (dev-meth standard)
+│   └── DESIGN.md        ← Design system spec (uiux-meth standard)
+```
+
+| File | Isi | Dibaca oleh |
+|------|-----|-------------|
+| `README.md` | Metodologi aktif, file list, aturan agent | Semua agent (entry point) |
+| `KNOWLEDGE.md` | Vision, decisions, progress, learnings | dev-methodology agents |
+| `DESIGN.md` | Brand, tokens, typography, components | uiux-methodology agents |
 
 ## The Seven Cardinal Sins (P0 — must fix)
 
