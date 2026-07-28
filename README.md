@@ -307,7 +307,7 @@ flowchart TD
     DECIDE -->|Stock Photo| UNSPLASH[Unsplash Search]
 
     CUSTOM_API --> CHECK{API key set?}
-    CHECK -->|Yes| CALL[/v1/images/generations]
+    CHECK -->|Yes| CALL["POST /v1/images/generations"]
     CHECK -->|No| UNSPLASH
 
     CALL --> SUCCESS{200 OK?}
