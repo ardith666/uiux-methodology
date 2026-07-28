@@ -230,10 +230,13 @@ flowchart TD
     REVIEW --> KNOW
 
     subgraph KNOW["Phase 7: Knowledge"]
-        K1[Log design decisions] --> K2[Update DESIGN.md with new decisions]
+        K1[Log decisions to knowledge/KNOWLEDGE.md] --> K2[Update DESIGN.md in project root]
         K2 --> K3[Save anti-slop patterns]
         K3 --> K4[Update brand guidelines]
     end
+
+    DONE2["\nDESIGN.md = WHAT\nknowledge/KNOWLEDGE.md = WHY"]
+    KNOW --> DONE2 --> DONE
 
     KNOW --> DONE([Ship It])
 

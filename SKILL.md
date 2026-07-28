@@ -113,11 +113,13 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 
 ### Phase 7: Knowledge
 
-- Log design decisions
+- Log design decisions to `knowledge/KNOWLEDGE.md` (same pattern as dev-methodology)
 - Save anti-slop patterns that worked
-- **Update DESIGN.md in project root** with new decisions
+- Update `DESIGN.md` in project root with final design system specs
 - Update brand guidelines if needed
-- Write to `knowledge/KNOWLEDGE.md`
+- Both `knowledge/KNOWLEDGE.md` + `DESIGN.md` live in project root
+  - `DESIGN.md` = "what" — design system spec readable by any AI agent (Google Stitch standard)
+  - `knowledge/KNOWLEDGE.md` = "why" — decisions, rationale, context (dev-methodology standard)
 
 ## The Seven Cardinal Sins (P0 — must fix)
 
