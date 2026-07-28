@@ -11,7 +11,6 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 ## Table of Contents
 
 - [What It Is](#what-it-is)
-- [Sources](#sources)
 - [Install](#install)
 - [Setup (API Keys)](#setup-api-keys)
 - [Workflow](#workflow)
@@ -33,20 +32,6 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 | **Brand Identity** | Voice, messaging, visual language extraction from brand guidelines |
 | **Banner Design** | Image generation with anti-slop prompts + Unsplash fallback |
 | **Anti-Slop Validation** | 13 automated checks (P0/P1/P2) to catch AI-generated boilerplate |
-
----
-
-## Sources
-
-Built from 3 open-source projects:
-
-| Source | License | What Was Taken |
-|---|---|---|
-| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | MIT | BM25 search engine, data CSVs, token scripts, brand tools, styling rules |
-| [aacassandra/anti-ai-slop-design](https://github.com/aacassandra/anti-ai-slop-design) | MIT | P0/P1/P2 anti-slop rules, image generation, 80/20 philosophy |
-| [dev-methodology](https://github.com/nextlevelbuilder/dev-methodology) | MIT | Workflow backbone (ask → spec → plan → implement → test → review → knowledge) |
-
-All original code adapted for OpenClaw multi-agent, multi-project use.
 
 ---
 
@@ -546,11 +531,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-### Credits
-
-| Source | License | Link |
-|---|---|---|
-| ui-ux-pro-max-skill | MIT | https://github.com/nextlevelbuilder/ui-ux-pro-max-skill |
-| anti-ai-slop-design | MIT | https://github.com/aacassandra/anti-ai-slop-design |
-| dev-methodology | MIT | https://github.com/nextlevelbuilder/dev-methodology |
