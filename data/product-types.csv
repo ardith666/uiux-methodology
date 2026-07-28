@@ -1,0 +1,44 @@
+name,category,recommended_pattern,recommended_styles,color_mood,typography_mood,key_effects,anti_patterns
+SaaS,tech,Hero-Centric + Social Proof,"Minimalism,Glassmorphism,Soft UI Evolution",professional trust,modern clean,"smooth transitions,subtle shadows",AI purple gradients,cluttered hero
+Micro SaaS,tech,Feature-Rich Showcase,"Minimalism,Bento Box Grid",clean focused,technical precision,"hover states,bento animations",busy layouts,overwhelming features
+B2B Service,tech,Trust & Authority,"Minimalism,Swiss Modernism 2.0",corporate reliable,professional serif,"smooth scroll,subtle parallax",playful colors,unprofessional imagery
+Developer Tool,tech,Interactive Product Demo,"Dark Mode,Minimalism",dark technical,monospace mixed,"code animations,terminal feel",bright themes,distracting animations
+AI Chatbot Platform,tech,Interactive Product Demo,"AI-Native UI,Glassmorphism",futuristic smart,modern sans,"typing indicators,fluid transitions",robot imagery,overwhelming complexity
+Cybersecurity Platform,tech,Trust & Authority,"Dark Mode,HUD / Sci-Fi FUI",dark secure,technical bold,"shield animations,pulse effects",bright colors,playful elements
+Fintech/Crypto,finance,Conversion-Optimized,"Minimalism,Glassmorphism",trustworthy premium,modern clean,"number animations,chart reveals",neon colors,risky imagery
+Banking,finance,Trust & Authority,"Minimalism,Swiss Modernism 2.0",stable trustworthy,professional,"smooth transitions,security badges",AI gradients,dark themes
+Insurance,finance,Trust & Authority,"Minimalism,Soft UI Evolution",safe reliable,friendly professional,"shield animations,step forms",playful elements,complex jargon
+Personal Finance,finance,Conversion-Optimized,"Minimalism,Bento Box Grid",friendly modern,modern clean,"chart animations,bento reveals",overwhelming data,cluttered dashboards
+Invoice & Billing,finance,Feature-Rich Showcase,"Minimalism,Flat Design",clean professional,technical precision,"table animations,PDF previews",decorative elements,slow loading
+Medical Clinic,healthcare,Hero-Centric + Social Proof,"Minimalism,Accessible & Ethical",calming trustworthy,friendly clean,"gentle animations,trust signals",dark themes,complex imagery
+Pharmacy,healthcare,Minimal & Direct,"Minimalism,Flat Design",clean clinical,clear readable,"smooth navigation,product cards",playful elements,distracting colors
+Dental,healthcare,Hero-Centric + Social Proof,"Minimalism,Soft UI Evolution",clean friendly,modern approachable,"before/after reveals,booking forms",dark themes,scary imagery
+Veterinary,healthcare,Hero-Centric + Social Proof,"Minimalism,Claymorphism",warm caring,friendly playful,"pet animations,appointment booking",clinical imagery,sterile feeling
+Mental Health,healthcare,Storytelling-Driven,"Minimalism,Organic Biophilic",calming safe,gentle human,"breathing animations,soft transitions",bright colors,overwhelming layouts
+Medication Reminder,lifestyle,Minimal & Direct,"Minimalism,Flat Design",clean simple,clear minimal,"notification animations,progress rings",complex interfaces,distracting elements
+General E-commerce,e-commerce,Conversion-Optimized,"Minimalism,Bento Box Grid",clean attractive,modern versatile,"product hover,cart animations",slow loading,complex checkout
+Luxury E-commerce,e-commerce,Storytelling-Driven,"Exaggerated Minimalism,Liquid Glass",elegant premium,serif sophisticated,"smooth reveals,luxury feel",cluttered layouts,discount badges
+Marketplace P2P,e-commerce,Feature-Rich Showcase,"Minimalism,Flat Design",friendly trustworthy,modern clean,"search animations,trust badges",complex navigation,slow performance
+Subscription Box,e-commerce,Hero-Centric + Social Proof,"Minimalism,Claymorphism",fun exciting,playful modern,"unboxing animations,social proof",boring layouts,unclear value
+Food Delivery,e-commerce,Conversion-Optimized,"Minimalism,Flat Design",appetizing vibrant,modern clean,"map animations,order tracking",slow loading,complex menus
+Restaurant,services,Hero-Centric + Social Proof,"Minimalism,Editorial Grid / Magazine",appetizing warm,serif elegant,"menu animations, reservation system",cold imagery,slow booking
+Hotel,services,Storytelling-Driven,"Minimalism,Liquid Glass",luxury inviting,serif elegant,"parallax reveals,booking flow",cluttered layouts,slow loading
+Legal,services,Trust & Authority,"Minimalism,Swiss Modernism 2.0",professional trustworthy,serif traditional,"smooth transitions,case studies",playful elements,complex jargon
+Home Services,services,Conversion-Optimized,"Minimalism,Flat Design",friendly reliable,modern clean,"booking animations,testimonials",dark themes,slow response
+Booking & Appointment,services,Conversion-Optimized,"Minimalism,Bento Box Grid",clean efficient,modern minimal,"calendar animations,confirmation flow",complex forms,slow loading
+Portfolio,creative,Storytelling-Driven,"Minimalism,Motion-Driven",creative expressive,modern variable,"scroll reveals,project galleries",cluttered layouts,distracting elements
+Agency,creative,Storytelling-Driven,"Minimalism,Aurora UI",professional creative,modern bold,"case study reveals,team animations",generic layouts,boring presentations
+Photography,creative,Storytelling-Driven,"Minimalism,Dark Mode",visual immersive,serif minimal,"fullscreen galleries,light transitions",cluttered UI,distracting borders
+Gaming,creative,Interactive Product Demo,"Cyberpunk UI,HUD / Sci-Fi FUI",energetic immersive,technical bold,"particle effects,glitch animations",boring layouts,slow loading
+Music Streaming,creative,Interactive Product Demo,"Retro-Futurism,Vaporwave",energetic vibrant,bold variable,"waveform animations,album reveals",cluttered interfaces,distracting elements
+Photo/Video Editor,creative,Interactive Product Demo,"Dark Mode,Minimalism",creative focused,modern minimal,"tool animations,canvas interactions",bright themes,overwhelming toolbars
+Habit Tracker,lifestyle,Minimal & Direct,"Minimalism,Flat Design",clean motivating,modern friendly,"streak animations,progress rings",complex interfaces,distracting elements
+Recipe & Cooking,lifestyle,Storytelling-Driven,"Minimalism,Editorial Grid / Magazine",appetizing warm,serif friendly,"step animations, timer integration",cluttered layouts,slow loading
+Meditation,lifestyle,Minimal & Direct,"Minimalism,Organic Biophilic",calming serene,gentle clean,"breathing animations,ambient transitions",bright colors,distracting elements
+Weather,lifestyle,Minimal & Direct,"Minimalism,Flat Design",clean informative,modern minimal,"forecast animations,icon transitions",complex layouts,slow loading
+Diary,lifestyle,Minimal & Direct,"Minimalism,E-Ink / Paper",personal intimate,serif minimal,"writing animations,entry reveals",cluttered UI,distracting elements
+Mood Tracker,lifestyle,Minimal & Direct,"Minimalism,Claymorphism",friendly warm,modern playful,"mood animations,chart reveals",complex interfaces,dark themes
+Web3/NFT,emerging,Interactive Product Demo,"Cyberpunk UI,Neubrutalism",futuristic bold,technical modern,"3D reveals,glitch effects",corporate imagery,boring layouts
+Spatial Computing,emerging,Interactive Product Demo,"Spatial UI (VisionOS),3D & Hyperrealism",futuristic immersive,modern clean,"depth animations,spatial transitions",flat layouts,traditional UI
+Quantum Computing,emerging,Trust & Authority,"Dark Mode,HUD / Sci-Fi FUI",futuristic technical,monospace bold,"particle effects,quantum visualizations",playful elements,oversimplified imagery
+Autonomous Drone,emerging,Interactive Product Demo,"HUD / Sci-Fi FUI,Cyberpunk UI",technical futuristic,monospace clean,"telemetry animations,flight paths",boring layouts,distracting elements

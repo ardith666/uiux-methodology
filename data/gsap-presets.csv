@@ -1,0 +1,21 @@
+name,description,best_for,framework_notes
+Scroll Reveal,Elements animate in as they enter viewport during scroll,"Content sections, features, testimonials",Use IntersectionObserver or GSAP ScrollTrigger for performance
+Stagger Animation,Sequential animation of multiple elements with offset timing,"Lists, grids, navigation items",Apply stagger to parent container animate children with delay
+Parallax Scrolling,Different scroll speeds creating depth illusion,"Hero sections, backgrounds, storytelling",Use transform: translateY with scroll offset keep GPU accelerated
+Fade In Up,Elements fade in and slide up from below","Content reveals, cards, sections",Combine opacity 0 to 1 with translateY 20px to 0
+Scale On Hover,Elements scale up slightly on hover for feedback,"Cards, buttons, interactive elements",Use transform: scale 1.02-1.05 with transition keep subtle
+Slide In Left,Elements slide in from the left side,"Content sections, feature lists",Use translateX -100px to 0 with opacity transition
+Slide In Right,Elements slide in from the right side,"Content sections, feature comparisons",Use translateX 100px to 0 with opacity transition
+Rotate In,Elements rotate into view from a starting angle,"Creative elements, decorative graphics",Use rotate from 5-10 degrees to 0 with opacity
+Blur Reveal,Elements transition from blurred to clear state,"Image reveals, text reveals, premium feel",Use filter: blur from 10px to 0 keep performance in mind
+Text Split,Individual characters animate separately for kinetic type,"Hero headlines, feature titles, emphasis",Split text into spans animate each with stagger
+Counter Animation,Numbers count up from 0 to target value,"Statistics, metrics, pricing, achievements",Use requestAnimationFrame for smooth counting
+Progress Bar Fill,Animated progress bars filling to target percentage,"Skills, loading states, completion indicators",Animate width from 0 to target with easing
+Typewriter Effect,Text appears character by character like typing,"Hero text, taglines, terminal-style content",Use setTimeout or GSAP for character-by-character reveal
+Bounce In,Elements enter with a bouncy overshoot effect,"Notifications, alerts, playful elements",Use elastic or backOut easing for bounce feel
+Flip Animation,Elements flip between front and back faces,"Cards, pricing tables, 3D effects",Use rotateY 180deg with transform-style preserve-3d
+Draw SVG Path,SVG paths animate as if being drawn,"Icons, decorative elements, logos",Use stroke-dasharray and stroke-dashoffset animation
+Morph Shape,Smooth transition between different SVG shapes,"Icon transitions, decorative elements",Use SVG path morphing or clip-path transitions
+Magnetic Hover,Elements subtly follow cursor on hover,"Buttons, interactive elements, creative sites",Calculate cursor offset and apply transform translation
+Smooth Scroll,Natural smooth scrolling behavior throughout page,"All pages, single page apps",Use CSS scroll-behavior smooth or GSAP ScrollSmoother
+Parallax Image,Images move at different speeds within their containers,"Hero images, gallery sections, storytelling",Apply transform based on scroll position relative to container

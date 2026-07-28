@@ -1,0 +1,26 @@
+name,description,best_for,data_requirements,js_library
+Line Chart,Shows trends over time with connected data points,"Time series, growth tracking, trends",at least 2 data series with time or category labels,Chart.js
+Bar Chart,Compares values across categories with vertical or horizontal bars,"Category comparison, rankings, distributions",categorical data with numeric values,Chart.js
+Doughnut Chart,Shows proportions as a ring with optional center content,"Percentage breakdown, composition, status",single data series totaling 100%,Chart.js
+Area Chart,Filled line chart showing volume over time,"Volume trends, cumulative data, comparisons",at least 2 data series with time labels,Chart.js
+Scatter Plot,Shows correlation between two variables with positioned dots,"Correlation analysis, distribution, clusters",paired numeric data points,Chart.js
+Radar Chart,Compares multiple variables on radial axes,"Multi-dimensional comparison, skill assessment",3-8 variables with numeric scores,Chart.js
+Horizontal Bar,Bar chart with horizontal orientation for long labels,"Long category names, rankings, comparisons",categorical data with long labels,Chart.js
+Stacked Bar,Stacked segments showing composition within categories,"Part of whole across categories, composition trends",categorical data with sub-categories,Chart.js
+Mixed Chart,Combines line and bar charts for dual-axis visualization,"Comparing different data types, dual metrics",multiple data series with different scales,Chart.js
+Heatmap,Color-intensity grid showing values across two dimensions,"Density visualization, activity patterns, correlations",matrix of numeric values,Chart.js
+Funnel Chart,Shows progressive reduction through stages,"Conversion funnels, sales pipelines, user journeys",sequential stage data with counts,Chart.js
+Gauge Chart,Shows a single value within a range like a speedometer,"KPI display, progress toward goal, status indicator",single numeric value with min and max,Chart.js
+Treemap,Nested rectangles showing hierarchical data proportions,"Portfolio allocation, category breakdown, file systems",hierarchical data with sizes,Chart.js
+Bubble Chart,Scatter plot with variable-sized circles for third dimension,"Multi-variable correlation, market analysis",x y and size data points,Chart.js
+Candlestick,Shows open high low close for financial data,"Stock prices, financial analysis, trading data",OHLC data with timestamps,Chart.js
+Waterfall Chart,Shows cumulative effect of sequential positive and negative values,"Financial analysis, profit/loss breakdown, variance",sequential positive and negative values,Chart.js
+Sankey Diagram,Shows flow and transfer between nodes with varying widths,"Resource allocation, user flow, energy distribution",flow data with source target and value,Chart.js
+Network Graph,Shows connections and relationships between nodes,"Social networks, dependency graphs, relationships",node and edge data,Chart.js
+Pie Chart,Shows proportions as slices of a circle,"Simple composition, percentage breakdown",single data series totaling 100%,Chart.js
+Polar Area Chart,Shows proportions on radial axes with equal angles,"Comparison with magnitude, cyclical data",single data series with radial axes,Chart.js
+Bullet Chart,Compares a measure to a target with performance bands,"Performance tracking, KPI vs target, goal progress",actual target and range values,Chart.js
+Sparkline,Minimal inline charts showing trends without axes,"Inline trends, dashboard widgets, summary views",simple time series data,Chart.js
+Histogram,Shows frequency distribution of continuous data,"Distribution analysis, frequency patterns, statistics",continuous numeric data,Chart.js
+Box Plot,Shows data distribution through quartiles and outliers,"Statistical analysis, distribution comparison, outliers",distribution data with quartiles,Chart.js
+Chord Diagram,Shows inter-relationships between entities in a circular layout,"Flow analysis, relationship mapping, trade data",matrix of flow or relationship values,Chart.js

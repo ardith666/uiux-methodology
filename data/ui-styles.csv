@@ -1,0 +1,50 @@
+name,description,best_for,keywords,anti_patterns
+Minimalism & Swiss Style,Clean layouts with generous whitespace and strong grid systems,"Enterprise apps, dashboards, documentation",clean professional grid,cluttered layouts|overwhelming information
+Neumorphism,Soft raised elements with subtle shadows creating depth,"Health/wellness apps, meditation platforms",soft shadows depth subtle,low contrast|hard edges
+Glassmorphism,Frosted glass effect with blur and transparency,"Modern SaaS, financial dashboards",frosted glass blur transparency,overuse of blur|poor contrast
+Brutalism,Raw bold typography with unconventional layouts,"Design portfolios, artistic projects",bold raw unconventional,subtle typography|safe layouts
+3D & Hyperrealism,Three-dimensional rendered elements with realistic lighting,"Gaming, product showcase, immersive",3D render depth realistic,flat design|simple shapes
+Vibrant & Block-based,Bold colors with distinct content blocks,"Startups, creative agencies, gaming",bold colorful blocks,subtle colors|muted palettes
+Dark Mode (OLED),Pure black backgrounds with high-contrast elements,"Night-mode apps, coding platforms",dark black high-contrast,bright backgrounds|low contrast text
+Accessible & Ethical,Inclusive design prioritizing usability for all,"Government, healthcare, education",accessible inclusive readable,dark themes|small text
+Claymorphism,Soft rounded elements with playful clay-like feel,"Educational apps, children's apps, SaaS",soft rounded playful,sharp edges|serious tone
+Aurora UI,Vibrant gradient backgrounds with ethereal glow effects,"Modern SaaS, creative agencies",aurora gradient glow,muted colors|flat backgrounds
+Retro-Futurism,Combining vintage aesthetics with futuristic elements,"Gaming, entertainment, music platforms",retro vintage futuristic,modern minimal|clean layouts
+Flat Design,Two-dimensional elements without depth effects,"Web apps, mobile apps, startup MVPs",flat 2D minimal,shadows|3D effects
+Skeuomorphism,Realistic textures mimicking physical objects,"Legacy apps, gaming, premium products",realistic texture skeuomorphic,flat design|minimal aesthetics
+Liquid Glass,Highly reflective glass-like surfaces with fluid motion,"Premium SaaS, high-end e-commerce",liquid glass reflective fluid,matte surfaces|static elements
+Motion-Driven,Animation-first design with scroll-triggered effects,"Portfolio sites, storytelling platforms",animation scroll motion,static layouts|no animations
+Micro-interactions,Small targeted animations responding to user actions,"Mobile apps, touchscreen UIs",micro interaction feedback subtle,distracting animations|no feedback
+Inclusive Design,Design accommodating the widest possible range of users,"Public services, education, healthcare",inclusive accessible wide,exclusive designs|complex interfaces
+Zero Interface,Minimal visible UI relying on AI or voice interaction,"Voice assistants, AI platforms",minimal voice AI,complex menus|overwhelming options
+Soft UI Evolution,Enhanced neumorphism with better contrast and usability,"Modern enterprise apps, SaaS",soft enhanced contrast,extreme shadows|low contrast
+Neubrutalism,Bold borders raw typography with intentional roughness,"Gen Z brands, startups, Figma-style",bold raw rough intentional,subtle design|smooth aesthetics
+Bento Box Grid,Modular grid layout with distinct content cards,"Dashboards, product pages, portfolios",modular grid cards,linear layouts|monolithic design
+Y2K Aesthetic,Early 2000s inspired with glossy and metallic elements,"Fashion brands, music, Gen Y",Y2K glossy metallic,modern minimal|flat design
+Cyberpunk UI,Neon-lit dark interfaces with tech-heavy elements,"Gaming, tech products, crypto apps",neon dark tech,bright themes|pastel colors
+Organic Biophilic,Nature-inspired with organic shapes and earth tones,"Wellness apps, sustainability brands",nature organic earth,geometric rigid|synthetic colors
+AI-Native UI,Designed specifically for AI interactions and outputs,"AI products, chatbots, copilots",AI native fluid,traditional forms|rigid layouts
+Memphis Design,Bold geometric shapes with vibrant playful patterns,"Creative agencies, music, youth brands",geometric bold playful,subtle design|muted colors
+Vaporwave,Pink-purple gradients with retro-digital aesthetic,"Music platforms, gaming, portfolios",vaporwave pink retro,corporate design|neutral colors
+Dimensional Layering,Elements arranged in clear depth layers creating hierarchy,"Dashboards, card layouts, modals",dimensional depth layers,flat stacking|no hierarchy
+Exaggerated Minimalism,Extreme minimalism with oversized elements as focal points,"Fashion, architecture, portfolios",extreme minimal oversized,cluttered|busy layouts
+Kinetic Typography,Animated text as the primary visual element,"Hero sections, marketing sites",animated typography motion,static text|small text
+Parallax Storytelling,Scroll-driven depth effects creating narrative flow,"Brand storytelling, product launches",parallax scroll narrative,static pages|no depth
+Swiss Modernism 2.0,Updated grid-based design with contemporary typography,"Corporate sites, architecture, editorial",swiss grid modern,chaotic layouts|irregular spacing
+HUD / Sci-Fi FUI,Heads-up display inspired with data-heavy visualizations,"Sci-fi games, space tech, cybersecurity",HUD sci-fi data-heavy,bright themes|simple layouts
+Pixel Art,Retro pixel-based graphics and typography,"Indie games, retro tools, creative",pixel retro 8bit,high-res graphics|smooth vectors
+Bento Grids,Apple-inspired modular card-based layouts,"Product features, dashboards, personal",bento modular cards,linear layouts|monolithic blocks
+Spatial UI (VisionOS),Depth-aware interfaces for spatial computing,"Spatial computing apps, VR/AR",spatial depth visionOS,flat 2D|no depth cues
+E-Ink / Paper,Paper-like design with minimal digital effects,"Reading apps, digital newspapers",eink paper minimal,digital effects|bright colors
+Gen Z Chaos / Maximalism,Intentionally chaotic and visually dense design,"Gen Z lifestyle, music artists",chaotic maximal dense,minimal design|clean layouts
+Biomimetic / Organic 2.0,Advanced nature-inspired with biological patterns,"Sustainability tech, biotech, health",biomimetic biological organic,geometric rigid|synthetic aesthetics
+Anti-Polish / Raw Aesthetic,Intentionally unfinished or rough design aesthetic,"Creative portfolios, artist sites",raw unfinished intentional,polished perfect|smooth design
+Tactile Digital / Deformable UI,Elements that respond to touch with physical-like deformation,"Modern mobile apps, playful brands",tactile deformable responsive,static rigid|no feedback
+Nature Distilled,Simplified natural elements as core design language,"Wellness brands, sustainable products",nature simplified organic,industrial synthetic|geometric harsh
+Interactive Cursor Design,Cursor interactions as primary engagement mechanism,"Creative portfolios, interactive sites",cursor interactive engagement,static cursor|no interaction
+Voice-First Multimodal,Interface designed primarily for voice with visual support,"Voice assistants, accessibility apps",voice multimodal accessible,visual-only|complex menus
+3D Product Preview,Three-dimensional interactive product visualization,"E-commerce, furniture, fashion",3D product interactive preview,flat images|static display
+Gradient Mesh / Aurora Evolved,Complex multi-point gradients creating depth and movement,"Hero sections, backgrounds, creative",gradient mesh aurora complex,solid colors|flat backgrounds
+Editorial Grid / Magazine,Typography-driven layouts inspired by print editorial,"News sites, blogs, magazines",editorial grid magazine,web-style layouts|digital-only aesthetic
+Chromatic Aberration / RGB Split,Color channel separation effects for visual impact,"Music platforms, gaming, tech",chromatic aberration RGB,subtle design|clean aesthetics
+Vintage Analog / Retro Film,Film grain and vintage color grading aesthetics,"Photography, music/vinyl brands",vintage analog film,digital clean|modern aesthetics

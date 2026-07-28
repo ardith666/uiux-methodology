@@ -1,0 +1,26 @@
+name,description,sections,best_for,conversion_notes
+Hero-Centric Design,Strong visual hero with supporting sections below,"Hero, Features, Social Proof, CTA, Footer","Products with strong visual identity",Hero above fold repeated CTA after social proof
+Conversion-Optimized,Focused on driving specific user actions,"Hero with CTA, Benefits, Testimonials, Pricing, CTA, FAQ","Lead generation sales pages",Single clear CTA repeated multiple times strong urgency
+Feature-Rich Showcase,Detailed feature breakdown with comparisons,"Hero, Feature Grid, Comparisons, Use Cases, Pricing, CTA","SaaS complex products",Feature comparison tables free trial CTA
+Minimal & Direct,Concise layout with essential information only,"Hero, Key Benefit, Simple CTA, Trust Signals","Simple products apps",One clear action minimal distraction
+Social Proof-Focused,Testimonials and trust elements as primary drivers,"Hero with Trust Badges, Testimonials, Case Studies, Stats, CTA","Services B2C products",Social proof above fold repeated testimonials
+Interactive Product Demo,Hands-on product experience with guided walkthrough,"Hero with Demo, Interactive Walkthrough, Feature Tour, Pricing, CTA","Software tools",Free trial interactive demo early engagement
+Trust & Authority,Expertise and credibility as primary conversion drivers,"Hero with Credentials, Expertise Sections, Certifications, Case Studies, CTA","B2B enterprise consulting",Authority signals certifications client logos
+Storytelling-Driven,Brand narrative guiding user through emotional journey,"Hero Story, Problem, Solution, Journey, Vision, CTA","Brands agencies nonprofits",Emotional connection narrative arc
+Grid Layout,Cards and grid-based content organization,"Hero, Feature Grid, Testimonials Grid, Pricing Grid, CTA","Dashboards portfolios",Scannable cards clear hierarchy
+Single Page App,Continuous scroll with anchored sections,"Hero, About, Features, Team, Contact","Web apps landing pages",Smooth scroll anchor navigation
+Split Screen,Two-column layout for parallel content display,"Hero Split, Feature Split, Testimonial Split, CTA","Comparison products dual content",Visual balance side-by-side comparison
+Fullscreen Media,Immersive full-screen imagery and video,"Fullscreen Hero, Fullscreen Gallery, Fullscreen CTA","Photography film restaurants",Visual impact immersive experience
+Magazine Editorial,Typography-driven editorial layout,"Hero Headline, Article Sections, Pull Quotes, CTA","News blogs media sites",Readable typography editorial authority
+Pricing Table,Feature comparison with pricing tiers,"Hero, Pricing Table, Feature Comparison, FAQ, CTA","SaaS subscription services",Clear pricing feature comparison money-back guarantee
+Timeline/Process,Step-by-step process or company history,"Hero, Timeline Steps, Process Details, CTA","Agencies consulting services",Clear process visualization step-by-step engagement
+FAQ/Support,Question-focused layout addressing user concerns,"Hero, FAQ Accordion, Support Options, Contact, CTA","Support-heavy products services",Address objections reduce support load
+Testimonial Wall,Heavy social proof with multiple testimonial formats,"Hero, Video Testimonials, Written Reviews, Star Ratings, CTA","Services B2C high-trust",Multiple proof formats review aggregation
+Comparison Page,Side-by-side comparison with competitor or alternatives,"Hero, Comparison Table, Feature Matrix, Switch CTA","SaaS competitive markets",Competitive positioning easy switching
+Before/After,Transformation showcase with visual before/after,"Hero, Before/After Slider, Results, Testimonials, CTA","Health fitness renovation services",Visual transformation proof of results
+Calculator/Tool,Interactive calculator or tool with value demonstration,"Hero, Calculator Tool, Results, Pricing, CTA","Finance SaaS pricing tools",Show value before purchase interactive engagement
+Video Hero,Video-first hero section with supporting content,"Video Hero, Key Points, Testimonials, CTA","Products with strong demos video content",Video engagement autoplay with muted sound
+Countdown/Urgency,Time-sensitive offers with countdown elements,"Hero with Countdown, Limited Offer, Social Proof, CTA","Events launches limited offers",Urgency scarcity FOMO conversion drivers
+Multi-Step Form,Progressive form with multiple steps and progress indicator,"Hero, Multi-Step Form, Progress Bar, Confirmation","Lead generation onboarding",Reduce friction step-by-step completion
+Case Study,Learning-focused layout with problem-solution-results,"Hero, Problem, Solution, Results, CTA","B2B services consulting",Evidence-based conversion detailed proof
+Waitlist/Early Access,Exclusivity-focused with signup for access,"Hero with Exclusivity, Features Preview, Social Proof, Waitlist Form","New product launches beta access",Exclusivity FOMO early access benefits

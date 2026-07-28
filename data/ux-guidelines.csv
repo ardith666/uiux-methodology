@@ -1,0 +1,71 @@
+id,category,title,description,priority,do_dont
+accessibility-01,accessibility,Contrast Ratio,Text must have 4.5:1 contrast ratio against background for normal text 3:1 for large text,CRITICAL,do:use tools to verify contrast dont:rely on visual estimation
+accessibility-02,accessibility,Alt Text,Every image must have descriptive alt text or be marked decorative for screen readers,CRITICAL,do:describe image purpose dont:use file names as alt text
+accessibility-03,accessibility,Keyboard Navigation,All interactive elements must be reachable and operable via keyboard alone,CRITICAL,do:test with Tab key dont:rely only on mouse interaction
+accessibility-04,accessibility,Focus Indicators,Visible focus ring on all interactive elements never remove without replacement,CRITICAL,do:use visible focus styles dont:use outline:none without alternative
+accessibility-05,accessibility,Semantic HTML,Use proper HTML elements header nav main article section footer,CRITICAL,do:use semantic elements dont:use divs for everything
+accessibility-06,accessibility,ARIA Labels,Add aria-labels to icon buttons and controls without visible text,CRITICAL,do:add aria-label to icon buttons dont:leave controls unlabeled
+accessibility-07,accessibility,Color Independence,Never use color alone to convey information use icons text or patterns,CRITICAL,do:use multiple indicators dont:rely on color only for status
+accessibility-08,accessibility,Form Labels,Every form input must have an associated label visible or via aria-label,CRITICAL,do:use explicit labels dont:use placeholder as only label
+accessibility-09,accessibility,Reduced Motion,Respect prefers-reduced-motion media query for animations,CRITICAL,do:provide reduced motion alternative dont:force animations on all users
+accessibility-10,accessibility,Heading Hierarchy,Maintain logical heading hierarchy h1 through h6 without skipping levels,HIGH,do:follow sequential order dont:skip heading levels for styling
+touch-01,touch,Minimum Touch Target,Interactive elements minimum 44x44px touch target size,CRITICAL,do:ensure 44px minimum dont:make buttons too small
+touch-02,touch,Touch Spacing,Minimum 8px spacing between adjacent touch targets,CRITICAL,do:space elements adequately dont:place buttons too close
+touch-03,touch,Loading Feedback,Show loading indicators for actions taking more than 300ms,HIGH,do:show spinners or progress dont:leave users guessing
+touch-04,touch,Gesture Alternatives,Provide button alternatives for complex swipe or pinch gestures,HIGH,do:offer tap alternatives dont:rely on gestures only
+touch-05,touch,Hover State,Provide hover states for desktop but dont rely on hover for critical info,MEDIUM,do:add hover feedback dont:hide essential info behind hover
+touch-06,touch,Haptic Feedback,Use subtle haptic feedback for important mobile interactions,LOW,do:use vibration for confirmations dont:overuse haptic feedback
+performance-01,performance,Image Optimization,Use WebP or AVIF format with responsive srcset for all images,HIGH,do:use modern image formats dont:serve uncompressed images
+performance-02,performance,Lazy Loading,Implement lazy loading for below-fold images and heavy components,HIGH,do:use loading=lazy dont:load everything upfront
+performance-03,performance,Layout Stability,Reserve space for dynamic content to prevent layout shift CLS < 0.1,HIGH,do:set explicit dimensions dont:load content without placeholder space
+performance-04,performance,Font Loading,Use font-display:swap and preload critical fonts,HIGH,do:use font-display swap dont:block rendering for fonts
+performance-05,performance,Code Splitting,Split JavaScript bundles and load code on demand,MEDIUM,do:use dynamic imports dont:bundle everything together
+performance-06,performance,Critical CSS,Inline critical above-fold CSS and defer non-critical,MEDIUM,do:inline critical styles dont:load all CSS upfront
+performance-07,performance,Debounce Throttle,Debounce scroll resize and input handlers,MEDIUM,do:debounce event handlers dont:fire handlers on every event
+performance-08,performance,Virtual Lists,Use virtual scrolling for lists with more than 100 items,MEDIUM,do:virtualize long lists dont:render all items at once
+style-01,style,Style Consistency,Maintain consistent design language across all pages and components,HIGH,do:follow design system dont:mix different styles randomly
+style-02,style,SVG Icons,Use SVG icons from Heroicons or Lucide never emoji as icons,HIGH,do:use SVG icon libraries dont:use emoji as functional icons
+style-03,style,Design Tokens,Use design tokens for colors spacing typography never hardcoded values,HIGH,do:reference CSS variables dont:use raw hex or px values
+style-04,style,Visual Hierarchy,Establish clear visual hierarchy with size weight and color,HIGH,do:use typography scale dont:make all text same size
+style-05,style,White Space,Use generous white space to reduce cognitive load,MEDIUM,do:provide breathing room dont:clutter interfaces
+style-06,style,Responsive Breakpoints,Build mobile-first with breakpoints at 375px 768px 1024px 1440px,HIGH,do:start with mobile styles dont:build desktop first
+layout-01,layout,Mobile First,Design for mobile screens first then enhance for larger screens,HIGH,do:write mobile CSS first dont:override desktop with mobile
+layout-02,layout,No Horizontal Scroll,Content must never cause horizontal scrolling on any screen size,HIGH,do:test on small screens dont:use fixed width containers
+layout-03,layout,Viewport Meta,Always include viewport meta tag with user-scalable=yes,HIGH,do:allow zoom dont:disable user scaling
+layout-04,layout,CSS Grid Flexbox,Use CSS Grid for 2D layouts Flexbox for 1D component layouts,MEDIUM,do:choose appropriate layout dont:use floats for layout
+layout-05,layout,Container Widths,Use max-width containers with responsive padding,MEDIUM,do:constrain content width dont:let content stretch full screen
+layout-06,layout,Sticky Headers,Use sticky navigation for quick access to main actions,MEDIUM,do:make nav accessible dont:hide navigation on scroll
+typography-01,typography,Base Font Size,Set base body font size to 16px minimum for readability,HIGH,do:use 16px base dont:use smaller than 14px body text
+typography-02,typography,Line Height,Use 1.5 line height for body text 1.2 for headings,HIGH,do:provide adequate line height dont:use tight line spacing
+typography-03,typography,Line Length,Keep body text lines between 50-75 characters for readability,MEDIUM,do:constrain line length dont:make lines too long
+typography-04,typography,Font Pairing,Maximum 2 font families per project one for headings one for body,MEDIUM,do:limit font variety dont:use more than 2 fonts
+typography-05,typography,Type Scale,Use consistent type scale with clear hierarchy,MEDIUM,do:follow type scale dont:randomly size text
+typography-06,typography,Dark Mode Text,Ensure text remains readable in dark mode with proper contrast,HIGH,do:test both modes dont:forget dark mode contrast
+color-01,color,Semantic Tokens,Use semantic color tokens like primary secondary accent not raw hex,HIGH,do:use CSS variables dont:hardcode colors in components
+color-02,color,Dark Mode Contrast,Test all color combinations in both light and dark modes,HIGH,do:verify both themes dont:assume colors work everywhere
+color-03,color,Accessible Pairs,Choose color combinations that work for color-blind users,MEDIUM,do:test with color blindness tools dont:rely on red-green only
+color-04,color,Color Limiting,Use maximum 5-6 colors in a palette for consistency,MEDIUM,do:limit palette size dont:use too many colors
+color-05,color,Status Colors,Use consistent status colors green success red error yellow warning,MEDIUM,do:use standard status colors dont:reinvent status indicators
+animation-01,animation,Duration Keep animation duration between 150ms and 300ms for natural feel,MEDIUM,do:use 150-300ms dont:make animations too slow or instant
+animation-02,animation,Easing,Use ease-out for entering elements ease-in for exiting elements,MEDIUM,do:use appropriate easing dont:use linear for everything
+animation-03,animation,Reduced Motion,Always provide alternative for users who prefer reduced motion,HIGH,do:respect prefers-reduced-motion dont:force animations
+animation-04,animation,Purpose,Motion should convey meaning or guide attention not decorative,MEDIUM,do:animate with purpose dont:add animation for its own sake
+animation-05,animation,Exit Speed,Exit animations should be faster than enter animations typically 0.75x,MEDIUM,do:make exits faster dont:use same duration for enter exit
+animation-06,animation,Spatial Continuity,Animated elements should move in direction consistent with user action,MEDIUM,do:maintain spatial logic dont:animate randomly
+forms-01,forms,Visible Labels,Form inputs must have visible labels not just placeholder text,HIGH,do:show labels above inputs dont:use placeholder as only label
+forms-02,forms,Error Placement,Show validation errors near the relevant form field,HIGH,do:place errors inline dont:show all errors at form top
+forms-03,forms,Helper Text,Provide helper text for complex fields with format examples,MEDIUM,do:add helper text dont:leave users guessing format
+forms-04,forms,Progressive Disclosure,Show essential fields first reveal additional fields as needed,MEDIUM,do:group related fields dont:overwhelm with all fields upfront
+forms-05,forms,Input Types,Use correct input types email tel url number for better mobile UX,MEDIUM,do:use proper input types dont:text for everything
+forms-06,forms,Auto Focus,Auto-focus first input on form pages but avoid on modal open,MEDIUM,do:focus first field dont:auto-focus when modal opens
+navigation-01,navigation,Predictable Back,Browser back button must always work correctly,MHIGH,do:test back button dont:break browser history
+navigation-02,navigation,Bottom Nav Limit,Mobile bottom navigation maximum 5 items,HIGH,do:limit nav items dont:overload bottom navigation
+navigation-03,navigation,Deep Linking,All important pages must be accessible via direct URL,MHIGH,do:enable deep links dont:require sequential navigation
+navigation-04,navigation,Breadcrumbs,Show breadcrumbs for nested navigation deeper than 2 levels,MEDIUM,do:add breadcrumbs dont:leave users lost in hierarchy
+navigation-05,navigation,Active State,Clearly indicate current page or section in navigation,MEDIUM,do:highlight active item dont:leave navigation ambiguous
+navigation-06,navigation,Search,Provide search functionality for content-heavy sites,MEDIUM,do:add search for large sites dont:make users browse everything
+charts-01,charts,Chart Legends,Always include legends for charts with multiple data series,MEDIUM,do:add clear legends dont:assume colors are self-explanatory
+charts-02,charts,Tooltips,Add interactive tooltips with detailed values on hover,MEDIUM,do:show detailed values on hover dont:hide exact numbers
+charts-03,charts,Accessible Colors,Use color-blind friendly palettes for chart data series,MEDIUM,do:test color combinations dont:rely on red-green differentiation
+charts-04,charts,Data Labels,Add data labels for important points to improve readability,MEDIUM,do:label key data points dont:force users to estimate values
+charts-05,charts,Responsive Charts,Make charts responsive and readable on all screen sizes,MEDIUM,do:test on mobile dont:assume desktop-only viewing
