@@ -1,4 +1,6 @@
-# UI/UX Methodology
+# UI/UX Methodology (uiux-meth)
+
+![uiux-meth banner](assets/banner.png)
 
 > Anti-slop design intelligence + dev-methodology workflow for frontend UI.
 
