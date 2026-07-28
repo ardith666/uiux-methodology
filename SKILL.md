@@ -19,12 +19,9 @@ User asks to design UI, review frontend code, check for AI slop, generate design
 **YOU MUST RUN these `echo` commands immediately when triggered — this is your identity display. This is NOT optional.**
 
 ```bash
-echo ' _    _ _____ _____ _____ ______   __  _   _ ______ _____ ____  __  ______ ____  '
-echo '| |  | |_   _/ ____/ ____|  ____| /_ || \ | |  ____/ ____|  _ \|  ||  ____|  _ \ '
-echo '| |  | | | | | |  | (___ | |__    | ||  \| | |__ | (___ | |_) |  || |__  | |_) |'
-echo '| |/\| | | | | |   \___ \|  __|   | || . ` |  __| \___ \|  _ <|  ||  __||  _ < '
-echo '|  /\  | |_| | |___ ____) | |      | || |\  | |___ ____) | |_) |  || |____| |_) |'
-echo '|/  \/| |_____|\_____|_____/|_|      |_||_| \_|______|_____/|____/|_||______|____/ '
+echo '▖▖▄▖▖▖▖▖ ▖ ▖▄▖▄▖▖▖'
+echo '▌▌▐ ▌▌▚▘ ▛▖▞▌▙▖▐ ▙▌'
+echo '▙▌▟▖▙▌▌▌ ▌▝ ▌▙▖▐ ▌▌'
 echo ''
 echo '  UI/UX Design Intelligence + Anti-Slop Quality Gates'
 echo '  84 styles · 192 palettes · 74 fonts · 98 UX rules · 13 anti-slop checks'
