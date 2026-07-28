@@ -63,8 +63,9 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 ### Phase 1: Ask
 
 - Understand project context, constraints, existing design system
+- **Check for DESIGN.md in project root** — if exists, load as brand context
 - Anti-slop gate: "Does this project have a design system? What's the accent token? Any serif fonts?"
-- Load brand context if available
+- Load brand context if available (brand-guidelines.md, DESIGN.md, or brand-context.md)
 - Extract: product type, target audience, style keywords, stack
 
 ### Phase 2: Spec
@@ -83,6 +84,7 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 - Choose ONE bold visual move (the 20% distinctive)
 - Plan token architecture (3-layer)
 - Plan brand voice + microcopy
+- **Generate or update DESIGN.md using templates/DESIGN.md** — one file that any AI agent can read
 - Anti-slop gate: "What makes this NOT look like AI generated?"
 - Break into tasks with dependencies
 
@@ -113,6 +115,7 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 
 - Log design decisions
 - Save anti-slop patterns that worked
+- **Update DESIGN.md in project root** with new decisions
 - Update brand guidelines if needed
 - Write to `knowledge/KNOWLEDGE.md`
 

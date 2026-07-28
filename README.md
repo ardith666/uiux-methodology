@@ -173,10 +173,13 @@ flowchart TD
     START([User Request]) --> ASK
 
     subgraph ASK["Phase 1: Ask"]
-        A1[Understand project context] --> A2{Has design system?}
+        A1[Understand project context] --> BD{Has DESIGN.md?}
+        BD -->|Yes| BD_LOAD[Load DESIGN.md as brand context]
+        BD -->|No| A2{Has design system?}
         A2 -->|Yes| A3[Load existing tokens + brand]
         A2 -->|No| A4[Define from scratch]
-        A3 --> A5[Extract: product type, audience, stack]
+        BD_LOAD --> A5[Extract: product type, audience, stack]
+        A3 --> A5
         A4 --> A5
     end
 
@@ -196,7 +199,8 @@ flowchart TD
     subgraph PLAN["Phase 3: Plan"]
         P1[Choose ONE bold visual move — the 20%] --> P2[Plan token architecture — 3-layer]
         P2 --> P3[Plan brand voice + microcopy]
-        P3 --> P4[Anti-slop gate: What makes this NOT AI?]
+        P3 --> P4[Generate DESIGN.md using templates/DESIGN.md]
+        P4 --> P5[Anti-slop gate: What makes this NOT AI?]
     end
 
     PLAN --> IMPL
@@ -220,14 +224,15 @@ flowchart TD
 
     subgraph REVIEW["Phase 6: Review"]
         R1[Final anti-slop audit] --> R2[80/20 balance check]
-        R2 --> R3[Brand consistency]
+        R2 --> R3[Brand consistency against DESIGN.md]
     end
 
     REVIEW --> KNOW
 
     subgraph KNOW["Phase 7: Knowledge"]
-        K1[Log design decisions] --> K2[Save anti-slop patterns]
-        K2 --> K3[Update brand guidelines]
+        K1[Log design decisions] --> K2[Update DESIGN.md with new decisions]
+        K2 --> K3[Save anti-slop patterns]
+        K3 --> K4[Update brand guidelines]
     end
 
     KNOW --> DONE([Ship It])
@@ -490,6 +495,7 @@ uiux-methodology/
 │   ├── token-architecture.md
 │   └── anti-slop-rules.md
 └── templates/
+    ├── DESIGN.md                        # Design system doc for AI agents
     ├── brand-guidelines-starter.md
     ├── design-tokens-starter.json
     └── anti-slop-checklist.md
