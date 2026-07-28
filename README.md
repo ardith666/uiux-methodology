@@ -39,16 +39,13 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Install
 
-### Option A: Global (recommended)
+### Option A: Global (shared — all agents)
 
-Available to all projects and agents on this machine.
+`~/.agents/skills/` adalah direktori shared. Semua agent (Pi, OpenClaw, dll) pakai path ini.
 
 ```bash
-# Clone or copy to OpenClaw skills directory
-cp -r uiux-methodology ~/.openclaw/workspace/skills/
-
-# Or if using ClawHub
-clawhub install uiux-methodology
+mkdir -p ~/.agents/skills
+cp -r uiux-methodology ~/.agents/skills/
 ```
 
 ### Option B: Per-Project
