@@ -13,6 +13,7 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 ## Table of Contents
 
 - [What It Is](#what-it-is)
+- [Fable Design Loop](#fable-design-loop)
 - [Install](#install)
 - [Setup (API Keys)](#setup-api-keys)
 - [Workflow](#workflow)
@@ -34,6 +35,33 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 | **Brand Identity** | Voice, messaging, visual language extraction from brand guidelines |
 | **Banner Design** | Image generation with anti-slop prompts + Unsplash fallback |
 | **Anti-Slop Validation** | 13 automated checks (P0/P1/P2) to catch AI-generated boilerplate |
+| **Fable Evidence Loop** | verify by observation — render + lihat, bukan cuma script pass |
+
+---
+
+## Fable Design Loop
+
+Adapted from [fable-method](https://github.com/Sahir619/fable-method): verifikasi = **render, bukan cuma script**. Script anti-slop cek kode; mata ngecek hasil. Dua-duanya wajib.
+
+```
+ask ─► 0 classify ─► 1 define done ─► 2 evidence ─► 3 decide ─► 4 act ─► 5 verify ─► 6 report
+```
+
+| Step | Isi (versi design) | Hook ke phase |
+|---|---|---|
+| 0 classify | question/assessment ("review", "menurutmu") = findings doang, jangan ubah. Task ("buat", "redesign") = ubah + verify | Sebelum Phase 1 |
+| 1 define done | observasi konkret: anti-slop strict pass, render bener di 375/768/1024/1440, konsisten sama `DESIGN.md` | Phase 1-2 |
+| 2 evidence | buka `knowledge/DESIGN.md` + komponen existing + brand context DULU, baru desain. Jangan desain dari memory. BM25 search = evidence | Phase 2 |
+| 3 decide | satu arah desain; alternatif disebut 1 baris kenapa kalah | Phase 3 |
+| 4 act | INTENT gate versi design, smallest change | Phase 4 |
+| 5 verify | **render + lihat sendiri**, bukan cuma anti-slop script pass | Phase 5 |
+| 6 report | outcome-first + artifact gate | Phase 6 |
+
+**Triviality gate:** satu file, <~10 baris, no visual/behavior baru, tau persis apa yang diubah → kerjakan + render 1 breakpoint + lapor 2 kalimat. Selain itu full loop.
+
+**INTENT gate:** sebelum ubah visual: `INTENT: design does <X>; anti-slop check expects <Y>; brand guidelines say <Z>`. Wajib buka `knowledge/DESIGN.md` / brand guidelines buat slot Z. X/Y/Z gak cocok → jangan edit, itu temuannya. Authority order: user > brand guidelines > anti-slop check > design saat ini.
+
+**Artifact gate:** `INTENT:` verbatim kalau visual berubah; `AUTH: user said "..."` kalau aksi outward (publish/deploy); `PENDING:` kalau follow-up di-skip. Twin check gak perlu terpisah — `anti-slop-check.py` scan seluruh project = twin check bawaan.
 
 ---
 
@@ -170,9 +198,11 @@ The skill follows **dev-methodology** as its backbone, with **anti-slop quality 
 
 ```mermaid
 flowchart TD
-    START([User Request]) --> ASK
+    START([User Request]) --> TRIV{Trivial?<br/>1 file, <10 baris,<br/>no visual baru}
+    TRIV -->|yes| DOIT["Kerjakan + render 1 breakpoint<br/>+ lapor 2 kalimat"]
+    TRIV -->|no| ASK
 
-    subgraph ASK["Phase 1: Ask"]
+    subgraph ASK["Phase 1: Ask — classify + define done"]
         README["Read knowledge/README.md
         (entry point — WAJIB)"] --> BD{Has knowledge/?}
         BD -->|Yes| CKNOW[Read knowledge/KNOWLEDGE.md]
@@ -191,7 +221,7 @@ flowchart TD
 
     ASK --> SPEC
 
-    subgraph SPEC["Phase 2: Spec"]
+    subgraph SPEC["Phase 2: Spec — evidence dulu"]
         S1[Define scope: landing / ecommerce / dashboard] --> S2[Anti-slop spec]
         S2 --> S3[accent_token — NOT hardcoded indigo]
         S3 --> S4[font_display — serif or sans?]
@@ -202,7 +232,7 @@ flowchart TD
 
     SPEC --> PLAN
 
-    subgraph PLAN["Phase 3: Plan"]
+    subgraph PLAN["Phase 3: Plan — satu arah desain"]
         P1[Choose ONE bold visual move — the 20%] --> P2[Plan token architecture — 3-layer]
         P2 --> P3[Plan brand voice + microcopy]
         P3 --> P4[Generate knowledge/DESIGN.md
@@ -214,7 +244,7 @@ flowchart TD
 
     PLAN --> IMPL
 
-    subgraph IMPL["Phase 4: Implement"]
+    subgraph IMPL["Phase 4: Implement — INTENT gate"]
         I1[generate-tokens.py → tokens.css] --> I2[inject-brand-context.py]
         I2 --> I3[Build components using tokens]
         I3 --> I4[generate.sh — images if needed]
@@ -222,18 +252,21 @@ flowchart TD
 
     IMPL --> TEST
 
-    subgraph TEST["Phase 5: Test"]
+    subgraph TEST["Phase 5: Test — verify by observation"]
         T1[anti-slop-check.py — P0/P1/P2] --> T2{P0 violations?}
         T2 -->|Yes| T3[Fix P0 sins first]
         T3 --> T1
         T2 -->|No| T4[validate-tokens.py]
+        T4 --> T5["RENDER + lihat sendiri<br/>375 / 768 / 1024 / 1440"]
+        T5 -->|visual broken| T1
     end
 
     TEST --> REVIEW
 
-    subgraph REVIEW["Phase 6: Review"]
+    subgraph REVIEW["Phase 6: Review — outcome-first"]
         R1[Final anti-slop audit] --> R2[80/20 balance check]
         R2 --> R3[Brand consistency against knowledge/DESIGN.md]
+        R3 --> R4[Artifact gate: INTENT/AUTH/PENDING]
     end
 
     REVIEW --> KNOW
@@ -472,6 +505,8 @@ Three 1-10 sliders to tune output:
 - [ ] Brand voice consistent across copy
 - [ ] Accent token used, not hardcoded indigo
 - [ ] Display font loaded and applied via tokens
+- [ ] **Rendered + dilihat sendiri di 375/768/1024/1440** (bukan cuma script pass)
+- [ ] **INTENT line ada kalau visual berubah** (artifact gate)
 ```
 
 ---
@@ -519,6 +554,7 @@ uiux-methodology/
 
 ## Priority Rules
 
+0. Explicit user statement > brand guidelines > anti-slop check > design saat ini (INTENT authority order)
 1. Anti-slop P0 sins override everything — always fix first
 2. Brand guidelines override design search results
 3. Existing project design system overrides skill recommendations

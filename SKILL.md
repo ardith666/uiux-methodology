@@ -55,6 +55,36 @@ Aim for **~80% proven patterns + ~20% distinctive choice**. The 20% lives in:
 
 If someone can identify your product from a screenshot — you have soul. Otherwise you shipped a template.
 
+## Fable Design Loop
+
+Tugas non-trivial dijalankan lewat loop fable (dari [fable-method](https://github.com/Sahir619/fable-method)), diadaptasi buat design: verifikasi = **render, bukan cuma script**. Script anti-slop cek kode; mata ngecek hasil. Dua-duanya wajib.
+
+```
+ask ─► 0 classify ─► 1 define done ─► 2 evidence ─► 3 decide ─► 4 act ─► 5 verify ─► 6 report
+```
+
+| Step | Isi (versi design) | Hook ke phase |
+|---|---|---|
+| 0 classify | question/assessment ("review", "menurutmu") = findings doang, jangan ubah. Task ("buat", "redesign") = ubah + verify | Sebelum Phase 1 |
+| 1 define done | observasi konkret: anti-slop strict pass, render bener di 375/768/1024/1440, konsisten sama `DESIGN.md` | Phase 1-2 |
+| 2 evidence | buka `knowledge/DESIGN.md` + komponen existing + brand context DULU, baru desain. Jangan desain dari memory. BM25 search = evidence | Phase 2 |
+| 3 decide | satu arah desain; alternatif disebut 1 baris kenapa kalah | Phase 3 |
+| 4 act | INTENT gate versi design (di bawah), smallest change | Phase 4 |
+| 5 verify | **render + lihat sendiri**, bukan cuma anti-slop script pass | Phase 5 |
+| 6 report | outcome-first + artifact gate | Phase 6 |
+
+### Triviality Gate (jalan duluan)
+
+Task trivial kalau SEMUA ini true: satu file, <~10 baris berubah, gak ada behavior/visual baru, dan udah tau persis apa yang diubah tanpa searching (ganti 1 token warna, tweak padding). Kalau trivial: kerjakan, render cek 1 breakpoint, lapor 1-2 kalimat. Selain itu — full loop.
+
+### INTENT Gate (versi design)
+
+Sebelum ubah behavior/visual: `INTENT: design does <X>; anti-slop check expects <Y>; brand guidelines say <Z>`. Wajib beneran buka `knowledge/DESIGN.md` / brand guidelines buat isi slot Z. X/Y/Z gak cocok → jangan edit dulu: ketidakcocokan itu temuannya. Authority order: explicit user statement > brand guidelines > anti-slop check > design saat ini.
+
+### Artifact Gate (laporan)
+
+`INTENT:` muncul verbatim kalau behavior/visual berubah; `AUTH: user said "..."` kalau aksi outward (publish/deploy/upload asset publik) diambil; `PENDING:` kalau follow-up prescribed sengaja gak diambil. Twin check gak perlu terpisah — `anti-slop-check.py` scan seluruh project = twin check bawaan.
+
 ## Workflow (dev-methodology backbone)
 
 ### Phase 1: Ask
@@ -69,6 +99,8 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 
 ### Phase 2: Spec
 
+- **Define done** (Step 1): observasi konkret — "anti-slop strict pass, render bener di 375/768/1024/1440, konsisten sama `DESIGN.md`". Bukan "udah keliatan bagus"
+- **Evidence dulu** (Step 2): buka `knowledge/DESIGN.md`, komponen existing, brand context SEBELUM desain. Jangan desain dari memory
 - Define scope: landing page / ecommerce / dashboard / marketing
 - Anti-slop spec (MUST include):
   - `accent_token` — project accent color (NOT hardcoded indigo)
@@ -96,16 +128,18 @@ If someone can identify your product from a screenshot — you have soul. Otherw
 - Generate images with anti-slop prompts (scripts/generate.sh) when needed
 - Enforce: SVG icons only, no emoji, no hardcoded hex in components
 
-### Phase 5: Test
+### Phase 5: Test (Step 5 — verify by observation)
 
+- **Render + lihat sendiri**: screenshot/canvas di 4 breakpoint (375/768/1024/1440). Script pass tapi visual broken = verifikasi GAGAL
 - Run anti-slop-check.py (automated validation)
 - Check P0 sins: indigo, gradients, emoji icons, serif mismatch, left-border cards, invented metrics, filler copy
 - Check P1 tells: template skeleton, placeholder CDNs, hex outside :root, accent overuse
 - Check P2 polish: section anchors, decorative blobs, layout tension
 - Validate tokens (scripts/validate-tokens.py)
 
-### Phase 6: Review
+### Phase 6: Review (Step 6 — outcome-first)
 
+- **Artifact gate**: `INTENT:` line kalau visual berubah; `AUTH:` kalau aksi outward; `PENDING:` kalau follow-up di-skip
 - Final anti-slop audit
 - Check 80/20 balance
 - **Verify brand consistency against `knowledge/DESIGN.md`**
@@ -276,6 +310,7 @@ In `templates/`:
 
 ## Priority Rules
 
+0. Explicit user statement > brand guidelines > anti-slop check > design saat ini (INTENT authority order)
 1. Anti-slop P0 sins override everything — always fix first
 2. Brand guidelines override design search results
 3. Existing project design system overrides skill recommendations
