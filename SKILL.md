@@ -249,20 +249,49 @@ Profiles:
 
 ### Token Generator
 
+Takes a nested JSON config and flattens it into `:root` CSS variables.
+
 ```bash
-python3 scripts/generate-tokens.py --accent "#1a1a2e" --font-display "Playfair Display" --font-body "Inter" --output tokens.css
+python3 scripts/generate-tokens.py --config tokens.json -o tokens.css
+```
+
+Example `tokens.json`:
+```json
+{
+  "color": { "accent": "#1a1a2e", "bg": "#ffffff", "text": "#1e293b" },
+  "font": { "display": "Playfair Display", "body": "Inter" },
+  "radius": "8px"
+}
+```
+
+Generates:
+```css
+:root {
+  --color-accent: #1a1a2e;
+  --color-bg: #ffffff;
+  --color-text: #1e293b;
+  --font-display: Playfair Display;
+  --font-body: Inter;
+  --radius: 8px;
+}
 ```
 
 ### Token Validator
 
+Scans a directory for hardcoded hex/rgb color values that should be tokens.
+
 ```bash
-python3 scripts/validate-tokens.py tokens.css
+python3 scripts/validate-tokens.py --dir src/
+# optional: --ext ".css,.scss,.tsx,.jsx,.vue,.svelte" (default)
 ```
 
 ### Brand Context Injector
 
+Extracts brand context from `brand-guidelines.md` for prompt injection. Output goes to stdout; use `--json` for structured output.
+
 ```bash
-python3 scripts/inject-brand-context.py --brand docs/brand-guidelines.md --output brand-context.md
+python3 scripts/inject-brand-context.py --brand-file docs/brand-guidelines.md
+python3 scripts/inject-brand-context.py --brand-file docs/brand-guidelines.md --json
 ```
 
 ### Image Generation
