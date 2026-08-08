@@ -13,9 +13,11 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 ## Table of Contents
 
 - [What It Is](#what-it-is)
+- [Version](#version)
 - [Fable Design Loop](#fable-design-loop)
 - [Install](#install)
 - [Setup (API Keys)](#setup-api-keys)
+- [21st.dev MCP Registry](#21stdev-mcp-registry)
 - [Workflow](#workflow)
 - [The Seven Cardinal Sins](#the-seven-cardinal-sins)
 - [Scripts](#scripts)
@@ -30,12 +32,29 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 | Capability | What It Does |
 |---|---|
-| **Design Intelligence** | BM25 search across 84 styles, 192 product types, 192 palettes, 74 font pairings, 98 UX rules |
+| **Design Intelligence** | BM25 search across 84 styles, 192 product types, 192 palettes, 74 font pairings, 99 UX rules |
 | **Design System** | 3-layer token architecture (global → alias → component), auto-generate + validate |
 | **Brand Identity** | Voice, messaging, visual language extraction from brand guidelines |
 | **Banner Design** | Image generation with anti-slop prompts + Unsplash fallback |
 | **Anti-Slop Validation** | 13 automated checks (P0/P1/P2) to catch AI-generated boilerplate |
 | **Fable Evidence Loop** | verify by observation — render + lihat, bukan cuma script pass |
+| **Live Component Registry** | 12,000+ React components via 21st.dev MCP (`search`/`generate`) |
+
+---
+
+## Version
+
+Current: **2.0.0** (see `VERSION`)
+
+- 2.0.0 — Data expansion + new domains + auto-detection + 21st.dev MCP
+  - Data: styles 49→84, palettes 40→192, ux 70→99, charts 25, landing 34, gsap tiered 16
+  - New domains: `icons`, `ui-reasoning`, `app-interface`, `google-fonts`, `stacks/` (22 stacks)
+  - Engine: synonym normalization, auto domain detection, `--stack` flag
+  - `framer-motion-presets.csv` — 14 Framer Motion presets (React + vanilla code)
+  - `scripts/test_search.py` — 56-check self-test
+  - 21st.dev MCP integration (search/generate live components)
+
+For changes on other devices: `git pull` + `cat VERSION` to confirm parity.
 
 ---
 
@@ -187,6 +206,53 @@ Add `.env` to `.gitignore`:
 ```gitignore
 .env
 ```
+
+---
+
+## 21st.dev MCP Registry
+
+Live registry of **12,000+ React components / themes / templates** (shadcn registry format). Components are copied into your repo (not installed as a dependency) — you own the code. Integrated via MCP so the search/generate tools are available to the agent directly.
+
+### What Was Added
+
+| Area | Detail |
+|---|---|
+| **MCP server** | `21st` registered in OpenClaw (`mcp.servers`) → HTTP `https://21st.dev/api/mcp` |
+| **Tools** | 35 tools exposed via `bundle-mcp` — `search`, `generate`, `get_component`, `get_inspiration`, `search_logo`, `get_usage`, etc. |
+| **Workflow hook** | design phase: `search` for inspiration → implement phase: `generate`/component install → anti-slop check still runs after |
+
+### Getting an API Key
+
+1. Go to [21st.dev/mcp](https://21st.dev/mcp)
+2. Click **"Get an API key"** (browser login; free account)
+3. Copy the key from your profile/dashboard
+
+Free tier: catalog **search unlimited**, **2 component installs/day**. Paid: unlimited installs + AI credits for `generate`.
+
+### Deploying the Key (local only)
+
+**Never commit the key.** Store it in the OpenClaw environment file (outside the skill repo):
+
+```bash
+# 1. Add key to OpenClaw env (outside repo, chmod 600)
+echo 'TWENTY_FIRST_API_KEY=21st_sk_xxxx' >> ~/.openclaw/.env
+chmod 600 ~/.openclaw/.env
+
+# 2. Register the MCP server — reference the env var, do NOT inline the key
+openclaw mcp set 21st '{"url":"https://21st.dev/api/mcp","transport":"streamable-http","headers":{"x-api-key":"${TWENTY_FIRST_API_KEY}"}}'
+
+# 3. Verify
+openclaw mcp probe 21st   # expect: 35 tools
+```
+
+The `${TWENTY_FIRST_API_KEY}` is resolved from `~/.openclaw/.env` at runtime — the raw key never appears in `openclaw.json` or the repo. If you use a different env var name, update the reference accordingly.
+
+> Tip: in CI or scripts, you can pass `--api-key $TWENTY_FIRST_API_KEY` to the 21st CLI instead of the env file.
+
+### Notes
+
+- Legacy Magic MCP (`@21st-dev/magic`) is deprecated; use the 21st CLI/server above.
+- Sandboxed sessions: ensure `tools.sandbox.tools` allows `bundle-mcp` so the tools are visible.
 
 ---
 
@@ -465,13 +531,19 @@ python3 scripts/inject-brand-context.py \
 | File | Records | Description |
 |---|---|---|
 | `product-types.csv` | 192 | Product type profiles (SaaS, ecommerce, fintech, etc.) |
-| `ui-styles.csv` | 84 | UI style profiles (glassmorphism, brutalist, minimal, etc.) |
-| `color-palettes.csv` | 192 | Palette recommendations per mood/industry |
+| `ui-styles.csv` | 84 | UI style profiles (full specs, prompts, CSS keywords) |
+| `color-palettes.csv` | 192 | Palettes with full token set (on-primary, card, muted, border, ring) |
 | `font-pairings.csv` | 74 | Typography pairings (display + body) |
-| `landing-patterns.csv` | 34 | Landing page section structures |
-| `ux-guidelines.csv` | 98 | UX rules across 22 tech stacks |
-| `chart-types.csv` | 25 | Chart/data visualization recommendations |
-| `gsap-presets.csv` | 16 | GSAP animation presets |
+| `google-fonts.csv` | 1900+ | Google Fonts (popularity, variable axes, subsets, URLs) |
+| `landing-patterns.csv` | 34 | Landing page structures + CTA strategy |
+| `ux-guidelines.csv` | 99 | UX rules with do/don't + code examples |
+| `ui-reasoning.csv` | 161 | Product-type decision rules (pattern, style, anti-patterns) |
+| `app-interface.csv` | 30 | Mobile app guidelines (iOS/Android/RN) |
+| `icons.csv` | 105 | Icon recommendations with import code (Phosphor/Lucide/Heroicons) |
+| `chart-types.csv` | 25 | Chart recommendations (a11y notes, thresholds, libraries) |
+| `gsap-presets.csv` | 16 | GSAP presets by intensity tier (subtle/standard/complex) |
+| `framer-motion-presets.csv` | 14 | Framer Motion presets (React + vanilla code) |
+| `stacks/` | 22 files | Stack guidelines (react, nextjs, vue, svelte, flutter, …) |
 
 ---
 

@@ -1,7 +1,8 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 98 UX guidelines across 22 tech stacks. Use when designing, building, or reviewing UI/UX."
+version: 2.0.0
+description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry. Use when designing, building, or reviewing UI/UX."
 ---
 
 # UI/UX Methodology (uiux-meth)
@@ -212,11 +213,16 @@ Three 1-10 sliders to tune output:
 | Style options | `--domain style` | `"glassmorphism dark"` |
 | Color palettes | `--domain color` | `"entertainment vibrant"` |
 | Font pairings | `--domain typography` | `"playful modern"` |
+| Individual Google Fonts | `--domain fonts` | `"monospace technical"` |
 | UX best practices | `--domain ux` | `"animation accessibility"` |
+| UI decision reasoning | `--domain reasoning` | `"ecommerce conversion"` |
+| Icon recommendations + import code | `--domain icons` | `"navigation outline"` |
+| Mobile app guidelines (iOS/RN/Flutter) | `--domain app` | `"accessibility label"` |
+| Stack-specific guidelines | `--stack react` | `"layout state"` |
 | Landing page structure | `--domain landing` | `"hero social-proof"` |
 | Chart recommendations | `--domain chart` | `"real-time dashboard"` |
 | GSAP animations | `--domain gsap` | `"scroll reveal stagger"` |
-| Icon recommendations | `--domain icons` | `"navigation outline"` |
+| Framer Motion presets (React + vanilla) | `--domain framer` | `"hero stagger"` |
 
 ## Scripts
 
@@ -232,6 +238,9 @@ Options:
 - `--design-system` — Generate full design system output
 - `-p "Name"` — Project name for generated system
 - `--domain <type>` — Restrict search to specific domain
+`--stack <stack>` — Stack-specific guidelines (react, nextjs, vue, svelte, flutter, swiftui, react-native, shadcn, threejs, html-tailwind…)
+
+Domain is auto-detected when `--domain` is omitted (synonym-aware: `dark-mode` = `dark`, `e-commerce` = `ecommerce`, `a11y` = `accessibility`).
 - `--variance`, `--motion`, `--density` — Design dials (1-10)
 - `--persist` — Save design system to project root
 - `--output-dir` — Where to save (with --persist)
@@ -252,6 +261,14 @@ Profiles:
 ```bash
 python3 scripts/generate-tokens.py --accent "#1a1a2e" --font-display "Playfair Display" --font-body "Inter" --output tokens.css
 ```
+
+### Search Self-Check
+
+```bash
+python3 scripts/test_search.py
+```
+
+Verifies synonym normalization, auto domain detection, ranked results, stack search, design system dials, and data integrity across all CSV files.
 
 ### Token Validator
 
@@ -277,14 +294,19 @@ In `data/` relative to this SKILL.md:
 
 | File | Contents |
 |------|----------|
-| `product-types.csv` | 192 product type profiles |
-| `ui-styles.csv` | 84 UI style profiles |
-| `color-palettes.csv` | 192 palette recommendations |
+| `ui-styles.csv` | 84 UI style profiles (full specs, prompts, CSS keywords) |
+| `color-palettes.csv` | 192 palettes with full token set (on-primary, card, muted, border, ring…) |
 | `font-pairings.csv` | 74 typography pairings |
-| `landing-patterns.csv` | 34 landing page structures |
-| `ux-guidelines.csv` | 98 UX rules across 22 stacks |
-| `chart-types.csv` | 25 chart recommendations |
-| `gsap-presets.csv` | 16 GSAP animation presets |
+| `google-fonts.csv` | 1900+ Google Fonts (popularity, variable axes, subsets, URLs) |
+| `landing-patterns.csv` | 34 landing page structures with CTA strategy |
+| `ux-guidelines.csv` | 99 UX rules with do/don't + code examples |
+| `ui-reasoning.csv` | 161 product-type decision rules (pattern, style, anti-patterns) |
+| `app-interface.csv` | 30 mobile app guidelines (iOS/Android/RN) |
+| `icons.csv` | 105 icon recommendations with import code (Phosphor/Lucide/Heroicons…) |
+| `chart-types.csv` | 25 chart recommendations (a11y notes, thresholds, libraries) |
+| `gsap-presets.csv` | 16 GSAP presets by intensity tier (subtle/standard/complex) |
+| `framer-motion-presets.csv` | 14 Framer Motion presets (React + vanilla code) |
+| `stacks/` | 22 stack guideline files (react, nextjs, vue, svelte, flutter…) |
 
 ## Reference Docs
 
@@ -316,6 +338,41 @@ In `templates/`:
 3. Existing project design system overrides skill recommendations
 4. Token architecture enforces consistency
 5. User preference overrides all defaults
+
+## Component Registry (21st.dev MCP)
+
+21st.dev = registry 12.000+ React components / themes / templates (shadcn registry format, MIT-style copy-into-repo, bukan dependency). Tiap komponen punya prompt + `npx shadcn@latest add` command.
+
+### MCP Integration (OpenClaw)
+
+21st MCP = plain HTTP server, butuh API key (gratis, dari https://21st.dev/mcp):
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "21st": {
+        "url": "https://21st.dev/api/mcp",
+        "transport": "streamable-http",
+        "headers": { "x-api-key": "YOUR_21ST_API_KEY" }
+      }
+    }
+  }
+}
+```
+
+Atau CLI: `openclaw mcp set 21st '{"url":"https://21st.dev/api/mcp","headers":{"x-api-key":"KEY"}}'`.
+Tools MCP keluar sebagai plugin-owned tools (`bundle-mcp`); pastikan `tools.sandbox.tools` allowlist berisi `bundle-mcp` kalau sandbox aktif.
+
+Tool utama: `search` (catalog components/themes/templates), `generate` (UI generation dengan variants), `get_inspiration`, `search_logo`. Legacy Magic names (`21st_magic_component_builder`) masih diterima.
+
+### Penggunaan dalam workflow
+
+1. Design system phase: `search` 21st buat component inspiration yang match `DESIGN.md` tokens
+2. Implement phase: `generate` / shadcn add — komponen masuk repo, adapt ke design tokens project
+3. Anti-slop check tetap jalan setelah install (P0/P1/P2 scan)
+
+Catatan: 21st = paid registry (2 free copy/hari, membership buat unlimited). Data gak bisa di-port offline — beda dari ui-ux-pro-max (MIT CSV).
 
 ## Anti-Patterns to Avoid
 
