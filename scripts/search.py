@@ -34,6 +34,7 @@ STOP_WORDS = {
     'how', 'when', 'where', 'why', 'all', 'each', 'every', 'both',
     'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor',
     'too', 'very', 'just', 'about', 'above', 'after', 'again', 'also',
+    'font',  # noise in font-name corpus ("Cute Font", "X Font")
 }
 
 DATA_DIR = Path(__file__).resolve().parent.parent / 'data'
@@ -43,10 +44,88 @@ DATA_DIR = Path(__file__).resolve().parent.parent / 'data'
 def tokenize(text):
     if not text:
         return []
-    text = text.lower()
+    text = _normalize(text).lower()
     text = re.sub(r'[^a-z0-9\s\-]', ' ', text)
     tokens = text.split()
     return [t for t in tokens if t and t not in STOP_WORDS and len(t) > 1]
+
+# --- Synonym normalization (ported from ui-ux-pro-max core.py) ---
+_SYNONYMS = {
+    'e-commerce': 'ecommerce',
+    'dark-mode': 'dark',
+    'darkmode': 'dark',
+    'light-mode': 'light',
+    'lightmode': 'light',
+    'a11y': 'accessibility',
+    'nav': 'navigation',
+    'sign-up': 'signup',
+    'log-in': 'login',
+    'colour': 'color',
+    'colours': 'colors',
+    'customisation': 'customization',
+    'organisation': 'organization',
+    'behaviour': 'behavior',
+    'ux/ui': 'ux ui',
+}
+
+def _normalize(text):
+    for variant, canonical in _SYNONYMS.items():
+        text = text.replace(variant, canonical)
+    return text
+
+# --- Auto domain detection (ported from ui-ux-pro-max core.py) ---
+_DOMAIN_KEYWORDS = {
+    'color': ['color', 'palette', 'hex', '#', 'rgb', 'token', 'semantic', 'accent',
+              'destructive', 'muted', 'foreground'],
+    'chart': ['chart', 'graph', 'visualization', 'trend', 'bar', 'pie', 'scatter',
+              'heatmap', 'funnel'],
+    'landing': ['landing', 'page', 'cta', 'conversion', 'hero', 'testimonial',
+                'pricing', 'section'],
+    'reasoning': ['reasoning', 'decision', 'pattern for', 'product type'],
+    'icons': ['icon', 'icons', 'lucide', 'heroicons', 'symbol', 'glyph',
+              'pictogram', 'svg icon'],
+    'app': ['accessibility label', 'accessibilityrole', 'react native', 'flutter',
+            'mobile app', 'live region'],
+    'fonts': ['google font', 'font family', 'font weight', 'variable font', 'noto',
+              'font subset', 'monospace font', 'serif font', 'sans serif font',
+              'display font', 'handwriting font', 'font', 'serif', 'sans'],
+    'gsap': ['gsap', 'quickto', 'scrolltrigger', 'stagger', 'magnetic cursor',
+             'parallax', 'page transition', 'scroll reveal', 'scrollytelling',
+             'flip plugin', 'splittext', 'shimmer', 'skeleton loader'],
+    'framer': ['framer', 'motion', 'layoutid', 'animatepresence', 'whileinview',
+               'usemotionvalue', 'motion.div'],
+    'ux': ['ux', 'usability', 'accessibility', 'wcag', 'touch', 'scroll',
+           'animation', 'keyboard', 'navigation', 'mobile'],
+    'typography': ['font pairing', 'typography pairing', 'heading font', 'body font'],
+    'product': ['saas', 'ecommerce', 'portfolio', 'dashboard', 'startup', 'app'],
+    'style': ['style', 'design', 'ui', 'minimalism', 'glassmorphism', 'neumorphism',
+              'brutalism', 'dark mode', 'flat', 'aurora', 'prompt', 'css',
+              'implementation', 'variable', 'checklist', 'tailwind'],
+}
+
+_DOMAIN_TIEBREAK_ORDER = [
+    'ux', 'product', 'style', 'color', 'typography', 'fonts',
+    'chart', 'landing', 'icons', 'gsap', 'framer', 'reasoning', 'app',
+]
+
+def detect_domain(query):
+    """Auto-detect most relevant domain from query text."""
+    query_lower = _normalize(query.lower())
+    scores = {}
+    for domain, keywords in _DOMAIN_KEYWORDS.items():
+        total = 0.0
+        for kw in keywords:
+            if re.search(r'\b' + re.escape(kw) + r'\b', query_lower):
+                total += max(1, len(kw.split()))
+        scores[domain] = total
+    ranked = sorted(
+        scores.items(),
+        key=lambda item: (item[1], -_DOMAIN_TIEBREAK_ORDER.index(item[0])
+                          if item[0] in _DOMAIN_TIEBREAK_ORDER else -999),
+        reverse=True,
+    )
+    best_domain, best_score = ranked[0]
+    return best_domain if best_score > 0 else 'style'
 
 
 # --- CSV Loading ---
@@ -66,6 +145,8 @@ def get_all_domains():
     return [
         'product-types', 'ui-styles', 'color-palettes', 'font-pairings',
         'landing-patterns', 'ux-guidelines', 'chart-types', 'gsap-presets',
+        'framer-motion-presets', 'icons', 'ui-reasoning', 'app-interface',
+        'google-fonts',
     ]
 
 
@@ -154,8 +235,24 @@ DOMAIN_MAP = {
     'chart-types': 'chart-types',
     'gsap': 'gsap-presets',
     'animation': 'gsap-presets',
-    'icons': 'ui-styles',
+    'framer': 'framer-motion-presets',
+    'framer-motion': 'framer-motion-presets',
+    'icons': 'icons',
+    'reasoning': 'ui-reasoning',
+    'ui-reasoning': 'ui-reasoning',
+    'mobile': 'app-interface',
+    'app': 'app-interface',
+    'app-interface': 'app-interface',
+    'fonts': 'google-fonts',
+    'font': 'google-fonts',
+    'google-fonts': 'google-fonts',
+    'stack': 'stacks',
 }
+
+STACK_DIR = DATA_DIR / 'stacks'
+AVAILABLE_STACKS = sorted(
+    [p.stem for p in STACK_DIR.glob('*.csv')]
+) if STACK_DIR.exists() else []
 
 
 def search_domain(query, domain_name, max_results=5):
@@ -217,7 +314,7 @@ def generate_design_system(query, project_name=None, variance=5, motion=5, densi
     if motion <= 3:
         motion_bias = 'subtle micro-interactions, 150ms'
     elif motion >= 8:
-        motion_bias = 'complex choreography, GSAP ScrollTrigger, Flip'
+        motion_bias = 'complex choreography, Framer Motion variants + layout animations, GSAP ScrollTrigger'
     else:
         motion_bias = 'standard scroll/stagger, 200-300ms'
 
@@ -237,11 +334,23 @@ def generate_design_system(query, project_name=None, variance=5, motion=5, densi
 
     # Collect effects
     effects = set()
+    if style.get('effects_animation'):
+        effects.update(style['effects_animation'].split(','))
     if style.get('key_effects'):
         effects.update(style['key_effects'].split(';'))
 
     # UX guidelines (top 5)
     ux_top = [r[0] for r in ux_results[:5]]
+
+    # Font fallback via google-fonts when pair missing
+    if not font.get('heading_font'):
+        gf = bm25_search(tokens, load_domain('google-fonts'))
+        if gf:
+            top = gf[0][0]
+            font = {'heading_font': top.get('name', 'Inter'),
+                    'body_font': top.get('name', 'Inter'),
+                    'mood': top.get('keywords', '')[:120],
+                    'google_fonts_url': top.get('url', '')}
 
     # Build output
     ds = {
@@ -281,6 +390,15 @@ def generate_design_system(query, project_name=None, variance=5, motion=5, densi
     # Persist if requested
     return ds
 
+
+def search_stack(query, stack, max_results=5):
+    """Search stack-specific guidelines (data/stacks/<stack>.csv)."""
+    fp = STACK_DIR / f'{stack}.csv'
+    if not fp.exists():
+        return []
+    docs = load_domain(f'stacks/{stack}')
+    tokens = tokenize(query)
+    return bm25_search(tokens, docs)[:max_results]
 
 def format_ascii(ds):
     """Format design system as ASCII table."""
@@ -445,6 +563,8 @@ def main():
     parser = argparse.ArgumentParser(description='UI/UX Design Intelligence Search')
     parser.add_argument('query', help='Search query')
     parser.add_argument('--domain', '-d', help='Search specific domain')
+    parser.add_argument('--stack', '-s', choices=AVAILABLE_STACKS,
+                        help=f'Stack-specific search: {chr(10).join(sorted(AVAILABLE_STACKS))}')
     parser.add_argument('--design-system', action='store_true',
                         help='Generate complete design system')
     parser.add_argument('--json', action='store_true', help='Output as JSON')
@@ -485,17 +605,36 @@ def main():
             print(format_ascii(ds))
 
     else:
+        if not args.domain and not args.stack:
+            args.domain = detect_domain(args.query)
+        if args.stack:
+            results = search_stack(args.query, args.stack, args.n)
+            if not results:
+                print(f"No results for '{args.query}' in stack '{args.stack}'")
+            for i, (doc, score) in enumerate(results):
+                print(f"  {i+1}. [{score:.2f}] [{doc.get('category','')}] {doc.get('name','')}")
+                desc = doc.get('description', '')
+                if desc:
+                    print(f"     {desc[:100]}")
+                if doc.get('code_good'):
+                    print(f"     GOOD: {doc['code_good'][:100]}")
+            return
+
         if args.domain:
             results = search_domain(args.query, args.domain, args.n)
             if args.json:
-                output = [{'rank': i+1, 'score': round(score, 3), **doc}
-                          for i, (doc, score) in enumerate(results)]
+                output = []
+                for i, (doc, score) in enumerate(results):
+                    doc = dict(doc)
+                    doc.setdefault('name', doc.get('title') or
+                                   f"{doc.get('heading_font','')} / {doc.get('body_font','')}".strip(' /') or 'Unknown')
+                    output.append({'rank': i+1, 'score': round(score, 3), **doc})
                 print(json.dumps(output, indent=2))
             else:
                 if not results:
                     print(f"No results for '{args.query}' in domain '{args.domain}'")
                 for i, (doc, score) in enumerate(results):
-                    name = doc.get('name', doc.get('title', 'Unknown'))
+                    name = (doc.get('name') or doc.get('title') or f"{doc.get('heading_font','')} / {doc.get('body_font','')}" or 'Unknown')
                     print(f"  {i+1}. [{score:.2f}] {name}")
                     desc = doc.get('description', doc.get('best_for', ''))
                     if desc:
@@ -515,7 +654,7 @@ def main():
                     if hits:
                         print(f"\n--- {domain} ---")
                         for i, (doc, score) in enumerate(hits):
-                            name = doc.get('name', doc.get('title', 'Unknown'))
+                            name = (doc.get('name') or doc.get('title') or f"{doc.get('heading_font','')} / {doc.get('body_font','')}" or 'Unknown')
                             print(f"  {i+1}. [{score:.2f}] {name}")
 
 

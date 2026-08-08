@@ -1,71 +1,100 @@
-id,category,title,description,priority,do_dont
-accessibility-01,accessibility,Contrast Ratio,Text must have 4.5:1 contrast ratio against background for normal text 3:1 for large text,CRITICAL,do:use tools to verify contrast dont:rely on visual estimation
-accessibility-02,accessibility,Alt Text,Every image must have descriptive alt text or be marked decorative for screen readers,CRITICAL,do:describe image purpose dont:use file names as alt text
-accessibility-03,accessibility,Keyboard Navigation,All interactive elements must be reachable and operable via keyboard alone,CRITICAL,do:test with Tab key dont:rely only on mouse interaction
-accessibility-04,accessibility,Focus Indicators,Visible focus ring on all interactive elements never remove without replacement,CRITICAL,do:use visible focus styles dont:use outline:none without alternative
-accessibility-05,accessibility,Semantic HTML,Use proper HTML elements header nav main article section footer,CRITICAL,do:use semantic elements dont:use divs for everything
-accessibility-06,accessibility,ARIA Labels,Add aria-labels to icon buttons and controls without visible text,CRITICAL,do:add aria-label to icon buttons dont:leave controls unlabeled
-accessibility-07,accessibility,Color Independence,Never use color alone to convey information use icons text or patterns,CRITICAL,do:use multiple indicators dont:rely on color only for status
-accessibility-08,accessibility,Form Labels,Every form input must have an associated label visible or via aria-label,CRITICAL,do:use explicit labels dont:use placeholder as only label
-accessibility-09,accessibility,Reduced Motion,Respect prefers-reduced-motion media query for animations,CRITICAL,do:provide reduced motion alternative dont:force animations on all users
-accessibility-10,accessibility,Heading Hierarchy,Maintain logical heading hierarchy h1 through h6 without skipping levels,HIGH,do:follow sequential order dont:skip heading levels for styling
-touch-01,touch,Minimum Touch Target,Interactive elements minimum 44x44px touch target size,CRITICAL,do:ensure 44px minimum dont:make buttons too small
-touch-02,touch,Touch Spacing,Minimum 8px spacing between adjacent touch targets,CRITICAL,do:space elements adequately dont:place buttons too close
-touch-03,touch,Loading Feedback,Show loading indicators for actions taking more than 300ms,HIGH,do:show spinners or progress dont:leave users guessing
-touch-04,touch,Gesture Alternatives,Provide button alternatives for complex swipe or pinch gestures,HIGH,do:offer tap alternatives dont:rely on gestures only
-touch-05,touch,Hover State,Provide hover states for desktop but dont rely on hover for critical info,MEDIUM,do:add hover feedback dont:hide essential info behind hover
-touch-06,touch,Haptic Feedback,Use subtle haptic feedback for important mobile interactions,LOW,do:use vibration for confirmations dont:overuse haptic feedback
-performance-01,performance,Image Optimization,Use WebP or AVIF format with responsive srcset for all images,HIGH,do:use modern image formats dont:serve uncompressed images
-performance-02,performance,Lazy Loading,Implement lazy loading for below-fold images and heavy components,HIGH,do:use loading=lazy dont:load everything upfront
-performance-03,performance,Layout Stability,Reserve space for dynamic content to prevent layout shift CLS < 0.1,HIGH,do:set explicit dimensions dont:load content without placeholder space
-performance-04,performance,Font Loading,Use font-display:swap and preload critical fonts,HIGH,do:use font-display swap dont:block rendering for fonts
-performance-05,performance,Code Splitting,Split JavaScript bundles and load code on demand,MEDIUM,do:use dynamic imports dont:bundle everything together
-performance-06,performance,Critical CSS,Inline critical above-fold CSS and defer non-critical,MEDIUM,do:inline critical styles dont:load all CSS upfront
-performance-07,performance,Debounce Throttle,Debounce scroll resize and input handlers,MEDIUM,do:debounce event handlers dont:fire handlers on every event
-performance-08,performance,Virtual Lists,Use virtual scrolling for lists with more than 100 items,MEDIUM,do:virtualize long lists dont:render all items at once
-style-01,style,Style Consistency,Maintain consistent design language across all pages and components,HIGH,do:follow design system dont:mix different styles randomly
-style-02,style,SVG Icons,Use SVG icons from Heroicons or Lucide never emoji as icons,HIGH,do:use SVG icon libraries dont:use emoji as functional icons
-style-03,style,Design Tokens,Use design tokens for colors spacing typography never hardcoded values,HIGH,do:reference CSS variables dont:use raw hex or px values
-style-04,style,Visual Hierarchy,Establish clear visual hierarchy with size weight and color,HIGH,do:use typography scale dont:make all text same size
-style-05,style,White Space,Use generous white space to reduce cognitive load,MEDIUM,do:provide breathing room dont:clutter interfaces
-style-06,style,Responsive Breakpoints,Build mobile-first with breakpoints at 375px 768px 1024px 1440px,HIGH,do:start with mobile styles dont:build desktop first
-layout-01,layout,Mobile First,Design for mobile screens first then enhance for larger screens,HIGH,do:write mobile CSS first dont:override desktop with mobile
-layout-02,layout,No Horizontal Scroll,Content must never cause horizontal scrolling on any screen size,HIGH,do:test on small screens dont:use fixed width containers
-layout-03,layout,Viewport Meta,Always include viewport meta tag with user-scalable=yes,HIGH,do:allow zoom dont:disable user scaling
-layout-04,layout,CSS Grid Flexbox,Use CSS Grid for 2D layouts Flexbox for 1D component layouts,MEDIUM,do:choose appropriate layout dont:use floats for layout
-layout-05,layout,Container Widths,Use max-width containers with responsive padding,MEDIUM,do:constrain content width dont:let content stretch full screen
-layout-06,layout,Sticky Headers,Use sticky navigation for quick access to main actions,MEDIUM,do:make nav accessible dont:hide navigation on scroll
-typography-01,typography,Base Font Size,Set base body font size to 16px minimum for readability,HIGH,do:use 16px base dont:use smaller than 14px body text
-typography-02,typography,Line Height,Use 1.5 line height for body text 1.2 for headings,HIGH,do:provide adequate line height dont:use tight line spacing
-typography-03,typography,Line Length,Keep body text lines between 50-75 characters for readability,MEDIUM,do:constrain line length dont:make lines too long
-typography-04,typography,Font Pairing,Maximum 2 font families per project one for headings one for body,MEDIUM,do:limit font variety dont:use more than 2 fonts
-typography-05,typography,Type Scale,Use consistent type scale with clear hierarchy,MEDIUM,do:follow type scale dont:randomly size text
-typography-06,typography,Dark Mode Text,Ensure text remains readable in dark mode with proper contrast,HIGH,do:test both modes dont:forget dark mode contrast
-color-01,color,Semantic Tokens,Use semantic color tokens like primary secondary accent not raw hex,HIGH,do:use CSS variables dont:hardcode colors in components
-color-02,color,Dark Mode Contrast,Test all color combinations in both light and dark modes,HIGH,do:verify both themes dont:assume colors work everywhere
-color-03,color,Accessible Pairs,Choose color combinations that work for color-blind users,MEDIUM,do:test with color blindness tools dont:rely on red-green only
-color-04,color,Color Limiting,Use maximum 5-6 colors in a palette for consistency,MEDIUM,do:limit palette size dont:use too many colors
-color-05,color,Status Colors,Use consistent status colors green success red error yellow warning,MEDIUM,do:use standard status colors dont:reinvent status indicators
-animation-01,animation,Duration Keep animation duration between 150ms and 300ms for natural feel,MEDIUM,do:use 150-300ms dont:make animations too slow or instant
-animation-02,animation,Easing,Use ease-out for entering elements ease-in for exiting elements,MEDIUM,do:use appropriate easing dont:use linear for everything
-animation-03,animation,Reduced Motion,Always provide alternative for users who prefer reduced motion,HIGH,do:respect prefers-reduced-motion dont:force animations
-animation-04,animation,Purpose,Motion should convey meaning or guide attention not decorative,MEDIUM,do:animate with purpose dont:add animation for its own sake
-animation-05,animation,Exit Speed,Exit animations should be faster than enter animations typically 0.75x,MEDIUM,do:make exits faster dont:use same duration for enter exit
-animation-06,animation,Spatial Continuity,Animated elements should move in direction consistent with user action,MEDIUM,do:maintain spatial logic dont:animate randomly
-forms-01,forms,Visible Labels,Form inputs must have visible labels not just placeholder text,HIGH,do:show labels above inputs dont:use placeholder as only label
-forms-02,forms,Error Placement,Show validation errors near the relevant form field,HIGH,do:place errors inline dont:show all errors at form top
-forms-03,forms,Helper Text,Provide helper text for complex fields with format examples,MEDIUM,do:add helper text dont:leave users guessing format
-forms-04,forms,Progressive Disclosure,Show essential fields first reveal additional fields as needed,MEDIUM,do:group related fields dont:overwhelm with all fields upfront
-forms-05,forms,Input Types,Use correct input types email tel url number for better mobile UX,MEDIUM,do:use proper input types dont:text for everything
-forms-06,forms,Auto Focus,Auto-focus first input on form pages but avoid on modal open,MEDIUM,do:focus first field dont:auto-focus when modal opens
-navigation-01,navigation,Predictable Back,Browser back button must always work correctly,MHIGH,do:test back button dont:break browser history
-navigation-02,navigation,Bottom Nav Limit,Mobile bottom navigation maximum 5 items,HIGH,do:limit nav items dont:overload bottom navigation
-navigation-03,navigation,Deep Linking,All important pages must be accessible via direct URL,MHIGH,do:enable deep links dont:require sequential navigation
-navigation-04,navigation,Breadcrumbs,Show breadcrumbs for nested navigation deeper than 2 levels,MEDIUM,do:add breadcrumbs dont:leave users lost in hierarchy
-navigation-05,navigation,Active State,Clearly indicate current page or section in navigation,MEDIUM,do:highlight active item dont:leave navigation ambiguous
-navigation-06,navigation,Search,Provide search functionality for content-heavy sites,MEDIUM,do:add search for large sites dont:make users browse everything
-charts-01,charts,Chart Legends,Always include legends for charts with multiple data series,MEDIUM,do:add clear legends dont:assume colors are self-explanatory
-charts-02,charts,Tooltips,Add interactive tooltips with detailed values on hover,MEDIUM,do:show detailed values on hover dont:hide exact numbers
-charts-03,charts,Accessible Colors,Use color-blind friendly palettes for chart data series,MEDIUM,do:test color combinations dont:rely on red-green differentiation
-charts-04,charts,Data Labels,Add data labels for important points to improve readability,MEDIUM,do:label key data points dont:force users to estimate values
-charts-05,charts,Responsive Charts,Make charts responsive and readable on all screen sizes,MEDIUM,do:test on mobile dont:assume desktop-only viewing
+id,category,title,description,priority,do_dont,platform,code_good,code_bad
+navigation-1,Navigation,Smooth Scroll,Anchor links should scroll smoothly to target section,High,do:Use scroll-behavior: smooth on html element dont:Jump directly without transition,Web,html { scroll-behavior: smooth; },<a href='#section'> without CSS
+navigation-2,Navigation,Sticky Navigation,Fixed nav should not obscure content,Medium,do:Add padding-top to body equal to nav height dont:Let nav overlap first section content,Web,pt-20 (if nav is h-20),No padding compensation
+navigation-3,Navigation,Active State,Current page/section should be visually indicated,Medium,do:Highlight active nav item with color/underline dont:No visual feedback on current location,All,text-primary border-b-2,All links same style
+navigation-4,Navigation,Back Button,Users expect back to work predictably,High,do:Preserve navigation history properly dont:Break browser/app back button behavior,Mobile,history.pushState(),location.replace()
+navigation-5,Navigation,Deep Linking,URLs should reflect current state for sharing,Medium,do:Update URL on state/view changes dont:Static URLs for dynamic content,All,Use query params or hash,Single URL for all states
+navigation-6,Navigation,Breadcrumbs,Show user location in site hierarchy,Low,do:Use for sites with 3+ levels of depth dont:Use for flat single-level sites,Web,Home > Category > Product,Only on deep nested pages
+animation-7,Animation,Excessive Motion,Too many animations cause distraction and motion sickness,High,do:Animate 1-2 key elements per view maximum dont:Animate everything that moves,All,Single hero animation,animate-bounce on 5+ elements
+animation-8,Animation,Duration Timing,Animations should feel responsive not sluggish,Medium,do:Use 150-300ms for micro-interactions dont:Use animations longer than 500ms for UI,All,transition-all duration-200,duration-1000
+animation-9,Animation,Reduced Motion,Respect user's motion preferences,High,do:Check prefers-reduced-motion media query dont:Ignore accessibility motion settings,All,@media (prefers-reduced-motion: reduce),No motion query check
+animation-10,Animation,Loading States,Show feedback during async operations,High,do:Use skeleton screens or spinners dont:Leave UI frozen with no feedback,All,animate-pulse skeleton,Blank screen while loading
+animation-11,Animation,Hover vs Tap,Hover effects don't work on touch devices,High,do:Use click/tap for primary interactions dont:Rely only on hover for important actions,All,onClick handler,onMouseEnter only
+animation-12,Animation,Continuous Animation,Infinite animations are distracting,Medium,do:Use for loading indicators only dont:Use for decorative elements,All,animate-spin on loader,animate-bounce on icons
+animation-13,Animation,Transform Performance,Some CSS properties trigger expensive repaints,Medium,do:Use transform and opacity for animations dont:Animate width/height/top/left properties,Web,transform: translateY(),top: 10px animation
+animation-14,Animation,Easing Functions,Linear motion feels robotic,Low,do:Use ease-out for entering ease-in for exiting dont:Use linear for UI transitions,All,ease-out,linear
+layout-15,Layout,Z-Index Management,Stacking context conflicts cause hidden elements,High,do:Define z-index scale system (10 20 30 50) dont:Use arbitrary large z-index values,Web,z-10 z-20 z-50,z-[9999]
+layout-16,Layout,Overflow Hidden,Hidden overflow can clip important content,Medium,do:Test all content fits within containers dont:Blindly apply overflow-hidden,Web,overflow-auto with scroll,overflow-hidden truncating content
+layout-17,Layout,Fixed Positioning,Fixed elements can overlap or be inaccessible,Medium,do:Account for safe areas and other fixed elements dont:Stack multiple fixed elements carelessly,Web,Fixed nav + fixed bottom with gap,Multiple overlapping fixed elements
+layout-18,Layout,Stacking Context,New stacking contexts reset z-index,Medium,do:Understand what creates new stacking context dont:Expect z-index to work across contexts,Web,Parent with z-index isolates children,z-index: 9999 not working
+layout-19,Layout,Content Jumping,Layout shift when content loads is jarring,High,do:Reserve space for async content dont:Let images/content push layout around,Web,aspect-ratio or fixed height,No dimensions on images
+layout-20,Layout,Viewport Units,100vh can be problematic on mobile browsers,Medium,do:Use dvh or account for mobile browser chrome dont:Use 100vh for full-screen mobile layouts,Web,min-h-dvh or min-h-screen,h-screen on mobile
+layout-21,Layout,Container Width,Content too wide is hard to read,Medium,do:Limit max-width for text content (65-75ch) dont:Let text span full viewport width,Web,max-w-prose or max-w-3xl,Full width paragraphs
+touch-22,Touch,Touch Target Size,Small buttons are hard to tap accurately,High,do:Minimum 44x44px touch targets dont:Tiny clickable areas,Mobile,min-h-[44px] min-w-[44px],w-6 h-6 buttons
+touch-23,Touch,Touch Spacing,Adjacent touch targets need adequate spacing,Medium,do:Minimum 8px gap between touch targets dont:Tightly packed clickable elements,Mobile,gap-2 between buttons,gap-0 or gap-1
+touch-24,Touch,Gesture Conflicts,Custom gestures can conflict with system,Medium,do:Avoid horizontal swipe on main content dont:Override system gestures,Mobile,Vertical scroll primary,Horizontal swipe carousel only
+touch-25,Touch,Tap Delay,300ms tap delay feels laggy,Medium,do:Use touch-action CSS or fastclick dont:Default mobile tap handling,Mobile,touch-action: manipulation,No touch optimization
+touch-26,Touch,Pull to Refresh,Accidental refresh is frustrating,Low,do:Disable where not needed dont:Enable by default everywhere,Mobile,overscroll-behavior: contain,Default overscroll
+touch-27,Touch,Haptic Feedback,Tactile feedback improves interaction feel,Low,do:Use for confirmations and important actions dont:Overuse vibration feedback,Mobile,navigator.vibrate(10),Vibrate on every tap
+interaction-28,Interaction,Focus States,Keyboard users need visible focus indicators,High,do:Use visible focus rings on interactive elements dont:Remove focus outline without replacement,All,focus:ring-2 focus:ring-blue-500,outline-none without alternative
+interaction-29,Interaction,Hover States,Visual feedback on interactive elements,Medium,do:Change cursor and add subtle visual change dont:No hover feedback on clickable elements,Web,hover:bg-gray-100 cursor-pointer,No hover style
+interaction-30,Interaction,Active States,Show immediate feedback on press/click,Medium,do:Add pressed/active state visual change dont:No feedback during interaction,All,active:scale-95,No active state
+interaction-31,Interaction,Disabled States,Clearly indicate non-interactive elements,Medium,do:Reduce opacity and change cursor dont:Confuse disabled with normal state,All,opacity-50 cursor-not-allowed,Same style as enabled
+interaction-32,Interaction,Loading Buttons,Prevent double submission during async actions,High,do:Disable button and show loading state dont:Allow multiple clicks during processing,All,disabled={loading} spinner,Button clickable while loading
+interaction-33,Interaction,Error Feedback,Users need to know when something fails,High,do:Show clear error messages near problem dont:Silent failures with no feedback,All,Red border + error message,No indication of error
+interaction-34,Interaction,Success Feedback,Confirm successful actions to users,Medium,do:Show success message or visual change dont:No confirmation of completed action,All,Toast notification or checkmark,Action completes silently
+interaction-35,Interaction,Confirmation Dialogs,Prevent accidental destructive actions,High,do:Confirm before delete/irreversible actions dont:Delete without confirmation,All,Are you sure modal,Direct delete on click
+accessibility-36,Accessibility,Color Contrast,Text must be readable against background,High,do:Minimum 4.5:1 ratio for normal text dont:Low contrast text,All,#333 on white (7:1),#999 on white (2.8:1)
+accessibility-37,Accessibility,Color Only,Don't convey information by color alone,High,do:Use icons/text in addition to color dont:Red/green only for error/success,All,Red text + error icon,Red border only for error
+accessibility-38,Accessibility,Alt Text,Images need text alternatives,High,do:Descriptive alt text for meaningful images dont:Empty or missing alt attributes,All,alt='Dog playing in park',alt='' for content images
+accessibility-39,Accessibility,Heading Hierarchy,Screen readers use headings for navigation,Medium,do:Use sequential heading levels h1-h6 dont:Skip heading levels or misuse for styling,Web,h1 then h2 then h3,h1 then h4
+accessibility-40,Accessibility,ARIA Labels,Interactive elements need accessible names,High,do:Add aria-label for icon-only buttons dont:Icon buttons without labels,All,aria-label='Close menu',<button><Icon/></button>
+accessibility-41,Accessibility,Keyboard Navigation,All functionality accessible via keyboard,High,do:Tab order matches visual order dont:Keyboard traps or illogical tab order,Web,tabIndex for custom order,Unreachable elements
+accessibility-42,Accessibility,Screen Reader,Content should make sense when read aloud,Medium,do:Use semantic HTML and ARIA properly dont:Div soup with no semantics,All,<nav> <main> <article>,<div> for everything
+accessibility-43,Accessibility,Form Labels,Inputs must have associated labels,High,do:Use label with for attribute or wrap input dont:Placeholder-only inputs,All,<label for='email'>,placeholder='Email' only
+accessibility-44,Accessibility,Error Messages,Error messages must be announced,High,do:Use aria-live or role=alert for errors dont:Visual-only error indication,All,role='alert',Red border only
+accessibility-45,Accessibility,Skip Links,Allow keyboard users to skip navigation,Medium,do:Provide skip to main content link dont:No skip link on nav-heavy pages,Web,Skip to main content link,100 tabs to reach content
+performance-46,Performance,Image Optimization,Large images slow page load,High,do:Use appropriate size and format (WebP) dont:Unoptimized full-size images,All,srcset with multiple sizes,4000px image for 400px display
+performance-47,Performance,Lazy Loading,Load content as needed,Medium,do:Lazy load below-fold images and content dont:Load everything upfront,All,loading='lazy',All images eager load
+performance-48,Performance,Code Splitting,Large bundles slow initial load,Medium,do:Split code by route/feature dont:Single large bundle,Web,dynamic import(),All code in main bundle
+performance-49,Performance,Caching,Repeat visits should be fast,Medium,do:Set appropriate cache headers dont:No caching strategy,Web,Cache-Control headers,Every request hits server
+performance-50,Performance,Font Loading,Web fonts can block rendering,Medium,do:Use font-display swap or optional dont:Invisible text during font load,Web,font-display: swap,FOIT (Flash of Invisible Text)
+performance-51,Performance,Third Party Scripts,External scripts can block rendering,Medium,do:Load non-critical scripts async/defer dont:Synchronous third-party scripts,Web,async or defer attribute,<script src='...'> in head
+performance-52,Performance,Bundle Size,Large JavaScript slows interaction,Medium,do:Monitor and minimize bundle size dont:Ignore bundle size growth,Web,Bundle analyzer,No size monitoring
+performance-53,Performance,Render Blocking,CSS/JS can block first paint,Medium,do:Inline critical CSS defer non-critical dont:Large blocking CSS files,Web,Critical CSS inline,All CSS in head
+forms-54,Forms,Input Labels,Every input needs a visible label,High,do:Always show label above or beside input dont:Placeholder as only label,All,<label>Email</label><input>,placeholder='Email' only
+forms-55,Forms,Error Placement,Errors should appear near the problem,Medium,do:Show error below related input dont:Single error message at top of form,All,Error under each field,All errors at form top
+forms-56,Forms,Inline Validation,Validate as user types or on blur,Medium,do:Validate on blur for most fields dont:Validate only on submit,All,onBlur validation,Submit-only validation
+forms-57,Forms,Input Types,Use appropriate input types,Medium,do:Use email tel number url etc dont:Text input for everything,All,type='email',type='text' for email
+forms-58,Forms,Autofill Support,Help browsers autofill correctly,Medium,do:Use autocomplete attribute properly dont:Block or ignore autofill,Web,autocomplete='email',autocomplete='off' everywhere
+forms-59,Forms,Required Indicators,Mark required fields clearly,Medium,do:Use asterisk or (required) text dont:No indication of required fields,All,* required indicator,Guess which are required
+forms-60,Forms,Password Visibility,Let users see password while typing,Medium,do:Toggle to show/hide password dont:No visibility toggle,All,Show/hide password button,Password always hidden
+forms-61,Forms,Submit Feedback,Confirm form submission status,High,do:Show loading then success/error state dont:No feedback after submit,All,Loading -> Success message,Button click with no response
+forms-62,Forms,Input Affordance,Inputs should look interactive,Medium,do:Use distinct input styling dont:Inputs that look like plain text,All,Border/background on inputs,Borderless inputs
+forms-63,Forms,Mobile Keyboards,Show appropriate keyboard for input type,Medium,do:Use inputmode attribute dont:Default keyboard for all inputs,Mobile,inputmode='numeric',Text keyboard for numbers
+responsive-64,Responsive,Mobile First,Design for mobile then enhance for larger,Medium,do:Start with mobile styles then add breakpoints dont:Desktop-first causing mobile issues,Web,Default mobile + md: lg: xl:,Desktop default + max-width queries
+responsive-65,Responsive,Breakpoint Testing,Test at all common screen sizes,Medium,do:Test at 320 375 414 768 1024 1440 dont:Only test on your device,Web,Multiple device testing,Single device development
+responsive-66,Responsive,Touch Friendly,Mobile layouts need touch-sized targets,High,do:Increase touch targets on mobile dont:Same tiny buttons on mobile,Web,Larger buttons on mobile,Desktop-sized targets on mobile
+responsive-67,Responsive,Readable Font Size,Text must be readable on all devices,High,do:Minimum 16px body text on mobile dont:Tiny text on mobile,All,text-base or larger,text-xs for body text
+responsive-68,Responsive,Viewport Meta,Set viewport for mobile devices,High,do:Use width=device-width initial-scale=1 dont:Missing or incorrect viewport,Web,<meta name='viewport'...>,No viewport meta tag
+responsive-69,Responsive,Horizontal Scroll,Avoid horizontal scrolling,High,do:Ensure content fits viewport width dont:Content wider than viewport,Web,max-w-full overflow-x-hidden,Horizontal scrollbar on mobile
+responsive-70,Responsive,Image Scaling,Images should scale with container,Medium,do:Use max-width: 100% on images dont:Fixed width images overflow,Web,max-w-full h-auto,width='800' fixed
+responsive-71,Responsive,Table Handling,Tables can overflow on mobile,Medium,do:Use horizontal scroll or card layout dont:Wide tables breaking layout,Web,overflow-x-auto wrapper,Table overflows viewport
+typography-72,Typography,Line Height,Adequate line height improves readability,Medium,do:Use 1.5-1.75 for body text dont:Cramped or excessive line height,All,leading-relaxed (1.625),leading-none (1)
+typography-73,Typography,Line Length,Long lines are hard to read,Medium,do:Limit to 65-75 characters per line dont:Full-width text on large screens,Web,max-w-prose,Full viewport width text
+typography-74,Typography,Font Size Scale,Consistent type hierarchy aids scanning,Medium,do:Use consistent modular scale dont:Random font sizes,All,Type scale (12 14 16 18 24 32),Arbitrary sizes
+typography-75,Typography,Font Loading,Fonts should load without layout shift,Medium,do:Reserve space with fallback font dont:Layout shift when fonts load,Web,font-display: swap + similar fallback,No fallback font
+typography-76,Typography,Contrast Readability,Body text needs good contrast,High,do:Use darker text on light backgrounds dont:Gray text on gray background,All,text-gray-900 on white,text-gray-400 on gray-100
+typography-77,Typography,Heading Clarity,Headings should stand out from body,Medium,do:Clear size/weight difference dont:Headings similar to body text,All,Bold + larger size,Same size as body
+feedback-78,Feedback,Loading Indicators,Show system status during waits,High,do:Show spinner/skeleton for operations > 300ms dont:No feedback during loading,All,Skeleton or spinner,Frozen UI
+feedback-79,Feedback,Empty States,Guide users when no content exists,Medium,do:Show helpful message and action dont:Blank empty screens,All,No items yet. Create one!,Empty white space
+feedback-80,Feedback,Error Recovery,Help users recover from errors,Medium,do:Provide clear next steps dont:Error without recovery path,All,Try again button + help link,Error message only
+feedback-81,Feedback,Progress Indicators,Show progress for multi-step processes,Medium,do:Step indicators or progress bar dont:No indication of progress,All,Step 2 of 4 indicator,No step information
+feedback-82,Feedback,Toast Notifications,Transient messages for non-critical info,Medium,do:Auto-dismiss after 3-5 seconds dont:Toasts that never disappear,All,Auto-dismiss toast,Persistent toast
+feedback-83,Feedback,Confirmation Messages,Confirm successful actions,Medium,do:Brief success message dont:Silent success,All,Saved successfully toast,No confirmation
+content-84,Content,Truncation,Handle long content gracefully,Medium,do:Truncate with ellipsis and expand option dont:Overflow or broken layout,All,line-clamp-2 with expand,Overflow or cut off
+content-85,Content,Date Formatting,Use locale-appropriate date formats,Low,do:Use relative or locale-aware dates dont:Ambiguous date formats,All,2 hours ago or locale format,01/02/03
+content-86,Content,Number Formatting,Format large numbers for readability,Low,do:Use thousand separators or abbreviations dont:Long unformatted numbers,All,"1.2K or 1,234",1234567
+content-87,Content,Placeholder Content,Show realistic placeholders during dev,Low,do:Use realistic sample data dont:Lorem ipsum everywhere,All,Real sample content,Lorem ipsum
+onboarding-88,Onboarding,User Freedom,Users should be able to skip tutorials,Medium,do:Provide Skip and Back buttons dont:Force linear unskippable tour,All,Skip Tutorial button,Locked overlay until finished
+search-89,Search,Autocomplete,Help users find results faster,Medium,do:Show predictions as user types dont:Require full type and enter,Web,Debounced fetch + dropdown,No suggestions
+search-90,Search,No Results,Dead ends frustrate users,Medium,do:Show 'No results' with suggestions dont:Blank screen or '0 results',Web,Try searching for X instead,No results found.
+data-entry-91,Data Entry,Bulk Actions,Editing one by one is tedious,Low,do:Allow multi-select and bulk edit dont:Single row actions only,Web,Checkbox column + Action bar,Repeated actions per row
+ai-interaction-92,AI Interaction,Disclaimer,Users need to know they talk to AI,High,do:Clearly label AI generated content dont:Present AI as human,All,AI Assistant label,Fake human name without label
+ai-interaction-93,AI Interaction,Streaming,Waiting for full text is slow,Medium,do:Stream text response token by token dont:Show loading spinner for 10s+,All,Typewriter effect,Spinner until 100% complete
+spatial-ui-94,Spatial UI,Gaze Hover,Elements should respond to eye tracking before pinch,High,do:Scale/highlight element on look dont:Static element until pinch,VisionOS,hoverEffect(),onTap only
+spatial-ui-95,Spatial UI,Depth Layering,UI needs Z-depth to separate content from environment,Medium,do:Use glass material and z-offset dont:Flat opaque panels blocking view,VisionOS,.glassBackgroundEffect(),bg-white
+sustainability-96,Sustainability,Auto-Play Video,Video consumes massive data and energy,Medium,do:Click-to-play or pause when off-screen dont:Auto-play high-res video loops,Web,playsInline muted preload='none',autoplay loop
+sustainability-97,Sustainability,Asset Weight,Heavy 3D/Image assets increase carbon footprint,Medium,do:Compress and lazy load 3D models dont:Load 50MB textures,Web,Draco compression,Raw .obj files
+ai-interaction-98,AI Interaction,Feedback Loop,AI needs user feedback to improve,Low,do:Thumps up/down or 'Regenerate' dont:Static output only,All,Feedback component,Read-only text
+accessibility-99,Accessibility,Motion Sensitivity,Parallax/Scroll-jacking causes nausea,High,do:Respect prefers-reduced-motion dont:Force scroll effects,All,@media (prefers-reduced-motion),ScrollTrigger.create()

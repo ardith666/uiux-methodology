@@ -1,41 +1,193 @@
-name,primary,secondary,accent,background,text,mood,best_for
-Tech Blue,#2563EB,#7C3AED,#F59E0B,#FFFFFF,#1F2937,professional trustworthy,SaaS dashboards developer tools
-Startup Gradient,#6366F1,#EC4899,#10B981,#FFFFFF,#111827,energetic modern,tech startups creative agencies
-Fintech Trust,#1E40AF,#059669,#D97706,#F8FAFC,#1E293B,stable reliable,banking fintech insurance
-Healthcare Calm,#0891B2,#7C3AED,#F59E0B,#F0FDFA,#134E4A,calming trustworthy,medical clinics wellness apps
-E-commerce Warm,#DC2626,#F59E0B,#059669,#FFFBEB,#78350F,appetizing inviting,food delivery restaurants retail
-Luxury Gold,#1F2937,#B45309,#D4AF37,#FAFAF9,#171717,elegant premium,high-end fashion luxury brands
-Dark Mode Pro,#0F172A,#6366F1,#22D3EE,#0F172A,#F1F5F9,technical immersive,coding platforms gaming developer tools
-Nature Green,#059669,#0D9488,#F59E0B,#ECFDF5,#064E3B,natural organic,wellness sustainability outdoor brands
-Creative Purple,#7C3AED,#EC4899,#F59E0B,#FAFAF9,#581C87,creative expressive,agencies portfolios music
-Minimal Gray,#374151,#6B7280,#111827,#FFFFFF,#111827,neutral clean,enterprise apps documentation
-Vibrant Coral,#F43F5E,#8B5CF6,#06B6D4,#FFF1F2,#881337,energetic playful,youth brands social apps
-Ocean Blue,#0369A1,#0891B2,#F59E0B,#F0F9FF,#0C4A6E,calming professional,travel hospitality education
-Sunset Orange,#EA580C,#DC2626,#F59E0B,#FFF7ED,#7C2D12,warm inviting,food beverage lifestyle brands
-Midnight Dark,#18181B,#A78BFA,#22D3EE,#18181B,#FAFAFA,premium immersive,luxury dark mode premium apps
-Forest Deep,#064E3B,#047857,#34D399,#ECFDF5,#022C22,deep natural,sustainability eco brands outdoor
-Rose Pink,#E11D48,#BE185D,#F472B6,#FFF1F2,#881337,romantic feminine,beauty fashion lifestyle brands
-Arctic Ice,#E0F2FE,#BAE6FD,#38BDF8,#F0F9FF,#0C4A6E,cool clean,technology science healthcare
-Warm Earth,#92400E,#78350F,#D97706,#FFFBEB,#451A03,earthy warm,organic food craft artisan brands
-Electric Neon,#22D3EE,#A78BFA,#F43F5E,#09090B,#FAFAFA,energetic futuristic,gaming crypto nightlife tech
-Soft Pastel,#C4B5FD,#F9A8D4,#6EE7B7,#FAF5FF,#581C87,gentle playful,children education wellness apps
-Monochrome,#171717,#525252,#A3A3A3,#FFFFFF,#171717,sophisticated timeless,fashion editorial architecture
-Cyber Dark,#0D0D0D,#00FF88,#FF0080,#0D0D0D,#E0E0E0,techy futuristic,crypto gaming cyberpunk brands
-Warm Neutrals,#78716C,#A8A29E,#D6D3D1,#FAFAF9,#292524,calm sophisticated,wellness spa hospitality
-Royal Purple,#6D28D9,#7C3AED,#C084FC,#F5F3FF,#3B0764,luxury creative,premium SaaS creative agencies
-Deep Teal,#0F766E,#14B8A6,#2DD4BF,#F0FDFA,#134E4A,trustworthy modern,fintech healthcare B2B
-Hot Pink,#DB2777,#EC4899,#F472B6,#FDF2F8,#831843,bold playful,youth brands entertainment social
-Steel Blue,#475569,#64748B,#94A3B8,#F8FAFC,#1E293B,corporate professional,enterprise B2B consulting
-Emerald Dark,#065F46,#059669,#10B981,#ECFDF5,#022C22,rich natural,sustainability luxury eco brands
-Lavender Dream,#A78BFA,#C4B5FD,#DDD6FE,#FAF5FF,#4C1D95,dreamy creative,wellness beauty creative brands
-Carbon Tech,#262626,#404040,#737373,#171717,#E5E5E5,technical minimal,developer tools dark mode apps
-Coral Reef,#FF6B6B,#FFA07A,#FFD93D,#FFF5F5,#6B3A3A,vibrant tropical,travel food lifestyle brands
-Sage Green,#86EFAC,#6EE7B7,#34D399,#F0FDF4,#14532D,calm natural,wellness meditation eco brands
-Indigo Deep,#4338CA,#6366F1,#818CF8,#EEF2FF,#312E81,depth creative,tech SaaS creative platforms
-Amber Warm,#F59E0B,#D97706,#B45309,#FFFBEB,#78350F,warm energy,food hospitality retail brands
-Slate Professional,#334155,#475569,#64748B,#F8FAFC,#0F172A,professional reliable,enterprise consulting legal
-Mint Fresh,#34D396,#6EE7B7,#A7F3D0,#ECFDF5,#064E3B,fresh clean,health wellness technology brands
-Crimson Bold,#DC2626,#B91C1C,#991B1B,#FEF2F2,#7F1D1D,bold powerful,entertainment sports gaming brands
-Deep Navy,#1E3A5F,#2563EB,#60A5FA,#EFF6FF,#1E3A5F,trustworthy deep,finance legal enterprise brands
-Peach Soft,#FBBF24,#F59E0B,#D97706,#FFFBEB,#92400E,warm friendly,food lifestyle wellness brands
-Arctic Blue,#BAE6FD,#7DD3FC,#38BDF8,#F0F9FF,#0C4A6E,cool fresh,technology healthcare education brands
+name,primary,secondary,accent,background,text,mood,best_for,on_primary,on_secondary,on_accent,card,card_foreground,muted,muted_foreground,border,destructive,on_destructive,ring
+SaaS (General),#2563EB,#3B82F6,#EA580C,#F8FAFC,#1E293B,Trust blue + orange CTA contrast [Accent adjusted from #F97316 for WCAG 3:1],SaaS (General),#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E293B,#E9EFF8,#64748B,#E2E8F0,#DC2626,#FFFFFF,#2563EB
+Micro SaaS,#6366F1,#818CF8,#059669,#F5F3FF,#1E1B4B,Indigo primary + emerald CTA [Accent adjusted from #10B981 for WCAG 3:1],Micro SaaS,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#1E1B4B,#EBEFF9,#64748B,#E0E7FF,#DC2626,#FFFFFF,#6366F1
+E-commerce,#059669,#10B981,#EA580C,#ECFDF5,#064E3B,Success green + urgency orange [Accent adjusted from #F97316 for WCAG 3:1],E-commerce,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#064E3B,#E8F1F3,#64748B,#A7F3D0,#DC2626,#FFFFFF,#059669
+E-commerce Luxury,#1C1917,#44403C,#A16207,#FAFAF9,#0C0A09,Premium dark + gold accent [Accent adjusted from #CA8A04 for WCAG 3:1],E-commerce Luxury,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0C0A09,#E8ECF0,#64748B,#D6D3D1,#DC2626,#FFFFFF,#1C1917
+B2B Service,#0F172A,#334155,#0369A1,#F8FAFC,#020617,Professional navy + blue CTA,B2B Service,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#020617,#E8ECF1,#64748B,#E2E8F0,#DC2626,#FFFFFF,#0F172A
+Financial Dashboard,#0F172A,#1E293B,#22C55E,#020617,#F8FAFC,Dark bg + green positive indicators,Financial Dashboard,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#EF4444,#FFFFFF,#0F172A
+Analytics Dashboard,#1E40AF,#3B82F6,#D97706,#F8FAFC,#1E3A8A,Blue data + amber highlights [Accent adjusted from #F59E0B for WCAG 3:1],Analytics Dashboard,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E3A8A,#E9EEF6,#64748B,#DBEAFE,#DC2626,#FFFFFF,#1E40AF
+Healthcare App,#0891B2,#22D3EE,#059669,#ECFEFF,#164E63,Calm cyan + health green,Healthcare App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#164E63,#E8F1F6,#64748B,#A5F3FC,#DC2626,#FFFFFF,#0891B2
+Educational App,#4F46E5,#818CF8,#EA580C,#EEF2FF,#1E1B4B,Playful indigo + energetic orange [Accent adjusted from #F97316 for WCAG 3:1],Educational App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#1E1B4B,#EBEEF8,#64748B,#C7D2FE,#DC2626,#FFFFFF,#4F46E5
+Creative Agency,#EC4899,#F472B6,#0891B2,#FDF2F8,#831843,Bold pink + cyan accent [Accent adjusted from #06B6D4 for WCAG 3:1],Creative Agency,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#831843,#F1EEF5,#64748B,#FBCFE8,#DC2626,#FFFFFF,#EC4899
+Portfolio/Personal,#18181B,#3F3F46,#2563EB,#FAFAFA,#09090B,Monochrome + blue accent,Portfolio/Personal,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#09090B,#E8ECF0,#64748B,#E4E4E7,#DC2626,#FFFFFF,#18181B
+Gaming,#7C3AED,#A78BFA,#F43F5E,#0F0F23,#E2E8F0,Neon purple + rose action,Gaming,#FFFFFF,#0F172A,#FFFFFF,#1E1C35,#E2E8F0,#27273B,#94A3B8,#4C1D95,#EF4444,#FFFFFF,#7C3AED
+Government/Public Service,#0F172A,#334155,#0369A1,#F8FAFC,#020617,High contrast navy + blue,Government/Public Service,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#020617,#E8ECF1,#64748B,#E2E8F0,#DC2626,#FFFFFF,#0F172A
+Fintech/Crypto,#F59E0B,#FBBF24,#8B5CF6,#0F172A,#F8FAFC,Gold trust + purple tech,Fintech/Crypto,#0F172A,#0F172A,#FFFFFF,#222735,#F8FAFC,#272F42,#94A3B8,#334155,#EF4444,#FFFFFF,#F59E0B
+Social Media App,#E11D48,#FB7185,#2563EB,#FFF1F2,#881337,Vibrant rose + engagement blue,Social Media App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#881337,#F0ECF2,#64748B,#FECDD3,#DC2626,#FFFFFF,#E11D48
+Productivity Tool,#0D9488,#14B8A6,#EA580C,#F0FDFA,#134E4A,Teal focus + action orange [Accent adjusted from #F97316 for WCAG 3:1],Productivity Tool,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F4,#64748B,#99F6E4,#DC2626,#FFFFFF,#0D9488
+Design System/Component Library,#4F46E5,#6366F1,#EA580C,#EEF2FF,#312E81,Indigo brand + doc hierarchy [Accent adjusted from #F97316 for WCAG 3:1],Design System/Component Library,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#312E81,#EBEEF8,#64748B,#C7D2FE,#DC2626,#FFFFFF,#4F46E5
+AI/Chatbot Platform,#7C3AED,#A78BFA,#0891B2,#FAF5FF,#1E1B4B,AI purple + cyan interactions [Accent adjusted from #06B6D4 for WCAG 3:1],AI/Chatbot Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#1E1B4B,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+NFT/Web3 Platform,#8B5CF6,#A78BFA,#FBBF24,#0F0F23,#F8FAFC,Purple tech + gold value,NFT/Web3 Platform,#FFFFFF,#0F172A,#0F172A,#1E1D35,#F8FAFC,#27273B,#94A3B8,#4C1D95,#EF4444,#FFFFFF,#8B5CF6
+Creator Economy Platform,#EC4899,#F472B6,#EA580C,#FDF2F8,#831843,Creator pink + engagement orange [Accent adjusted from #F97316 for WCAG 3:1],Creator Economy Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#831843,#F1EEF5,#64748B,#FBCFE8,#DC2626,#FFFFFF,#EC4899
+Remote Work/Collaboration Tool,#6366F1,#818CF8,#059669,#F5F3FF,#312E81,Calm indigo + success green [Accent adjusted from #10B981 for WCAG 3:1],Remote Work/Collaboration Tool,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#312E81,#EBEFF9,#64748B,#E0E7FF,#DC2626,#FFFFFF,#6366F1
+Mental Health App,#8B5CF6,#C4B5FD,#059669,#FAF5FF,#4C1D95,Calming lavender + wellness green [Accent adjusted from #10B981 for WCAG 3:1],Mental Health App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#EDEFF9,#64748B,#EDE9FE,#DC2626,#FFFFFF,#8B5CF6
+Pet Tech App,#F97316,#FB923C,#2563EB,#FFF7ED,#9A3412,Playful orange + trust blue,Pet Tech App,#0F172A,#0F172A,#FFFFFF,#FFFFFF,#9A3412,#F1F0F0,#64748B,#FED7AA,#DC2626,#FFFFFF,#F97316
+Smart Home/IoT Dashboard,#1E293B,#334155,#22C55E,#0F172A,#F8FAFC,Dark tech + status green,Smart Home/IoT Dashboard,#FFFFFF,#FFFFFF,#0F172A,#1B2336,#F8FAFC,#272F42,#94A3B8,#475569,#EF4444,#FFFFFF,#1E293B
+EV/Charging Ecosystem,#0891B2,#22D3EE,#16A34A,#ECFEFF,#164E63,Electric cyan + eco green [Accent adjusted from #22C55E for WCAG 3:1],EV/Charging Ecosystem,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#164E63,#E8F1F6,#64748B,#A5F3FC,#DC2626,#FFFFFF,#0891B2
+Subscription Box Service,#D946EF,#E879F9,#EA580C,#FDF4FF,#86198F,Excitement purple + urgency orange [Accent adjusted from #F97316 for WCAG 3:1],Subscription Box Service,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#86198F,#F0EEF9,#64748B,#F5D0FE,#DC2626,#FFFFFF,#D946EF
+Podcast Platform,#1E1B4B,#312E81,#F97316,#0F0F23,#F8FAFC,Dark audio + warm accent,Podcast Platform,#FFFFFF,#FFFFFF,#0F172A,#1B1B30,#F8FAFC,#27273B,#94A3B8,#4338CA,#EF4444,#FFFFFF,#1E1B4B
+Dating App,#E11D48,#FB7185,#EA580C,#FFF1F2,#881337,Romantic rose + warm orange [Accent adjusted from #F97316 for WCAG 3:1],Dating App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#881337,#F0ECF2,#64748B,#FECDD3,#DC2626,#FFFFFF,#E11D48
+Micro-Credentials/Badges Platform,#0369A1,#0EA5E9,#A16207,#F0F9FF,#0C4A6E,Trust blue + achievement gold [Accent adjusted from #CA8A04 for WCAG 3:1],Micro-Credentials/Badges Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E7EFF5,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0369A1
+Knowledge Base/Documentation,#475569,#64748B,#2563EB,#F8FAFC,#1E293B,Neutral grey + link blue,Knowledge Base/Documentation,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E293B,#EAEFF3,#64748B,#E2E8F0,#DC2626,#FFFFFF,#475569
+Hyperlocal Services,#059669,#10B981,#EA580C,#ECFDF5,#064E3B,Location green + action orange [Accent adjusted from #F97316 for WCAG 3:1],Hyperlocal Services,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#064E3B,#E8F1F3,#64748B,#A7F3D0,#DC2626,#FFFFFF,#059669
+Beauty/Spa/Wellness Service,#EC4899,#F9A8D4,#8B5CF6,#FDF2F8,#831843,Soft pink + lavender luxury,Beauty/Spa/Wellness Service,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#831843,#F1EEF5,#64748B,#FBCFE8,#DC2626,#FFFFFF,#EC4899
+Luxury/Premium Brand,#1C1917,#44403C,#A16207,#FAFAF9,#0C0A09,Premium black + gold accent [Accent adjusted from #CA8A04 for WCAG 3:1],Luxury/Premium Brand,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0C0A09,#E8ECF0,#64748B,#D6D3D1,#DC2626,#FFFFFF,#1C1917
+Restaurant/Food Service,#DC2626,#F87171,#A16207,#FEF2F2,#450A0A,Appetizing red + warm gold [Accent adjusted from #CA8A04 for WCAG 3:1],Restaurant/Food Service,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#450A0A,#F0EDF1,#64748B,#FECACA,#DC2626,#FFFFFF,#DC2626
+Fitness/Gym App,#F97316,#FB923C,#22C55E,#1F2937,#F8FAFC,Energy orange + success green,Fitness/Gym App,#0F172A,#0F172A,#0F172A,#313742,#F8FAFC,#37414F,#94A3B8,#374151,#EF4444,#FFFFFF,#F97316
+Real Estate/Property,#0F766E,#14B8A6,#0369A1,#F0FDFA,#134E4A,Trust teal + professional blue,Real Estate/Property,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F0F3,#64748B,#99F6E4,#DC2626,#FFFFFF,#0F766E
+Travel/Tourism Agency,#0EA5E9,#38BDF8,#EA580C,#F0F9FF,#0C4A6E,Sky blue + adventure orange [Accent adjusted from #F97316 for WCAG 3:1],Travel/Tourism Agency,#0F172A,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E8F2F8,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0EA5E9
+Hotel/Hospitality,#1E3A8A,#3B82F6,#A16207,#F8FAFC,#1E40AF,Luxury navy + gold service [Accent adjusted from #CA8A04 for WCAG 3:1],Hotel/Hospitality,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E40AF,#E9EEF5,#64748B,#BFDBFE,#DC2626,#FFFFFF,#1E3A8A
+Wedding/Event Planning,#DB2777,#F472B6,#A16207,#FDF2F8,#831843,Romantic pink + elegant gold [Accent adjusted from #CA8A04 for WCAG 3:1],Wedding/Event Planning,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#831843,#F0EDF4,#64748B,#FBCFE8,#DC2626,#FFFFFF,#DB2777
+Legal Services,#1E3A8A,#1E40AF,#B45309,#F8FAFC,#0F172A,Authority navy + trust gold,Legal Services,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A8A
+Insurance Platform,#0369A1,#0EA5E9,#16A34A,#F0F9FF,#0C4A6E,Security blue + protected green [Accent adjusted from #22C55E for WCAG 3:1],Insurance Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E7EFF5,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0369A1
+Banking/Traditional Finance,#0F172A,#1E3A8A,#A16207,#F8FAFC,#020617,Trust navy + premium gold [Accent adjusted from #CA8A04 for WCAG 3:1],Banking/Traditional Finance,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#020617,#E8ECF1,#64748B,#E2E8F0,#DC2626,#FFFFFF,#0F172A
+Online Course/E-learning,#0D9488,#2DD4BF,#EA580C,#F0FDFA,#134E4A,Progress teal + achievement orange [Accent adjusted from #F97316 for WCAG 3:1],Online Course/E-learning,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F4,#64748B,#5EEAD4,#DC2626,#FFFFFF,#0D9488
+Non-profit/Charity,#0891B2,#22D3EE,#EA580C,#ECFEFF,#164E63,Compassion blue + action orange [Accent adjusted from #F97316 for WCAG 3:1],Non-profit/Charity,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#164E63,#E8F1F6,#64748B,#A5F3FC,#DC2626,#FFFFFF,#0891B2
+Music Streaming,#1E1B4B,#4338CA,#22C55E,#0F0F23,#F8FAFC,Dark audio + play green,Music Streaming,#FFFFFF,#FFFFFF,#0F172A,#1B1B30,#F8FAFC,#27273B,#94A3B8,#312E81,#EF4444,#FFFFFF,#1E1B4B
+Video Streaming/OTT,#0F0F23,#1E1B4B,#E11D48,#000000,#F8FAFC,Cinema dark + play red,Video Streaming/OTT,#FFFFFF,#FFFFFF,#FFFFFF,#0C0C0D,#F8FAFC,#181818,#94A3B8,#312E81,#EF4444,#FFFFFF,#0F0F23
+Job Board/Recruitment,#0369A1,#0EA5E9,#16A34A,#F0F9FF,#0C4A6E,Professional blue + success green [Accent adjusted from #22C55E for WCAG 3:1],Job Board/Recruitment,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E7EFF5,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0369A1
+Marketplace (P2P),#7C3AED,#A78BFA,#16A34A,#FAF5FF,#4C1D95,Trust purple + transaction green [Accent adjusted from #22C55E for WCAG 3:1],Marketplace (P2P),#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Logistics/Delivery,#2563EB,#3B82F6,#EA580C,#EFF6FF,#1E40AF,Tracking blue + delivery orange [Accent adjusted from #F97316 for WCAG 3:1],Logistics/Delivery,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E40AF,#E9EFF8,#64748B,#BFDBFE,#DC2626,#FFFFFF,#2563EB
+Agriculture/Farm Tech,#15803D,#22C55E,#A16207,#F0FDF4,#14532D,Earth green + harvest gold [Accent adjusted from #CA8A04 for WCAG 3:1],Agriculture/Farm Tech,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#14532D,#E8F0F1,#64748B,#BBF7D0,#DC2626,#FFFFFF,#15803D
+Construction/Architecture,#64748B,#94A3B8,#EA580C,#F8FAFC,#334155,Industrial grey + safety orange [Accent adjusted from #F97316 for WCAG 3:1],Construction/Architecture,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#334155,#EBF0F5,#64748B,#E2E8F0,#DC2626,#FFFFFF,#64748B
+Automotive/Car Dealership,#1E293B,#334155,#DC2626,#F8FAFC,#0F172A,Premium dark + action red,Automotive/Car Dealership,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EDF1,#64748B,#E2E8F0,#DC2626,#FFFFFF,#1E293B
+Photography Studio,#18181B,#27272A,#F8FAFC,#000000,#FAFAFA,Pure black + white contrast,Photography Studio,#FFFFFF,#FFFFFF,#0F172A,#0C0C0C,#FAFAFA,#181818,#94A3B8,#3F3F46,#EF4444,#FFFFFF,#18181B
+Coworking Space,#F59E0B,#FBBF24,#2563EB,#FFFBEB,#78350F,Energetic amber + booking blue,Coworking Space,#0F172A,#0F172A,#FFFFFF,#FFFFFF,#78350F,#F1F2EF,#64748B,#FDE68A,#DC2626,#FFFFFF,#F59E0B
+Home Services (Plumber/Electrician),#1E40AF,#3B82F6,#EA580C,#EFF6FF,#1E3A8A,Professional blue + urgent orange [Accent adjusted from #F97316 for WCAG 3:1],Home Services (Plumber/Electrician),#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E3A8A,#E9EEF6,#64748B,#BFDBFE,#DC2626,#FFFFFF,#1E40AF
+Childcare/Daycare,#F472B6,#FBCFE8,#16A34A,#FDF2F8,#9D174D,Soft pink + safe green [Accent adjusted from #22C55E for WCAG 3:1],Childcare/Daycare,#0F172A,#0F172A,#FFFFFF,#FFFFFF,#9D174D,#F1F0F6,#64748B,#FCE7F3,#DC2626,#FFFFFF,#F472B6
+Senior Care/Elderly,#0369A1,#38BDF8,#16A34A,#F0F9FF,#0C4A6E,Calm blue + reassuring green [Accent adjusted from #22C55E for WCAG 3:1],Senior Care/Elderly,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E7EFF5,#64748B,#E0F2FE,#DC2626,#FFFFFF,#0369A1
+Medical Clinic,#0891B2,#22D3EE,#16A34A,#F0FDFA,#134E4A,Medical teal + health green [Accent adjusted from #22C55E for WCAG 3:1],Medical Clinic,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F6,#64748B,#CCFBF1,#DC2626,#FFFFFF,#0891B2
+Pharmacy/Drug Store,#15803D,#22C55E,#0369A1,#F0FDF4,#14532D,Pharmacy green + trust blue,Pharmacy/Drug Store,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#14532D,#E8F0F1,#64748B,#BBF7D0,#DC2626,#FFFFFF,#15803D
+Dental Practice,#0EA5E9,#38BDF8,#0EA5E9,#F0F9FF,#0C4A6E,Fresh blue + smile yellow [Accent adjusted from #FBBF24 for WCAG 3:1],Dental Practice,#0F172A,#0F172A,#0F172A,#FFFFFF,#0C4A6E,#E8F2F8,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0EA5E9
+Veterinary Clinic,#0D9488,#14B8A6,#EA580C,#F0FDFA,#134E4A,Caring teal + warm orange [Accent adjusted from #F97316 for WCAG 3:1],Veterinary Clinic,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F4,#64748B,#99F6E4,#DC2626,#FFFFFF,#0D9488
+Florist/Plant Shop,#15803D,#22C55E,#EC4899,#F0FDF4,#14532D,Natural green + floral pink,Florist/Plant Shop,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#14532D,#E8F0F1,#64748B,#BBF7D0,#DC2626,#FFFFFF,#15803D
+Bakery/Cafe,#92400E,#B45309,#92400E,#FEF3C7,#78350F,Warm brown + cream white [Accent adjusted from #F8FAFC for WCAG 3:1],Bakery/Cafe,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#78350F,#EDEEF0,#64748B,#FDE68A,#DC2626,#FFFFFF,#92400E
+Brewery/Winery,#7C2D12,#B91C1C,#A16207,#FEF2F2,#450A0A,Deep burgundy + craft gold [Accent adjusted from #CA8A04 for WCAG 3:1],Brewery/Winery,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#450A0A,#ECEDF0,#64748B,#FECACA,#DC2626,#FFFFFF,#7C2D12
+Airline,#1E3A8A,#3B82F6,#EA580C,#EFF6FF,#1E40AF,Sky blue + booking orange [Accent adjusted from #F97316 for WCAG 3:1],Airline,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E40AF,#E9EEF5,#64748B,#BFDBFE,#DC2626,#FFFFFF,#1E3A8A
+News/Media Platform,#DC2626,#EF4444,#1E40AF,#FEF2F2,#450A0A,Breaking red + link blue,News/Media Platform,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#450A0A,#F0EDF1,#64748B,#FECACA,#DC2626,#FFFFFF,#DC2626
+Magazine/Blog,#18181B,#3F3F46,#EC4899,#FAFAFA,#09090B,Editorial black + accent pink,Magazine/Blog,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#09090B,#E8ECF0,#64748B,#E4E4E7,#DC2626,#FFFFFF,#18181B
+Freelancer Platform,#6366F1,#818CF8,#16A34A,#EEF2FF,#312E81,Creative indigo + hire green [Accent adjusted from #22C55E for WCAG 3:1],Freelancer Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#312E81,#EBEFF9,#64748B,#C7D2FE,#DC2626,#FFFFFF,#6366F1
+Marketing Agency,#EC4899,#F472B6,#0891B2,#FDF2F8,#831843,Bold pink + creative cyan [Accent adjusted from #06B6D4 for WCAG 3:1],Marketing Agency,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#831843,#F1EEF5,#64748B,#FBCFE8,#DC2626,#FFFFFF,#EC4899
+Event Management,#7C3AED,#A78BFA,#EA580C,#FAF5FF,#4C1D95,Excitement purple + action orange [Accent adjusted from #F97316 for WCAG 3:1],Event Management,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Membership/Community,#7C3AED,#A78BFA,#16A34A,#FAF5FF,#4C1D95,Community purple + join green [Accent adjusted from #22C55E for WCAG 3:1],Membership/Community,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Newsletter Platform,#0369A1,#0EA5E9,#EA580C,#F0F9FF,#0C4A6E,Trust blue + subscribe orange [Accent adjusted from #F97316 for WCAG 3:1],Newsletter Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0C4A6E,#E7EFF5,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0369A1
+Digital Products/Downloads,#6366F1,#818CF8,#16A34A,#EEF2FF,#312E81,Digital indigo + buy green [Accent adjusted from #22C55E for WCAG 3:1],Digital Products/Downloads,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#312E81,#EBEFF9,#64748B,#C7D2FE,#DC2626,#FFFFFF,#6366F1
+Church/Religious Organization,#7C3AED,#A78BFA,#A16207,#FAF5FF,#4C1D95,Spiritual purple + warm gold [Accent adjusted from #CA8A04 for WCAG 3:1],Church/Religious Organization,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Sports Team/Club,#DC2626,#EF4444,#DC2626,#FEF2F2,#7F1D1D,Team red + championship gold [Accent adjusted from #FBBF24 for WCAG 3:1],Sports Team/Club,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#7F1D1D,#F0EDF1,#64748B,#FECACA,#DC2626,#FFFFFF,#DC2626
+Museum/Gallery,#18181B,#27272A,#18181B,#FAFAFA,#09090B,Gallery black + white space [Accent adjusted from #F8FAFC for WCAG 3:1],Museum/Gallery,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#09090B,#E8ECF0,#64748B,#E4E4E7,#DC2626,#FFFFFF,#18181B
+Theater/Cinema,#1E1B4B,#312E81,#CA8A04,#0F0F23,#F8FAFC,Dramatic dark + spotlight gold,Theater/Cinema,#FFFFFF,#FFFFFF,#0F172A,#1B1B30,#F8FAFC,#27273B,#94A3B8,#4338CA,#EF4444,#FFFFFF,#1E1B4B
+Language Learning App,#4F46E5,#818CF8,#16A34A,#EEF2FF,#312E81,Learning indigo + progress green [Accent adjusted from #22C55E for WCAG 3:1],Language Learning App,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#312E81,#EBEEF8,#64748B,#C7D2FE,#DC2626,#FFFFFF,#4F46E5
+Coding Bootcamp,#0F172A,#1E293B,#22C55E,#020617,#F8FAFC,Terminal dark + success green,Coding Bootcamp,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#EF4444,#FFFFFF,#0F172A
+Cybersecurity Platform,#00FF41,#0D0D0D,#FF3333,#000000,#E0E0E0,Matrix green + alert red,Cybersecurity Platform,#0F172A,#FFFFFF,#FFFFFF,#0C130E,#E0E0E0,#181818,#94A3B8,#1F1F1F,#EF4444,#FFFFFF,#00FF41
+Developer Tool / IDE,#1E293B,#334155,#22C55E,#0F172A,#F8FAFC,Code dark + run green,Developer Tool / IDE,#FFFFFF,#FFFFFF,#0F172A,#1B2336,#F8FAFC,#272F42,#94A3B8,#475569,#EF4444,#FFFFFF,#1E293B
+Biotech / Life Sciences,#0EA5E9,#0284C7,#059669,#F0F9FF,#0C4A6E,DNA blue + life green [Accent adjusted from #10B981 for WCAG 3:1],Biotech / Life Sciences,#0F172A,#FFFFFF,#FFFFFF,#FFFFFF,#0C4A6E,#E8F2F8,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0EA5E9
+Space Tech / Aerospace,#F8FAFC,#94A3B8,#3B82F6,#0B0B10,#F8FAFC,Star white + launch blue,Space Tech / Aerospace,#0F172A,#0F172A,#FFFFFF,#1E1E23,#F8FAFC,#232328,#94A3B8,#1E293B,#EF4444,#FFFFFF,#F8FAFC
+Architecture / Interior,#171717,#404040,#A16207,#FFFFFF,#171717,Minimal black + accent gold [Accent adjusted from #D4AF37 for WCAG 3:1],Architecture / Interior,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#171717,#E8ECF0,#64748B,#E5E5E5,#DC2626,#FFFFFF,#171717
+Quantum Computing Interface,#00FFFF,#7B61FF,#FF00FF,#050510,#E0E0FF,Quantum cyan + interference purple,Quantum Computing Interface,#0F172A,#FFFFFF,#FFFFFF,#101823,#E0E0FF,#1D1D28,#94A3B8,#333344,#EF4444,#FFFFFF,#00FFFF
+Biohacking / Longevity App,#FF4D4D,#4D94FF,#059669,#F5F5F7,#1C1C1E,Bio red/blue + vitality green [Accent adjusted from #00E676 for WCAG 3:1],Biohacking / Longevity App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1C1C1E,#F2EEF2,#64748B,#E5E5EA,#DC2626,#FFFFFF,#FF4D4D
+Autonomous Drone Fleet Manager,#00FF41,#008F11,#FF3333,#0D1117,#E6EDF3,Terminal green + alert red,Autonomous Drone Fleet Manager,#0F172A,#FFFFFF,#FFFFFF,#182424,#E6EDF3,#25292F,#94A3B8,#30363D,#EF4444,#FFFFFF,#00FF41
+Generative Art Platform,#18181B,#3F3F46,#EC4899,#FAFAFA,#09090B,Canvas neutral + creative pink,Generative Art Platform,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#09090B,#E8ECF0,#64748B,#E4E4E7,#DC2626,#FFFFFF,#18181B
+Spatial Computing OS / App,#FFFFFF,#E5E5E5,#FFFFFF,#888888,#000000,Glass white + system blue [Accent adjusted from #007AFF for WCAG 3:1],Spatial Computing OS / App,#0F172A,#0F172A,#0F172A,#999999,#000000,#777777,#D4D4D4,#CCCCCC,#FF3B30,#FFFFFF,#007AFF
+Sustainable Energy / Climate Tech,#059669,#10B981,#059669,#ECFDF5,#064E3B,Nature green + solar gold [Accent adjusted from #FBBF24 for WCAG 3:1],Sustainable Energy / Climate Tech,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#064E3B,#E8F1F3,#64748B,#A7F3D0,#DC2626,#FFFFFF,#059669
+Personal Finance Tracker,#1E40AF,#3B82F6,#059669,#0F172A,#FFFFFF,Trust blue + profit green on dark,Personal Finance Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#101A34,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#1E40AF
+Chat & Messaging App,#2563EB,#6366F1,#059669,#FFFFFF,#0F172A,Messenger blue + online green,Chat & Messaging App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Notes & Writing App,#78716C,#A8A29E,#D97706,#FFFBEB,#0F172A,Warm ink + amber accent on cream,Notes & Writing App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F6F6F6,#64748B,#EEEDED,#DC2626,#FFFFFF,#78716C
+Habit Tracker,#D97706,#F59E0B,#059669,#FFFBEB,#0F172A,Streak amber + habit green,Habit Tracker,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FCF6F0,#64748B,#FAEEE1,#DC2626,#FFFFFF,#D97706
+Food Delivery / On-Demand,#EA580C,#F97316,#2563EB,#FFF7ED,#0F172A,Appetizing orange + trust blue,Food Delivery / On-Demand,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FDF4F0,#64748B,#FCEAE1,#DC2626,#FFFFFF,#EA580C
+Ride Hailing / Transportation,#1E293B,#334155,#2563EB,#0F172A,#FFFFFF,Map dark + route blue,Ride Hailing / Transportation,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#10182B,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#1E293B
+Recipe & Cooking App,#9A3412,#C2410C,#059669,#FFFBEB,#0F172A,Warm terracotta + fresh green,Recipe & Cooking App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F8F2F0,#64748B,#F2E6E2,#DC2626,#FFFFFF,#9A3412
+Meditation & Mindfulness,#7C3AED,#8B5CF6,#059669,#FAF5FF,#0F172A,Calm lavender + mindful green,Meditation & Mindfulness,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F7F3FD,#64748B,#EFE7FC,#DC2626,#FFFFFF,#7C3AED
+Weather App,#0284C7,#0EA5E9,#F59E0B,#F0F9FF,#0F172A,Sky blue + sun amber,Weather App,#FFFFFF,#FFFFFF,#0F172A,#FFFFFF,#0F172A,#EFF7FB,#64748B,#E0F0F8,#DC2626,#FFFFFF,#0284C7
+Diary & Journal App,#92400E,#A16207,#6366F1,#FFFBEB,#0F172A,Warm journal brown + ink violet,Diary & Journal App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F8F3F0,#64748B,#F1E8E2,#DC2626,#FFFFFF,#92400E
+CRM & Client Management,#2563EB,#3B82F6,#059669,#F8FAFC,#0F172A,Professional blue + deal green,CRM & Client Management,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Inventory & Stock Management,#334155,#475569,#059669,#F8FAFC,#0F172A,Industrial slate + stock green,Inventory & Stock Management,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F2F3F4,#64748B,#E6E8EA,#DC2626,#FFFFFF,#334155
+Flashcard & Study Tool,#7C3AED,#8B5CF6,#059669,#FAF5FF,#0F172A,Study purple + correct green,Flashcard & Study Tool,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F7F3FD,#64748B,#EFE7FC,#DC2626,#FFFFFF,#7C3AED
+Booking & Appointment App,#0284C7,#0EA5E9,#059669,#F0F9FF,#0F172A,Calendar blue + available green,Booking & Appointment App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#EFF7FB,#64748B,#E0F0F8,#DC2626,#FFFFFF,#0284C7
+Invoice & Billing Tool,#1E3A5F,#2563EB,#059669,#F8FAFC,#0F172A,Navy professional + paid green,Invoice & Billing Tool,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F3F5,#64748B,#E4E7EB,#DC2626,#FFFFFF,#1E3A5F
+Grocery & Shopping List,#059669,#10B981,#D97706,#ECFDF5,#0F172A,Fresh green + food amber,Grocery & Shopping List,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F0F8F6,#64748B,#E1F2ED,#DC2626,#FFFFFF,#059669
+Timer & Pomodoro,#DC2626,#EF4444,#059669,#0F172A,#FFFFFF,Focus red on dark + break green,Timer & Pomodoro,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#1F1829,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#DC2626
+Parenting & Baby Tracker,#EC4899,#F472B6,#0284C7,#FDF2F8,#0F172A,Soft pink + trust blue,Parenting & Baby Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FDF4F8,#64748B,#FCE9F2,#DC2626,#FFFFFF,#EC4899
+Scanner & Document Manager,#1E293B,#334155,#2563EB,#F8FAFC,#0F172A,Document grey + scan blue,Scanner & Document Manager,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F2F3,#64748B,#E4E5E7,#DC2626,#FFFFFF,#1E293B
+Calendar & Scheduling App,#2563EB,#3B82F6,#059669,#F8FAFC,#0F172A,Calendar blue + event green,Calendar & Scheduling App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Password Manager,#1E3A5F,#334155,#059669,#0F172A,#FFFFFF,Vault dark blue + secure green,Password Manager,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#10192E,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#1E3A5F
+Expense Splitter / Bill Split,#059669,#10B981,#DC2626,#F8FAFC,#0F172A,Balance green + owe red,Expense Splitter / Bill Split,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F0F8F6,#64748B,#E1F2ED,#DC2626,#FFFFFF,#059669
+Voice Recorder & Memo,#DC2626,#EF4444,#2563EB,#FFFFFF,#0F172A,Recording red + waveform blue,Voice Recorder & Memo,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FCF1F1,#64748B,#FAE4E4,#DC2626,#FFFFFF,#DC2626
+Bookmark & Read-Later,#D97706,#F59E0B,#2563EB,#FFFBEB,#0F172A,Warm amber + link blue,Bookmark & Read-Later,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FCF6F0,#64748B,#FAEEE1,#DC2626,#FFFFFF,#D97706
+Translator App,#2563EB,#0891B2,#EA580C,#F8FAFC,#0F172A,Global blue + teal + accent orange,Translator App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Calculator & Unit Converter,#EA580C,#F97316,#2563EB,#1C1917,#FFFFFF,Operation orange on dark,Calculator & Unit Converter,#FFFFFF,#FFFFFF,#FFFFFF,#262321,#FFFFFF,#2C1E16,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#EA580C
+Alarm & World Clock,#D97706,#F59E0B,#6366F1,#0F172A,#FFFFFF,Time amber + night indigo on dark,Alarm & World Clock,#FFFFFF,#0F172A,#FFFFFF,#192134,#FFFFFF,#1F1E27,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#D97706
+File Manager & Transfer,#2563EB,#3B82F6,#D97706,#F8FAFC,#0F172A,Folder blue + file amber,File Manager & Transfer,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Email Client,#2563EB,#3B82F6,#DC2626,#FFFFFF,#0F172A,Inbox blue + priority red,Email Client,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Casual Puzzle Game,#EC4899,#8B5CF6,#F59E0B,#FDF2F8,#0F172A,Cheerful pink + reward gold,Casual Puzzle Game,#FFFFFF,#FFFFFF,#0F172A,#FFFFFF,#0F172A,#FDF4F8,#64748B,#FCE9F2,#DC2626,#FFFFFF,#EC4899
+Trivia & Quiz Game,#2563EB,#7C3AED,#F59E0B,#EFF6FF,#0F172A,Quiz blue + gold leaderboard,Trivia & Quiz Game,#FFFFFF,#FFFFFF,#0F172A,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Card & Board Game,#15803D,#166534,#D97706,#0F172A,#FFFFFF,Felt green + gold on dark,Card & Board Game,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#0F1F2B,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#15803D
+Idle & Clicker Game,#D97706,#F59E0B,#7C3AED,#FFFBEB,#0F172A,Coin gold + prestige purple,Idle & Clicker Game,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FCF6F0,#64748B,#FAEEE1,#DC2626,#FFFFFF,#D97706
+Word & Crossword Game,#15803D,#059669,#D97706,#FFFFFF,#0F172A,Word green + letter amber,Word & Crossword Game,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F0F7F3,#64748B,#E2EFE7,#DC2626,#FFFFFF,#15803D
+Arcade & Retro Game,#DC2626,#2563EB,#22C55E,#0F172A,#FFFFFF,Neon red+blue on dark + score green,Arcade & Retro Game,#FFFFFF,#FFFFFF,#0F172A,#192134,#FFFFFF,#1F1829,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#DC2626
+Photo Editor & Filters,#7C3AED,#6366F1,#0891B2,#0F172A,#FFFFFF,Editor violet + filter cyan on dark,Photo Editor & Filters,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#171939,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#7C3AED
+Short Video Editor,#EC4899,#DB2777,#2563EB,#0F172A,#FFFFFF,Video pink on dark + timeline blue,Short Video Editor,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#201A32,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#EC4899
+Drawing & Sketching Canvas,#7C3AED,#8B5CF6,#0891B2,#1C1917,#FFFFFF,Canvas purple + tool teal on dark,Drawing & Sketching Canvas,#FFFFFF,#FFFFFF,#FFFFFF,#262321,#FFFFFF,#231B28,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#7C3AED
+Music Creation & Beat Maker,#7C3AED,#6366F1,#22C55E,#0F172A,#FFFFFF,Studio purple + waveform green on dark,Music Creation & Beat Maker,#FFFFFF,#FFFFFF,#0F172A,#192134,#FFFFFF,#171939,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#7C3AED
+Meme & Sticker Maker,#EC4899,#F59E0B,#2563EB,#FFFFFF,#0F172A,Viral pink + comedy yellow + share blue,Meme & Sticker Maker,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FDF4F8,#64748B,#FCE9F2,#DC2626,#FFFFFF,#EC4899
+AI Photo & Avatar Generator,#7C3AED,#6366F1,#EC4899,#FAF5FF,#0F172A,AI purple + generation pink,AI Photo & Avatar Generator,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F7F3FD,#64748B,#EFE7FC,#DC2626,#FFFFFF,#7C3AED
+Link-in-Bio Page Builder,#2563EB,#7C3AED,#EC4899,#FFFFFF,#0F172A,Brand blue + creator purple,Link-in-Bio Page Builder,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Wardrobe & Outfit Planner,#BE185D,#EC4899,#D97706,#FDF2F8,#0F172A,Fashion rose + gold accent,Wardrobe & Outfit Planner,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FBF1F5,#64748B,#F7E3EB,#DC2626,#FFFFFF,#BE185D
+Plant Care Tracker,#15803D,#059669,#D97706,#F0FDF4,#0F172A,Nature green + sun yellow,Plant Care Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F0F7F3,#64748B,#E2EFE7,#DC2626,#FFFFFF,#15803D
+Book & Reading Tracker,#78716C,#92400E,#D97706,#FFFBEB,#0F172A,Book brown + page amber,Book & Reading Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F6F6F6,#64748B,#EEEDED,#DC2626,#FFFFFF,#78716C
+Couple & Relationship App,#BE185D,#EC4899,#DC2626,#FDF2F8,#0F172A,Romance rose + love red,Couple & Relationship App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FBF1F5,#64748B,#F7E3EB,#DC2626,#FFFFFF,#BE185D
+Family Calendar & Chores,#2563EB,#059669,#D97706,#F8FAFC,#0F172A,Family blue + chore green,Family Calendar & Chores,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Mood Tracker,#7C3AED,#6366F1,#D97706,#FAF5FF,#0F172A,Mood purple + insight amber,Mood Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F7F3FD,#64748B,#EFE7FC,#DC2626,#FFFFFF,#7C3AED
+Gift & Wishlist,#DC2626,#D97706,#EC4899,#FFF1F2,#0F172A,Gift red + gold + surprise pink,Gift & Wishlist,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FCF1F1,#64748B,#FAE4E4,#DC2626,#FFFFFF,#DC2626
+Running & Cycling GPS,#EA580C,#F97316,#059669,#0F172A,#FFFFFF,Energetic orange + pace green on dark,Running & Cycling GPS,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#201C27,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#EA580C
+Yoga & Stretching Guide,#6B7280,#78716C,#0891B2,#F5F5F0,#0F172A,Sage neutral + calm teal,Yoga & Stretching Guide,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F6F6F7,#64748B,#EDEEEF,#DC2626,#FFFFFF,#6B7280
+Sleep Tracker,#4338CA,#6366F1,#7C3AED,#0F172A,#FFFFFF,Night indigo + dream violet on dark,Sleep Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#131936,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#4338CA
+Calorie & Nutrition Counter,#059669,#10B981,#EA580C,#ECFDF5,#0F172A,Healthy green + macro orange,Calorie & Nutrition Counter,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F0F8F6,#64748B,#E1F2ED,#DC2626,#FFFFFF,#059669
+Period & Cycle Tracker,#BE185D,#EC4899,#7C3AED,#FDF2F8,#0F172A,Blush rose + fertility lavender,Period & Cycle Tracker,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FBF1F5,#64748B,#F7E3EB,#DC2626,#FFFFFF,#BE185D
+Medication & Pill Reminder,#0284C7,#0891B2,#DC2626,#F0F9FF,#0F172A,Medical blue + alert red,Medication & Pill Reminder,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#EFF7FB,#64748B,#E0F0F8,#DC2626,#FFFFFF,#0284C7
+Water & Hydration Reminder,#0284C7,#06B6D4,#0891B2,#F0F9FF,#0F172A,Refreshing blue + water cyan,Water & Hydration Reminder,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#EFF7FB,#64748B,#E0F0F8,#DC2626,#FFFFFF,#0284C7
+Fasting & Intermittent Timer,#6366F1,#4338CA,#059669,#0F172A,#FFFFFF,Fasting indigo on dark + eating green,Fasting & Intermittent Timer,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#151D39,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#6366F1
+Anonymous Community / Confession,#475569,#334155,#0891B2,#0F172A,#FFFFFF,Protective grey + subtle teal on dark,Anonymous Community / Confession,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#131B2F,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#475569
+Local Events & Discovery,#EA580C,#F97316,#2563EB,#FFF7ED,#0F172A,Event orange + map blue,Local Events & Discovery,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FDF4F0,#64748B,#FCEAE1,#DC2626,#FFFFFF,#EA580C
+Study Together / Virtual Coworking,#2563EB,#3B82F6,#059669,#F8FAFC,#0F172A,Focus blue + session green,Study Together / Virtual Coworking,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Coding Challenge & Practice,#22C55E,#059669,#D97706,#0F172A,#FFFFFF,Code green + difficulty amber on dark,Coding Challenge & Practice,#0F172A,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#10242E,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#22C55E
+Kids Learning (ABC & Math),#2563EB,#F59E0B,#EC4899,#EFF6FF,#0F172A,Learning blue + play yellow + fun pink,Kids Learning (ABC & Math),#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Music Instrument Learning,#DC2626,#9A3412,#D97706,#FFFBEB,#0F172A,Musical red + warm amber,Music Instrument Learning,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FCF1F1,#64748B,#FAE4E4,#DC2626,#FFFFFF,#DC2626
+Parking Finder,#2563EB,#059669,#DC2626,#F0F9FF,#0F172A,Available blue/green + occupied red,Parking Finder,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Public Transit Guide,#2563EB,#0891B2,#EA580C,#F8FAFC,#0F172A,Transit blue + line colors,Public Transit Guide,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Road Trip Planner,#EA580C,#0891B2,#D97706,#FFF7ED,#0F172A,Adventure orange + map teal,Road Trip Planner,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FDF4F0,#64748B,#FCEAE1,#DC2626,#FFFFFF,#EA580C
+VPN & Privacy Tool,#1E3A5F,#334155,#22C55E,#0F172A,#FFFFFF,Shield dark + connected green,VPN & Privacy Tool,#FFFFFF,#FFFFFF,#0F172A,#192134,#FFFFFF,#10192E,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#1E3A5F
+Emergency SOS & Safety,#DC2626,#EF4444,#2563EB,#FFF1F2,#0F172A,Alert red + safety blue,Emergency SOS & Safety,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#FCF1F1,#64748B,#FAE4E4,#DC2626,#FFFFFF,#DC2626
+Wallpaper & Theme App,#7C3AED,#EC4899,#2563EB,#FAF5FF,#0F172A,Aesthetic purple + trending pink,Wallpaper & Theme App,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F7F3FD,#64748B,#EFE7FC,#DC2626,#FFFFFF,#7C3AED
+White Noise & Ambient Sound,#475569,#334155,#4338CA,#0F172A,#FFFFFF,Ambient grey + deep indigo on dark,White Noise & Ambient Sound,#FFFFFF,#FFFFFF,#FFFFFF,#192134,#FFFFFF,#131B2F,#94A3B8,"rgba(255,255,255,0.08)",#DC2626,#FFFFFF,#475569
+Home Decoration & Interior Design,#78716C,#A8A29E,#D97706,#FAF5F2,#0F172A,Interior warm grey + gold accent,Home Decoration & Interior Design,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F6F6F6,#64748B,#EEEDED,#DC2626,#FFFFFF,#78716C
+Academic Journal / Scholarly Publishing,#1E3A5F,#334155,#B45309,#F8FAFC,#0F172A,Scholarly navy + citation gold + serif accent,Academic Journal / Scholarly Publishing,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+API Developer Portal,#0F172A,#1E293B,#22C55E,#020617,#F8FAFC,Code dark + endpoint green + syntax colors,API Developer Portal,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#EF4444,#FFFFFF,#0F172A
+Forum / Discussion Board,#475569,#64748B,#2563EB,#F8FAFC,#1E293B,Neutral grey + topic accent + unread indicator,Forum / Discussion Board,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E293B,#EAEFF3,#64748B,#E2E8F0,#DC2626,#FFFFFF,#475569
+Directory / Listing Site,#059669,#10B981,#D97706,#ECFDF5,#064E3B,Category green + verified badge + map accent,Directory / Listing Site,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#064E3B,#E8F1F3,#64748B,#A7F3D0,#DC2626,#FFFFFF,#059669
+Status Page / Incident Management,#16A34A,#22C55E,#DC2626,#F0FDF4,#14532D,Operational green + incident red + maintenance amber,Status Page / Incident Management,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#14532D,#E8F0F1,#64748B,#BBF7D0,#DC2626,#FFFFFF,#16A34A
+Wiki / Encyclopedia,#1E3A8A,#3B82F6,#7C3AED,#F8FAFC,#1E40AF,Knowledge blue + link purple + clean white,Wiki / Encyclopedia,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E40AF,#E9EEF5,#64748B,#BFDBFE,#DC2626,#FFFFFF,#1E3A8A
+Auction Platform,#0F172A,#1E293B,#16A34A,#020617,#F8FAFC,Dark luxury + bid green + outbid red + urgency,Auction Platform,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#DC2626,#FFFFFF,#0F172A
+Changelog / Release Notes,#475569,#64748B,#059669,#F8FAFC,#1E293B,Feature green + fix blue + breaking red badges,Changelog / Release Notes,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E293B,#EAEFF3,#64748B,#E2E8F0,#DC2626,#FFFFFF,#475569
+Citizen Science Platform,#15803D,#22C55E,#D97706,#F0FDF4,#14532D,Discovery green + volunteer badge + data neutral,Citizen Science Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#14532D,#E8F0F1,#64748B,#BBF7D0,#DC2626,#FFFFFF,#15803D
+Classifieds / Buy-Sell,#2563EB,#3B82F6,#16A34A,#EFF6FF,#1E40AF,Listing blue + price green + seller badge,Classifieds / Buy-Sell,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E40AF,#E9EFF8,#64748B,#BFDBFE,#DC2626,#FFFFFF,#2563EB
+Conference / Symposium Landing Page,#1E3A5F,#2563EB,#A16207,#F8FAFC,#0F172A,Academic navy + gold keynote + track chips,Conference / Symposium Landing Page,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+Crowdfunding Platform,#D97706,#F59E0B,#16A34A,#FFFBEB,#0F172A,Funding progress amber + goal green + urgency,Crowdfunding Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FCF6F0,#64748B,#FAEEE1,#DC2626,#FFFFFF,#D97706
+Digital Signage / Kiosk,#0F172A,#1E293B,#EF4444,#020617,#F8FAFC,High contrast dark + brand accent + large touch targets,Digital Signage / Kiosk,#FFFFFF,#FFFFFF,#FFFFFF,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#EF4444,#FFFFFF,#0F172A
+E-signature / Document Workflow,#1E3A5F,#2563EB,#16A34A,#F8FAFC,#0F172A,Trust navy + signature green + audit trail,E-signature / Document Workflow,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+Feature Flag / Config Management,#0F172A,#1E293B,#16A34A,#020617,#F8FAFC,Enabled green + disabled grey + experimental amber,Feature Flag / Config Management,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#DC2626,#FFFFFF,#0F172A
+Government Portal / Civic Services,#1E40AF,#3B82F6,#16A34A,#EFF6FF,#1E3A8A,Professional blue + service green + accessibility,Government Portal / Civic Services,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E3A8A,#E9EFF5,#64748B,#BFDBFE,#DC2626,#FFFFFF,#1E40AF
+Grant / Funding Portal,#1E3A5F,#2563EB,#16A34A,#F8FAFC,#0F172A,Institution navy + funding green + deadline urgency,Grant / Funding Portal,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+LMS (Learning Management System),#0D9488,#2DD4BF,#D97706,#F0FDFA,#134E4A,Education teal + course amber + grade green,LMS (Learning Management System),#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F4,#64748B,#5EEAD4,#DC2626,#FFFFFF,#0D9488
+No-code / Low-code Builder,#7C3AED,#A78BFA,#EC4899,#FAF5FF,#4C1D95,Builder purple + component pink + canvas neutral,No-code / Low-code Builder,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Open Source Project Landing,#0F172A,#1E293B,#A16207,#020617,#F8FAFC,Dark code + star gold + fork silver + sponsor purple,Open Source Project Landing,#FFFFFF,#FFFFFF,#FFFFFF,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#22C55E,#FFFFFF,#0F172A
+Patient Portal / Health Records,#0284C7,#0891B2,#16A34A,#F0F9FF,#0C4A6E,Clinical blue + health green + alert red,Patient Portal / Health Records,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0C4A6E,#E8F2F8,#64748B,#BAE6FD,#DC2626,#FFFFFF,#0284C7
+Patent / IP Database,#475569,#64748B,#A16207,#F8FAFC,#1E293B,Formal neutral + patent type chips + status badges,Patent / IP Database,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#1E293B,#EAEFF3,#64748B,#E2E8F0,#DC2626,#FFFFFF,#475569
+Q&A Community Platform,#2563EB,#0891B2,#D97706,#F8FAFC,#0F172A,Knowledge blue + accepted green + reputation gold,Q&A Community Platform,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#F1F5FD,#64748B,#E4ECFC,#DC2626,#FFFFFF,#2563EB
+Research Lab / University Department,#1E3A5F,#2563EB,#A16207,#F8FAFC,#0F172A,Institutional navy + research accent + serif headings,Research Lab / University Department,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+Resume / CV Builder,#1E3A5F,#2563EB,#16A34A,#F8FAFC,#0F172A,Professional navy + section accent + success green,Resume / CV Builder,#FFFFFF,#FFFFFF,#FFFFFF,#FFFFFF,#0F172A,#E9EEF5,#64748B,#CBD5E1,#DC2626,#FFFFFF,#1E3A5F
+Review Platform,#F59E0B,#FBBF24,#16A34A,#FFFBEB,#0F172A,Star gold + positive green + negative red,Review Platform,#0F172A,#0F172A,#FFFFFF,#FFFFFF,#0F172A,#FCF6F0,#64748B,#FAEEE1,#DC2626,#FFFFFF,#F59E0B
+RPA / Automation Dashboard,#0F172A,#1E293B,#16A34A,#020617,#F8FAFC,Dark terminal + running green + failed red + queued amber,RPA / Automation Dashboard,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#DC2626,#FFFFFF,#0F172A
+Survey / Form Builder,#0D9488,#2DD4BF,#D97706,#F0FDFA,#134E4A,Question teal + progress green + submit blue,Survey / Form Builder,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F4,#64748B,#5EEAD4,#DC2626,#FFFFFF,#0D9488
+Telemedicine Platform,#0891B2,#22D3EE,#16A34A,#F0FDFA,#134E4A,Medical teal + video green + waiting amber,Telemedicine Platform,#FFFFFF,#0F172A,#FFFFFF,#FFFFFF,#134E4A,#E8F1F6,#64748B,#CCFBF1,#DC2626,#FFFFFF,#0891B2
+Testimonial & Social Proof Widget,#7C3AED,#A78BFA,#F59E0B,#FAF5FF,#4C1D95,Trust purple + quote gold + verified blue,Testimonial & Social Proof Widget,#FFFFFF,#0F172A,#0F172A,#FFFFFF,#4C1D95,#ECEEF9,#64748B,#DDD6FE,#DC2626,#FFFFFF,#7C3AED
+Ticketing / Box Office,#0F172A,#1E293B,#16A34A,#020617,#F8FAFC,Event theme colors + available green + sold-out red,Ticketing / Box Office,#FFFFFF,#FFFFFF,#0F172A,#0E1223,#F8FAFC,#1A1E2F,#94A3B8,#334155,#DC2626,#FFFFFF,#0F172A
