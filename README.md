@@ -332,7 +332,8 @@ flowchart TD
     subgraph REVIEW["Phase 6: Review — outcome-first"]
         R1[Final anti-slop audit] --> R2[80/20 balance check]
         R2 --> R3[Brand consistency against knowledge/DESIGN.md]
-        R3 --> R4[Artifact gate: INTENT/AUTH/PENDING]
+        R3 --> R4[Anti-slop writing: copy blok headline/microcopy → skill no-ai-slop (auto-install kalau belum ada)]
+        R4 --> R5[Artifact gate: INTENT/AUTH/PENDING]
     end
 
     REVIEW --> KNOW

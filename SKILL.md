@@ -142,9 +142,21 @@ Sebelum ubah behavior/visual: `INTENT: design does <X>; anti-slop check expects 
 
 - **Artifact gate**: `INTENT:` line kalau visual berubah; `AUTH:` kalau aksi outward; `PENDING:` kalau follow-up di-skip
 - Final anti-slop audit
+- **Anti-slop writing (opsional, auto-install):** kalau output task = user-facing copy blok (headline, hero, microcopy, error message, atau teks panjang) → cek skill `no-ai-slop`. Belum ada? Install langsung tanpa tanya: `npx skills add petergyang/no-ai-slop --skill no-ai-slop --yes`. Lalu jalankan aturannya — anti-slop visual (P0 "Filler Copy") cuma nangkep lorem ipsum / "Get started", gak nangkep binary contrast ("It's not X. It's Y."), importance puffery ("Unlock your potential"), atau fake-profound ending — itu domain-nya no-ai-slop
 - Check 80/20 balance
 - **Verify brand consistency against `knowledge/DESIGN.md`**
 - Self-critique checklist (from dev-methodology)
+
+## Optional Dependencies
+
+Skill-skill berikut dipakai sebagai quality gate opsional — bukan bundel, tapi referensi. Install di agent masing-masing (bukan di repo ini) biar update upstream selalu nyampe.
+
+| Skill | Sumber | Kapan dipakai | Install | Perlu tanya user? |
+|---|---|---|---|---|
+| `no-ai-slop` | petergyang/no-ai-slop | Phase 6: user-facing copy blok (headline/microcopy) | `npx skills add petergyang/no-ai-slop --skill no-ai-slop --yes` | ❌ gak perlu (cuma file rules) |
+| `penetration-testing-with-strix` | usestrix/strix | Task nyentuh web/API/auth/input | `npx skills add usestrix/strix --skill penetration-testing-with-strix --yes` | ✅ WAJIB (butuh Docker + LLM API key) |
+
+Kalau skill belum terinstall dan hook kepanggil: ikuti kebijakan di atas (auto-install / tanya). Kalau gak jadi jalan → catat `PENDING:` di report, jangan di-skip diam-diam.
 
 ### Phase 7: Knowledge
 
