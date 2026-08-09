@@ -44,8 +44,10 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Version
 
-Current: **2.0.0** (see `VERSION`)
+Current: **2.2.0** (see `VERSION`)
 
+- 2.2.0 — Communication rules (ADHD-friendly, berlaku semua phase)
+- 2.1.0 — no-ai-slop hook Phase 6 (copy blok/headline/microcopy) + optional dependencies table
 - 2.0.0 — Data expansion + new domains + auto-detection + 21st.dev MCP
   - Data: styles 49→84, palettes 40→192, ux 70→99, charts 25, landing 34, gsap tiered 16
   - New domains: `icons`, `ui-reasoning`, `app-interface`, `google-fonts`, `stacks/` (22 stacks)
@@ -54,7 +56,18 @@ Current: **2.0.0** (see `VERSION`)
   - `scripts/test_search.py` — 56-check self-test
   - 21st.dev MCP integration (search/generate live components)
 
-For changes on other devices: `git pull` + `cat VERSION` to confirm parity.
+Untuk update di device lain: `git pull` + `cat VERSION` untuk konfirmasi parity.
+
+## Optional Dependencies
+
+Quality gate opsional — bukan bundel, referensi. Install di agent (bukan di repo ini) biar update upstream selalu nyampe:
+
+| Skill | Sumber | Kapan dipakai | Install | Perlu tanya user? |
+|---|---|---|---|---|
+| `no-ai-slop` | petergyang/no-ai-slop | Phase 6: user-facing copy blok (headline/microcopy) | `npx skills add petergyang/no-ai-slop --skill no-ai-slop --yes` | ❌ gak perlu (cuma file rules) |
+| `penetration-testing-with-strix` | usestrix/strix | Task nyentuh web/API/auth/input | `npx skills add usestrix/strix --skill penetration-testing-with-strix --yes` | ✅ WAJIB (butuh Docker + LLM API key) |
+
+Kalau skill belum terinstall dan hook kepanggil: ikuti kebijakan (auto-install / tanya). Gak jadi jalan → catat `PENDING:` di report, jangan di-skip diam-diam.
 
 ---
 
