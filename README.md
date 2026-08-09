@@ -44,8 +44,10 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Version
 
-Current: **2.2.0** (see `VERSION`)
+Current: **2.3.0** (see `VERSION`)
 
+- 2.3.0 — Loading state (skeleton UI) section
+- 2.2.1 — README: optional deps + version history
 - 2.2.0 — Communication rules (ADHD-friendly, berlaku semua phase)
 - 2.1.0 — no-ai-slop hook Phase 6 (copy blok/headline/microcopy) + optional dependencies table
 - 2.0.0 — Data expansion + new domains + auto-detection + 21st.dev MCP
@@ -593,6 +595,19 @@ Three 1-10 sliders to tune output:
 | `--variance` | Centered/minimal | Balanced | Bold/asymmetric |
 | `--motion` | Subtle micro-interactions | Standard scroll/stagger | Complex choreography |
 | `--density` | Spacious (24-96px) | Standard (16-64px) | Dense/dashboard (8-32px) |
+
+---
+
+## Loading State (Skeleton UI)
+
+Kalau UI nampilin data async (fetch, image, list) — wajib ada loading state:
+
+- **Skeleton > spinner** — skeleton tunjukin struktur konten yang bakal muncul, layout match; spinner cuma bilang "tunggu"
+- **Skeleton match layout aslinya** — card → card-shaped, list → baris-baris. Bukan kotak abstrak
+- **Shimmer halus** — gradient sweep ±1.5-2s loop; `prefers-reduced-motion` → matiin shimmer, block statis aja
+- **Jangan overshoot** — skeleton cuma buat initial load/pagination; refresh & filter cukup subtle
+- **A11y** — `aria-busy="true"`; keep old data + subtle indicator pas refresh, jangan blank dulu
+- **Verifikasi (Phase 5)** — throttle Slow 3G → skeleton muncul, gak ada layout jump pas data render
 
 ---
 

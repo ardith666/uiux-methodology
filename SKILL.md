@@ -219,6 +219,17 @@ project-root/
 - Decorative blob/wave SVG backgrounds
 - Perfect symmetric layout with no visual tension
 
+## Loading State (Skeleton UI)
+
+Kalau UI nampilin data async (fetch, image, list) — wajib ada loading state, jangan blank/spinner doang:
+
+- **Skeleton > spinner:** skeleton tunjukin struktur konten yang bakal muncul (layout match), spinner cuma bilang "tunggu". Skeleton buat layout shift lebih kecil pas data datang
+- **Skeleton match layout aslinya:** card → card-shaped skeleton, list → baris-baris. Jangan asal kotak abstrak
+- **Shimmer halus:** animasi gradient sweep ±1.5-2s loop, `prefers-reduced-motion` → matiin shimmer, cukup block statis
+- **Jangan overshoot:** skeleton cuma buat initial load (atau pagination). Loading tambahan di tengah (refresh, filter) cukup subtle — jangan blinker seluruh halaman
+- **Accessibility:** `aria-busy="true"` + jangan sembunyikan konten lama sebelum punya pengganti (kalau refresh, keep old data + subtle indicator)
+- **Verifikasi (Phase 5):** throttle network ke Slow 3G → skeleton muncul, gak ada layout jump pas data render
+
 ## Design Dials
 
 Three 1-10 sliders to tune output:
