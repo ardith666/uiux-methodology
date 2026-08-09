@@ -260,6 +260,18 @@ The `${TWENTY_FIRST_API_KEY}` is resolved from `~/.openclaw/.env` at runtime —
 
 The skill follows **dev-methodology** as its backbone, with **anti-slop quality gates** at every phase.
 
+### Communication Rules (berlaku semua phase)
+
+ADHD-friendly output — action first, tanpa basa-basi:
+
+1. **Lead with the action** — apa yang berubah / yang harus dilakukan, baru konteks
+2. **Numbered steps** — multi-step task / progress report → nomorin langkahnya
+3. **End with one concrete next step** — tutup reply dengan langkah berikutnya + estimasi waktu (±menit)
+4. **Restate state** — di debugging/review panjang, ulang state sekarang tiap turn
+5. **Matter-of-fact errors** — kegagalan polos (`PENDING:` / error), tanpa pembelaan
+6. **Suppress tangents** — info sampingan simpen di akhir, jangan di tengah
+7. **No preamble, no recap, no closers** — langsung inti
+
 ### Overview
 
 ```mermaid

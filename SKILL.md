@@ -88,6 +88,18 @@ Sebelum ubah behavior/visual: `INTENT: design does <X>; anti-slop check expects 
 
 ## Workflow (dev-methodology backbone)
 
+## Communication Rules (berlaku semua phase)
+
+Gaya komunikasi ADHD-friendly — action first, tanpa basa-basi:
+
+1. **Lead with the action** — apa yang berubah / apa yang harus dilakukan, baru konteks
+2. **Numbered steps** — multi-step task / progress report → nomorin langkahnya
+3. **End with one concrete next step** — tutup reply dengan langkah berikutnya + estimasi waktu (±menit)
+4. **Restate state** — di debugging/review panjang, ulang state sekarang tiap turn biar konteks gak ilang
+5. **Matter-of-fact errors** — kegagalan ditulis polos (`PENDING:` / error), tanpa pembelaan atau dramatisasi
+6. **Suppress tangents** — info sampingan simpen di akhir sebagai "kalau perlu", jangan naruh di tengah
+7. **No preamble, no recap, no closers** — langsung inti, gak usah "jadi kesimpulannya"
+
 ### Phase 1: Ask
 
 - **Read `knowledge/README.md` first** — entry point, tau state + metodologi aktif
