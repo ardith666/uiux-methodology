@@ -1,8 +1,8 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 2.0.0
-description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry. Use when designing, building, or reviewing UI/UX."
+version: 3.0.0
+description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain). Use when designing, building, or reviewing UI/UX."
 ---
 
 # UI/UX Methodology (uiux-meth)
@@ -471,3 +471,29 @@ Catatan: 21st = paid registry (2 free copy/hari, membership buat unlimited). Dat
 ## Environment
 
 Some scripts need API keys. See `.env.example` in this skill directory.
+
+## Obsidian Integration (vault-aware)
+
+Modul aktif saat CWD ada di dalam **vault Obsidian** (folder `.obsidian/` di CWD atau parent) atau user minta pakai Obsidian. Referensi lengkap: `references/obsidian/` di skill ini — `README.md` = gateway (filosofi, 4 alur retain, retention policy, dependency & self-healing), `markdown.md` / `bases.md` / `canvas.md` / `cli.md` / `defuddle.md` = detail sintaks.
+
+### Prinsip
+
+1. **Vault-native writing** — semua output design ditulis vault-native: `knowledge/DESIGN.md`, brand guidelines, keputusan, hasil anti-slop check, evidence BM25 → frontmatter (`title/tags/status/created`) + `[[wikilinks]]` + `#tag`.
+2. **Empat alur retain** — mencatat, merangkum (defuddle → distilasi → note), mengkoneksikan (wikilink/base/canvas), meretain (append-only + timestamp). Detail: `references/obsidian/README.md`.
+3. **Retention restraint** — HANYA tulis continuity artifacts (design decisions, learnings, evidence ringkas, asset index). JANGAN duplikasi atau meniru konten milik user.
+4. **Progressive disclosure** — `SKILL.md` ini tetap ringkas; baca `references/obsidian/*` on-demand saat fitur dibutuhkan.
+
+### Hook per phase
+
+- **Phase 1 (Ask)** — baca `knowledge/DESIGN.md` + vault dulu; simpan brand context sebagai note vault-native.
+- **Phase 2 (Spec)** — evidence: BM25 search + note terkait di vault; hasil riset web via `defuddle parse <url> --md` → ringkas → simpan note → wikilink.
+- **Phase 3 (Plan)** — generate `knowledge/DESIGN.md` vault-native; asset/token berulang → `design-assets.base`.
+- **Phase 4 (Implement)** — log keputusan design ke `knowledge/KNOWLEDGE.md` vault-native.
+- **Phase 5 (Test)** — simpan hasil anti-slop check + catatan render review (4 breakpoint) ke note status.
+- **Phase 6 (Review)** — entry append-only `[YYYY-MM-DD]`; update `DESIGN.md` final + sambungkan wikilink; galeri/referensi visual → `.canvas`.
+
+`knowledge/` folder structure di atas tetap berlaku; saat di vault semua file-nya ikut **vault-native** supaya terindeks & ter-retain Obsidian.
+
+### Dependency & Self-Healing
+
+Cek-req → **tanya user → bantu deploy → verify**. Kurang sesuatu (Obsidian app, CLI belum enabled, PATH, defuddle, node)? Pakai tabel + perintah di `references/obsidian/README.md`. Aksi sistem (npm install -g, ubah shell rc, symlink) butuh AUTH. Gagal → pakai yang tersedia (file ops selalu jalan), fitur yang kurang di-skip dan dicatat `PENDING:`.

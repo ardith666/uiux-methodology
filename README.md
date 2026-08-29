@@ -14,6 +14,7 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 - [What It Is](#what-it-is)
 - [Version](#version)
+- [Obsidian Integration](#obsidian-integration)
 - [Fable Design Loop](#fable-design-loop)
 - [Install](#install)
 - [Setup (API Keys)](#setup-api-keys)
@@ -44,8 +45,9 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Version
 
-Current: **2.3.0** (see `VERSION`)
+Current: **3.0.0** (see `VERSION`)
 
+- 3.0.0 — **Obsidian Integration Module** (`references/obsidian/*`): vault-native design knowledge (DESIGN.md, brand, decisions, evidence), 4 retention flows, dependency self-healing, frontmatter `version:` sync
 - 2.3.0 — Loading state (skeleton UI) section
 - 2.2.1 — README: optional deps + version history
 - 2.2.0 — Communication rules (ADHD-friendly, berlaku semua phase)
@@ -58,7 +60,16 @@ Current: **2.3.0** (see `VERSION`)
   - `scripts/test_search.py` — 56-check self-test
   - 21st.dev MCP integration (search/generate live components)
 
-Untuk update di device lain: `git pull` + `cat VERSION` untuk konfirmasi parity.
+Untuk update di device lain: `git pull` + `cat VERSION` untuk konfirmasi parity. Agent: bandingkan `version:` frontmatter lokal dengan tag remote.
+
+## Obsidian Integration
+
+Modul `references/obsidian/*` = cara skill ini terhubung ke vault Obsidian: **mencatat, merangkum (defuddle), mengkoneksikan (wikilink/base/canvas), meretain** design knowledge lintas sesi & lintas mesin.
+
+- Saat bekerja di dalam vault → `knowledge/DESIGN.md`, brand context, keputusan design, evidence BM25 & hasil anti-slop ditulis **vault-native** (frontmatter + wikilinks + tags) + update tracker/base/canvas sesuai phase.
+- **Dependency self-healing** — kurang Obsidian / CLI / defuddle / node → tanya user → bantu deploy → verify. Detail: `references/obsidian/README.md`.
+- Setup per mesin: `git pull` skill repo + `npm install -g defuddle` + enable Obsidian CLI (Settings → General → Advanced).
+- Konten diadaptasi dari [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) (MIT).
 
 ## Optional Dependencies
 
