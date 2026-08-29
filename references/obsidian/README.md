@@ -32,6 +32,25 @@ Setiap note/tulisan yang agent buat di vault **WAJIB**:
 | **Mengkoneksikan** | Keputusan/learning baru, project mulai | `[[wikilinks]]`, embed `![[...]]`, `.base` untuk data terstruktur, `.canvas` untuk peta visual. Detail: `bases.md`, `canvas.md` |
 | **Meretain** | Akhir sesi, lintas mesin | Entry append-only + timestamp di `knowledge/history.md`; sync via git; agent berikutnya baca vault dulu |
 
+## Vault Hygiene — graph check (pola 2026-08-29)
+
+Setiap selesai menulis/menkoneksikan note, verifikasi health graph via CLI:
+
+```bash
+obsidian unresolved   # wikilink yang menunjuk file tak ada (dangling)
+obsidian orphans      # note tanpa backlink (terisolasi)
+```
+
+Aturan yang menurun dari audit nyata (vault ~27 note: 22 orphan, 10 unresolved):
+
+1. **Wikilink harus persis nama file.** `[[Zipline]]` ≠ `zipline-upload.md` → unresolved walau note-nya ada. Kalau tampilan beda: `[[zipline-upload|Zipline]]`.
+2. **Jangan me-wikilink nama file/asset** (`[[buffer_config.json]]`) → inline code `` `buffer_config.json` ``.
+3. **Link markdown wajib skema lengkap** — `(zipline.digitechnesia.my.id)` tanpa `https://` dianggap file lokal → unresolved. Pakai `(https://zipline.digitechnesia.my.id)`.
+4. **Folder ≠ koneksi.** Note seduluran (plan di subfolder project, cheat sheet sekelas) wajib saling di-`[[link]]` — taruh bareng tidak cukup.
+5. **Duplikat/pasangan → cross-link + tandai canonical.** Dua note topik sama (mis. `coding/x` vs `project/x`) wajib saling menunjuk; kalau duplikat penuh, tandai mana yang dipertahankan.
+6. **MOC/index hub.** Kalau `orphans` mulai banyak → tawarkan buat note index yang me-wikilink semua note (semua langsung dapat backlink).
+7. **Target setelah masuk:** `unresolved` tinggal konsep yang memang belum punya note (catat `PENDING:`), `orphans` berisi note yang benar-benar standalone.
+
 ## Retention Policy (restraint)
 
 Proses mencatat sendiri adalah bagian dari belajar — jangan menggantikan catatan pribadi user:

@@ -1,7 +1,7 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 3.0.0
+version: 3.0.1
 description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain). Use when designing, building, or reviewing UI/UX."
 ---
 
@@ -490,7 +490,7 @@ Modul aktif saat CWD ada di dalam **vault Obsidian** (folder `.obsidian/` di CWD
 - **Phase 3 (Plan)** — generate `knowledge/DESIGN.md` vault-native; asset/token berulang → `design-assets.base`.
 - **Phase 4 (Implement)** — log keputusan design ke `knowledge/KNOWLEDGE.md` vault-native.
 - **Phase 5 (Test)** — simpan hasil anti-slop check + catatan render review (4 breakpoint) ke note status.
-- **Phase 6 (Review)** — entry append-only `[YYYY-MM-DD]`; update `DESIGN.md` final + sambungkan wikilink; galeri/referensi visual → `.canvas`.
+- **Phase 6 (Review)** — entry append-only `[YYYY-MM-DD]`; update `DESIGN.md` final + sambungkan wikilink; galeri/referensi visual → `.canvas`. Verifikasi health graph setelahnya: `obsidian unresolved` + `obsidian orphans` (aturan di `references/obsidian/README.md` § Vault Hygiene).
 
 `knowledge/` folder structure di atas tetap berlaku; saat di vault semua file-nya ikut **vault-native** supaya terindeks & ter-retain Obsidian.
 

@@ -45,8 +45,9 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Version
 
-Current: **3.0.0** (see `VERSION`)
+Current: **3.0.1** (see `VERSION`)
 
+- 3.0.1 — **Vault Hygiene** (`references/obsidian/README.md`): graph check `unresolved`/`orphans` + 7 aturan dari audit nyata; hook Phase 6 verifikasi health graph
 - 3.0.0 — **Obsidian Integration Module** (`references/obsidian/*`): vault-native design knowledge (DESIGN.md, brand, decisions, evidence), 4 retention flows, dependency self-healing, frontmatter `version:` sync
 - 2.3.0 — Loading state (skeleton UI) section
 - 2.2.1 — README: optional deps + version history
