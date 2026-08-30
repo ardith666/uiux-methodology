@@ -1,7 +1,7 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 3.0.1
+version: 3.1.0
 description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain). Use when designing, building, or reviewing UI/UX."
 ---
 
@@ -495,5 +495,22 @@ Modul aktif saat CWD ada di dalam **vault Obsidian** (folder `.obsidian/` di CWD
 `knowledge/` folder structure di atas tetap berlaku; saat di vault semua file-nya ikut **vault-native** supaya terindeks & ter-retain Obsidian.
 
 ### Dependency & Self-Healing
+ 
+ Cek-req → **tanya user → bantu deploy → verify**. Kurang sesuatu (Obsidian app, CLI belum enabled, PATH, defuddle, node)? Pakai tabel + perintah di `references/obsidian/README.md`. Aksi sistem (npm install -g, ubah shell rc, symlink) butuh AUTH. Gagal → pakai yang tersedia (file ops selalu jalan), fitur yang kurang di-skip dan dicatat `PENDING:`.
 
-Cek-req → **tanya user → bantu deploy → verify**. Kurang sesuatu (Obsidian app, CLI belum enabled, PATH, defuddle, node)? Pakai tabel + perintah di `references/obsidian/README.md`. Aksi sistem (npm install -g, ubah shell rc, symlink) butuh AUTH. Gagal → pakai yang tersedia (file ops selalu jalan), fitur yang kurang di-skip dan dicatat `PENDING:`.
+## Graphify Integration (codebase intelligence)
+
+Saat redesign/refactor codebase **existing**, pahami dulu sistemnya lewat knowledge graph, bukan baca file satu-satu. Referensi lengkap (perintah inti, instalasi & deploy per mesin, prompt AUTH ke user): `references/graphify/README.md`.
+
+### Kapan
+
+- **Phase 2 (Spec/evidence)** — kalau project punya `graphify-out/`: buka dengan `graphify query "..."` / `explain` buat lihat logika, dependensi, dan pola komponen yang mau didesain ulang.
+- Belum ada graph → tawarkan `/graphify .` (bisa `--code-only`, offline 0 token) — jangan install diam-diam; ikuti prompt AUTH di referensi.
+- Setelah implementasi: `graphify update .` biar `GRAPH_REPORT.md` tetap mencerminkan struktur final.
+- Melacak alur antar konsep UI/state: `graphify path "A" "B"`.
+
+### Aturan
+
+- **Hasil → `knowledge/`** — temuan & digest dari graph (arsitektur, dependensi, pola) masuk folder `knowledge/` (contoh `knowledge/graph-report-<project>.md`, frontmatter + wikilink biar nyambung di vault). Jangan bikin file hasil di luar folder itu. Satu-satunya pengecualian: `graphify-out/` (artefak teknis yang wajib di-commit ke repo, bukan "hasil sesi").
+- **Self-healing** — `uv tool install graphifyy` (CLI `graphify`) + PATH `~/.local/bin` + `graphify install --platform agents`; butuh AUTH. Gagal → tool lain / manual, dicatat `PENDING:`.
+- **Offline dulu** — `--code-only` (0 token) kecuali user minta semantic pass docs/media.
