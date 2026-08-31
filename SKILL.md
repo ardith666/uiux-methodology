@@ -1,7 +1,7 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 3.1.0
+version: 3.1.1
 description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain). Use when designing, building, or reviewing UI/UX."
 ---
 
@@ -512,5 +512,11 @@ Saat redesign/refactor codebase **existing**, pahami dulu sistemnya lewat knowle
 ### Aturan
 
 - **Hasil → `knowledge/`** — temuan & digest dari graph (arsitektur, dependensi, pola) masuk folder `knowledge/` (contoh `knowledge/graph-report-<project>.md`, frontmatter + wikilink biar nyambung di vault). Jangan bikin file hasil di luar folder itu. Satu-satunya pengecualian: `graphify-out/` (artefak teknis yang wajib di-commit ke repo, bukan "hasil sesi").
+- **Git: commit vs ignore `graphify-out/`** — commit `graph.json`, `graph.html`, `GRAPH_REPORT.md`, `manifest.json`, `cost.json`, `.graphify_labels.json`. Ignore `graphify-out/cache/`, `.graphify_python`, `.graphify_root` (state mesin lokal + cache build, path absolut beda per mesin, regenerable — graphify punya interpreter-guard yg re-resolve otomatis). Blok gitignore:
+  ```gitignore
+  graphify-out/cache/
+  graphify-out/.graphify_python
+  graphify-out/.graphify_root
+  ```
 - **Self-healing** — `uv tool install graphifyy` (CLI `graphify`) + PATH `~/.local/bin` + `graphify install --platform agents`; butuh AUTH. Gagal → tool lain / manual, dicatat `PENDING:`.
 - **Offline dulu** — `--code-only` (0 token) kecuali user minta semantic pass docs/media.

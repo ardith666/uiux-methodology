@@ -45,8 +45,9 @@ Combines **5 design domains** into one unified workflow with **anti-slop quality
 
 ## Version
 
-Current: **3.1.0** (see `VERSION`)
+Current: **3.1.1** (see `VERSION`)
 
+- 3.1.1 — **Graphify gitignore rule**: commit-vs-ignore `graphify-out/` (commit graph.json/html/GRAPH_REPORT/manifest/cost/labels; ignore `cache/`, `.graphify_python`, `.graphify_root`); blok gitignore utk diterapkan di repo project
 - 3.1.0 — **Graphify Integration** (new `references/graphify/`): knowledge graph codebase (extract/query/path/explain, offline `--code-only`) for redesign/refactor existing code; hasil → `knowledge/`; install & deploy per machine + AUTH prompt to user
 - 3.0.1 — **Vault Hygiene** (`references/obsidian/README.md`): graph check `unresolved`/`orphans` + 7 aturan dari audit nyata; hook Phase 6 verifikasi health graph
 - 3.0.0 — **Obsidian Integration Module** (`references/obsidian/*`): vault-native design knowledge (DESIGN.md, brand, decisions, evidence), 4 retention flows, dependency self-healing, frontmatter `version:` sync
