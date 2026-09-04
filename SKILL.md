@@ -166,9 +166,21 @@ Skill-skill berikut dipakai sebagai quality gate opsional — bukan bundel, tapi
 | Skill | Sumber | Kapan dipakai | Install | Perlu tanya user? |
 |---|---|---|---|---|
 | `no-ai-slop` | petergyang/no-ai-slop | Phase 6: user-facing copy blok (headline/microcopy) | `npx skills add petergyang/no-ai-slop --skill no-ai-slop --yes` | ❌ gak perlu (cuma file rules) |
+| `diagram-design` | ardith666/diagram-design (mirror upstream cathrynlavery) | Phase 2: user journey / story map / swimlane buat riset UX. Phase 3: high-level stack / wireframe-ish. Phase 5: render diagram diverifikasi mata (4 breakpoint), konsisten sama `DESIGN.md` tokens | via aggregator `ardith666/agent-skills` (`./setup.sh`) | ❌ gak perlu |
 | `penetration-testing-with-strix` | usestrix/strix | Task nyentuh web/API/auth/input | `npx skills add usestrix/strix --skill penetration-testing-with-strix --yes` | ✅ WAJIB (butuh Docker + LLM API key) |
 
 Kalau skill belum terinstall dan hook kepanggil: ikuti kebijakan di atas (auto-install / tanya). Kalau gak jadi jalan → catat `PENDING:` di report, jangan di-skip diam-diam.
+
+## Diagram Design Integration
+
+Pakai skill `diagram-design` (39 tipe diagram editorial, output HTML+SVG self-contained, bisa redraw Mermaid/draw.io) saat dokumen design butuh visual — user journey, story map, swimlane, arsitektur UI.
+
+**Aturan output — WAJIB ke `knowledge/`:**
+
+- **Phase 2 (Evidence)** — user journey / story map / swimlane hasil riset → `knowledge/diagrams/<nama>.html` + `.svg`, link dari `DESIGN.md`
+- **Phase 3 (Plan)** — high-level stack / arsitektur UI → `knowledge/diagrams/`
+- **Phase 5 (Test)** — diagram dirender + diverifikasi mata di 4 breakpoint (375/768/1024/1440), konsisten sama design tokens
+- File diagram vault-native (frontmatter + wikilink) biar ter-indeks Obsidian, mengikuti alur Obsidian Integration
 
 ### Phase 7: Knowledge
 
