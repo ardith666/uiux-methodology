@@ -1,8 +1,8 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 3.1.1
-description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain). Use when designing, building, or reviewing UI/UX."
+version: 3.2.0
+description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain) + Wiki Pattern (source contract, index retrieval, lint). Use when designing, building, or reviewing UI/UX."
 ---
 
 # UI/UX Methodology (uiux-meth)
@@ -189,6 +189,7 @@ Pakai skill `diagram-design` (39 tipe diagram editorial, output HTML+SVG self-co
 - **Update `knowledge/DESIGN.md`** with final design system specs
 - **Update `knowledge/README.md`** jika ada perubahan metodologi
 - Update brand guidelines if needed
+- **Lint (opsional, pre-ship):** kalau user minta "lint"/"audit design" atau handover — jalankan audit `DESIGN.md` + `KNOWLEDGE.md` → `knowledge/lint-reports/lint-YYYY-MM-DD.md`. Report only, tunggu approval per temuan (Wiki Pattern § lint)
 
 ### Knowledge Folder Structure
 
@@ -197,7 +198,9 @@ project-root/
 ├── knowledge/
 │   ├── README.md        ← Entry point. Agent WAJIB baca ini dulu
 │   ├── KNOWLEDGE.md     ← Context, decisions, progress (dev-meth standard)
-│   └── DESIGN.md        ← Design system spec (uiux-meth standard)
+│   ├── DESIGN.md        ← Design system spec (uiux-meth standard)
+│   ├── research/        ← Sumber design web mentah, satu file per URL
+│   └── lint-reports/    ← Output audit design (report only, no edits)
 ```
 
 | File | Isi | Dibaca oleh |
@@ -205,6 +208,18 @@ project-root/
 | `README.md` | Metodologi aktif, file list, aturan agent | Semua agent (entry point) |
 | `KNOWLEDGE.md` | Vision, decisions, progress, learnings | dev-methodology agents |
 | `DESIGN.md` | Brand, tokens, typography, components | uiux-methodology agents |
+| `research/*.md` | Sumber mentah (brand site, style ref, 21st.dev pick) | Agent yang butuh verifikasi klaim design |
+| `lint-reports/*.md` | Temuan audit `DESIGN.md` + `KNOWLEDGE.md` | User, agent yang akan fix |
+
+### Wiki Pattern (source contract · index retrieval · lint)
+
+Schema lengkap: `dev-methodology/references/wiki-pattern.md` — **WAJIB dibaca** (dev-meth dependency, sudah terpasang). Yang berlaku di uiux-meth:
+
+1. **`data/` = supreme court of design.** CSV `data/` skill ini adalah sumber kebenaran token/style/UX rule. Halaman web, artikel, dan "~80% proven patterns" dari luar **tidak mengalahkan** `data/`. Kalau ada conflict → `data/` yang menang, catat di `knowledge/KNOWLEDGE.md` Decisions.
+2. **Sumber design web immutable.** Ditemukan di Phase 2 (BM25/context web, 21st.dev, brand site)? Simpan mentah dulu di `knowledge/research/<slug>.md` dengan frontmatter `url`/`fetched`/`summary` + konten penuh. **Satu URL = satu file.** Jangan overwrite, jangan gabung 2 sumber. Baru distilasi ke `DESIGN.md`/`KNOWLEDGE.md`, dan **sebut file sumbernya di `**Source:**`** artikel knowledge itu.
+3. **Artikel knowledge punya kontrak.** Selain `KNOWLEDGE.md`/`DESIGN.md` (index), file knowledge lain wajib `**Source:** <path> · [YYYY-MM-DD] · fase: <phase>`, intro 2-4 kalimat, `## Key Takeaways`, `## Related` (wikilink). Nggak ada sumber → `## Open Questions`, jangan ditebak.
+4. **Query lewat index.** `knowledge/README.md` → `KNOWLEDGE.md`/`DESIGN.md` → artikel spesifik (1-3 file). Jangan grep semua `knowledge/`.
+5. **`lint` = report dulu, tanpa ubah.** Audit `DESIGN.md` + `KNOWLEDGE.md`: token hardcoded di luar `:root`, brand rule dilanggar, komponen pakai hex bukan token, klaim tanpa sumber, section yang orphan. Report → `knowledge/lint-reports/lint-YYYY-MM-DD.md`. **Tidak mengubah apa pun.** Fix masuk approval satu per satu, tiap fix append 1 baris di `history.md`. Trigger: user bilang "lint"/"audit design", atau Phase 6 pre-ship.
 
 ## The Seven Cardinal Sins (P0 — must fix)
 
