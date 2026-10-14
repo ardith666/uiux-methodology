@@ -1,7 +1,7 @@
 ---
 name: uiux-methodology
 alias: uiux-meth
-version: 3.2.0
+version: 3.3.0
 description: "UI/UX design intelligence: design system generator, brand identity, styling guidelines, banner design, and UX best practices. Searchable database of 84 styles, 192 color palettes, 74 font pairings, 192 product types, 99 UX guidelines across 22 tech stacks + 21st.dev MCP registry + Obsidian Integration (vault-native design knowledge & retain) + Wiki Pattern (source contract, index retrieval, lint). Use when designing, building, or reviewing UI/UX."
 ---
 
@@ -103,8 +103,8 @@ Gaya komunikasi ADHD-friendly — action first, tanpa basa-basi:
 ### Phase 1: Ask
 
 - **Read `knowledge/README.md` first** — entry point, tau state + metodologi aktif
-- **If `knowledge/` doesn't exist, create it with templates** (`knowledge-README.md`, `KNOWLEDGE.md`, `DESIGN.md`)
-- **Check for `knowledge/DESIGN.md`** — design system context
+- **If `knowledge/` doesn't exist, create it with templates** (`knowledge-README.md`, `KNOWLEDGE.md`, `DESIGN.md`, `PRODUCT.md`)
+- **Check for `knowledge/PRODUCT.md` first, then `knowledge/DESIGN.md`** — product truth before visual direction
 - Understand project context, constraints, existing design system
 - Anti-slop gate: "Does this project have a design system? What's the accent token? Any serif fonts?"
 - Load brand context if available
@@ -158,6 +158,19 @@ Gaya komunikasi ADHD-friendly — action first, tanpa basa-basi:
 - Check 80/20 balance
 - **Verify brand consistency against `knowledge/DESIGN.md`**
 - Self-critique checklist (from dev-methodology)
+
+## Impeccable Verb Map (port selektif, tanpa binary)
+
+| Verb | uiux-meth fase | Pakai saat |
+|---|---|---|
+| shape | Phase 2 | Plan UX/UI sebelum kode |
+| craft | Phase 4 | Shape-then-build |
+| bolder / quieter / distill | Phase 4 | Amplify / tone down / strip |
+| layout / typeset / colorize / animate / delight / overdrive | Phase 4 | Fix spesifik visual/motion |
+| clarify / harden / onboard / adapt / optimize | Phase 4-5 | Copy, edge-case, empty-state, device, perf |
+| audit / critique / polish | Phase 5-6 | A11y/perf/responsive + review + ship |
+| document / extract | Phase 7 | DESIGN.md dari kode + token reuse |
+| init | Phase 1 | Tulis PRODUCT.md |
 
 ## Optional Dependencies
 

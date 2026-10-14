@@ -199,6 +199,33 @@ Amazing futuristic product, cinematic, ultra detailed, 8k, masterpiece, trending
 
 ## Integration with dev-methodology
 
+## Impeccable Port (selektif, tanpa binary)
+
+Source: impeccable.style/slop · [2026-10-14] · 59 detector + 6 review.
+Data/ CSV tetap supreme court; daftar ini ekstensi, bukan pengganti.
+
+### Design-system (wajib selaras DESIGN.md)
+- Font outside DESIGN.md → P1
+- Color outside DESIGN.md → P1
+- Radius outside DESIGN.md → P1
+- Font-size outside DESIGN.md → P1
+
+### AI slop → P0/P1
+- Decorative grid-line bg, border-accent rounded, side-tab accent, hairline+wide shadow, repeating-gradient stripes → P1
+- Glassmorphism everywhere, extreme radius, rough SVG, placeholder illustration → P1 (butuh review mata)
+- Label above heading, badge above headline, oversized hero, icon-tile above heading, italic-serif display, overused font (Inter/Geist), crushed spacing → P0 (tipografi)
+- Radial halo, soft spotlight, AI palette (purple/cyan), dark glow, gradient text, cream/beige default, gray on color → P0 (warna)
+- Tiny numbered labels, monotonous spacing, nested cards, identical card grids, hero-metric template → P1 (layout)
+- Pulsing dot, blinking cursor, marquee, bounce/elastic, hover-zoom images, layout-animating → P1 (motion)
+- Em-dash overuse, generic claims, forced contrast, "theater" → P0 filler-copy
+- Same text repeated, jagged mask, overlay-hidden image, broken image → P1
+- Tiny UI text, flat hierarchy, all-caps body, long line, justified, low contrast, tight leading, tiny body, wide body tracking, skipped heading → P0 a11y/type
+- Cards flush scroller edge, covered text, unbalanced columns, heading spacing, overflow, clipped popover, cramped padding, edge-touch body → P1 harden
+- JS error on load, stuck hidden content → P0 harden (blocker fungsional)
+
+### Review-only (6 pola, mata manusia)
+Glassmorphism, extreme radius, rough SVG, hero-metric, identical grids, single-font-flat → critique, bukan auto-block.
+
 | Phase | Anti-Slop Gate |
 |-------|---------------|
 | Ask | "Does this project have a design system?" |
